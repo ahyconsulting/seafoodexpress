@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Customer - Marinexe</title>
+    <meta
+      name="description"
+      content="See what Marinexe’s customers say about our seafood quality, service, and global reach."
+    />
+    <meta
+      name="keywords"
+      content="Marinexe customers, client reviews, seafood feedback, global seafood buyers"
+    />
+    <meta name="author" content="Marinexe" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Customer - Marinexe" />
+    <meta
+      property="og:description"
+      content="Trusted by clients worldwide — read what our customers say about working with Marinexe."
+    />
+    <meta
+      property="og:image"
+      content="https://yourdomain.com/assets/customer-og.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://yourdomain.com/pages/customer.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="https://marinexe.blogspot.com/favicon.ico" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-P7WGPTWND1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-P7WGPTWND1");
+    </script>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles & Scripts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/custom.css" />
+  </head>
+  <body
+    x-data="initPageLayout()"
+    x-init="loadTemplates()"
+    class="min-h-screen flex flex-col bg-white"
+  >
+    <!-- Header placeholder -->
+    <div x-ref="header"></div>
+
+    <main class="flex-grow">
+      <!-- Hero Section with Background Image -->
+      <div class="relative h-[70vh] w-full overflow-hidden">
+        <img
+          src="/assets/service-page/header-img.jpg"
+          alt="About Image"
+          class="absolute top-0 left-0 w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+
+        <!-- Optional overlay content -->
+        <div class="relative z-10 h-full flex items-center justify-center">
+          <div
+            class="max-w-7xl mx-auto absolute bottom-0 left-4 right-4 sm:left-6 sm:right-6 md:left-8 md:right-8 lg:left-16 lg:right-16 xl:left-24 xl:right-24 2xl:left-[100px] 2xl:right-[100px] flex flex-col items-center sm:items-start justify-end text-center sm:text-left z-10 pb-8 md:pb-12 lg:pb-12"
+          >
+            <div class="max-w-full space-y-6 md:space-y-7">
+              <h1
+                class="text-white text-3xl md:text-[50px] font-medium drop-shadow-lg custom-heading leading-none tracking-wider"
+              >
+                WE’RE HERE TO HELP
+              </h1>
+
+              <p
+                class="text-white text-lg md:text-lg font-medium drop-shadow leading-relaxed max-w-xl"
+              >
+                Our Team Is Available To Assist With Your Orders, Inquiries, And
+                Feedback – 24/7
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- service page Section 1 -->
+      <section class="px-6 pt-20 md:px-6">
+        <div class="max-w-7xl mx-auto text-center">
+          <h2
+            class="text-[48px] text-[#1D265F] uppercase leading-none custom-heading"
+          >
+            Frequently asked questions
+          </h2>
+          <p
+            class="mt-5 text-[#334155] mx-auto text-sm md:text-base font-medium leading-relaxed max-w-full md:max-w-3xl lg:max-w-5xl"
+          >
+            Have more questions?
+            <a href="/pages/contact.html" class="hover:underline text-[#14B8A6]"
+              >Contact us.</a
+            >
+          </p>
+          <!-- Container -->
+          <div
+            class="flex items-start justify-center bg-white pt-10 px-2 sm:px-4"
+          >
+            <!-- FAQs container -->
+            <div class="w-full max-w-4xl mx-auto space-y-4">
+              <!-- FAQ Item -->
+              <details
+                class="group overflow-hidden rounded-t-lg bg-[#F1FAFF] text-[#1D265F] transition-all duration-300"
+              >
+                <summary
+                  class="flex items-start justify-between gap-2 sm:gap-4 p-4 sm:p-5 font-bold text-sm sm:text-base list-none cursor-pointer"
+                >
+                  <span class="text-left flex-grow">
+                    What is the estimated delivery time for international
+                    seafood shipments?
+                  </span>
+                  <svg
+                    class="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 9l6 6 6-6"
+                    />
+                  </svg>
+                </summary>
+                <hr class="border-t border-gray-300 mt-2 mb-4" />
+
+                <div
+                  class="px-4 sm:px-5 pb-5 text-left text-[#334155] text-sm md:text-base"
+                >
+                  International seafood shipments usually take 7–14 business
+                  days, depending on the destination and shipping method.
+                </div>
+              </details>
+
+              <!-- FAQ Item -->
+              <details
+                class="group overflow-hidden rounded-t-lg bg-[#F1FAFF] text-[#1D265F] transition-all duration-300"
+              >
+                <summary
+                  class="flex items-start justify-between gap-2 sm:gap-4 p-4 sm:p-5 font-bold text-sm sm:text-base list-none cursor-pointer"
+                >
+                  <span class="text-left flex-grow">
+                    How do you ensure seafood stays fresh during transit?
+                  </span>
+                  <svg
+                    class="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 9l6 6 6-6"
+                    />
+                  </svg>
+                </summary>
+                <hr class="border-t border-gray-300 mt-2 mb-4" />
+                <div
+                  class="px-4 sm:px-5 pb-5 text-left text-[#334155] text-sm md:text-base"
+                >
+                  We use temperature-controlled packaging and express logistics
+                  partners to maintain freshness during transit.
+                </div>
+              </details>
+
+              <!-- FAQ Item -->
+              <details
+                class="group overflow-hidden rounded-t-lg bg-[#F1FAFF] text-[#1D265F] transition-all duration-300"
+              >
+                <summary
+                  class="flex items-start justify-between gap-2 sm:gap-4 p-4 sm:p-5 font-bold text-sm sm:text-base list-none cursor-pointer"
+                >
+                  <span class="text-left flex-grow">
+                    What certifications do your processing plants hold?
+                  </span>
+                  <svg
+                    class="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 9l6 6 6-6"
+                    />
+                  </svg>
+                </summary>
+                <hr class="border-t border-gray-300 mt-2 mb-4" />
+                <div
+                  class="px-4 sm:px-5 pb-5 text-left text-[#334155] text-sm md:text-base"
+                >
+                  Our plants are certified with ISO, HACCP, and FDA regulations
+                  to ensure top-level food safety and compliance.
+                </div>
+              </details>
+
+              <!-- FAQ Item -->
+              <details
+                class="group overflow-hidden rounded-t-lg bg-[#F1FAFF] text-[#1D265F] transition-all duration-300"
+              >
+                <summary
+                  class="flex items-start justify-between gap-2 sm:gap-4 p-4 sm:p-5 font-bold text-sm sm:text-base list-none cursor-pointer"
+                >
+                  <span class="text-left flex-grow">
+                    What packaging options are available?
+                  </span>
+                  <svg
+                    class="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 9l6 6 6-6"
+                    />
+                  </svg>
+                </summary>
+                <hr class="border-t border-gray-300 mt-2 mb-4" />
+                <div
+                  class="px-4 sm:px-5 pb-5 text-left text-[#334155] text-sm md:text-base"
+                >
+                  We offer vacuum-sealed, frozen, and eco-friendly packaging
+                  options tailored to your shipping needs.
+                </div>
+              </details>
+
+              <!-- FAQ Item -->
+              <details
+                class="group overflow-hidden rounded-t-lg bg-[#F1FAFF] text-[#1D265F] transition-all duration-300"
+              >
+                <summary
+                  class="flex items-start justify-between gap-2 sm:gap-4 p-4 sm:p-5 font-bold text-sm sm:text-base list-none cursor-pointer"
+                >
+                  <span class="text-left flex-grow">
+                    How do you ensure seafood stays frozen during export?
+                  </span>
+                  <svg
+                    class="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 9l6 6 6-6"
+                    />
+                  </svg>
+                </summary>
+                <hr class="border-t border-gray-300 mt-2 mb-4" />
+                <div
+                  class="px-4 sm:px-5 pb-5 text-left text-[#334155] text-sm md:text-base"
+                >
+                  We utilize specialized insulated containers and dry ice to
+                  ensure products stay frozen throughout export transit.
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- service page Section 2 -->
+      <section class="px-6 py-20" x-data="{ showChat: false }">
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center border border-gray-300 rounded-xl"
+          >
+            <!-- Live Chatbot (STATIC) -->
+            <div
+              class="p-5 md:p-10 flex flex-col items-center lg:items-start text-center lg:text-left"
+            >
+              <div
+                class="bg-[#F1FAFF] p-4 mb-4 flex items-center justify-center"
+              >
+                <iconify-icon
+                  icon="hugeicons:chatting-01"
+                  width="36"
+                  height="36"
+                  class="text-[#14B8A6]"
+                ></iconify-icon>
+              </div>
+              <h4 class="text-[#1D265F] font-bold text-base mb-1">
+                Live Chatbot
+              </h4>
+              <p class="text-[#334155] text-sm">Talk to get advice</p>
+              <p class="text-[#1D265F] font-bold text-base">
+                Contact With Chatbot
+              </p>
+            </div>
+
+            <!-- Contact Us -->
+            <div
+              class="p-5 md:p-10 flex flex-col items-center lg:items-start text-center lg:text-left"
+            >
+              <a
+                href="/pages/contact.html"
+                class="bg-[#F1FAFF] p-4 mb-4 flex items-center justify-center cursor-pointer"
+              >
+                <iconify-icon
+                  icon="solar:phone-bold"
+                  width="36"
+                  height="36"
+                  class="text-[#14B8A6]"
+                ></iconify-icon>
+              </a>
+              <h4 class="text-[#1D265F] font-bold text-base mb-1">
+                Contact Us
+              </h4>
+              <a
+                href="tel:+919324566111"
+                class="text-[#334155] text-sm hover:underline cursor-pointer"
+              >
+                +91 9324566111
+              </a>
+              <a
+                href="mailto:sales@seafoodexpress.in"
+                class="text-[#334155] text-sm hover:underline cursor-pointer"
+              >
+                sales@seafoodexpress.in
+              </a>
+            </div>
+
+            <!-- Address -->
+            <div
+              class="p-5 md:p-10 flex flex-col items-center lg:items-start text-center lg:text-left"
+            >
+              <div
+                class="bg-[#F1FAFF] p-4 mb-4 flex items-center justify-center"
+              >
+                <iconify-icon
+                  icon="mdi:map-marker"
+                  width="36"
+                  height="36"
+                  class="text-[#14B8A6]"
+                ></iconify-icon>
+              </div>
+              <h4 class="text-[#1D265F] font-bold text-base mb-1">Address</h4>
+              <p class="text-[#334155] text-sm leading-relaxed">
+                Survey No 104,<br />
+                Near Sahara Colony,<br />
+                Wadiya Farha, Gala No 2,<br />
+                Mahape Road, Shilphata,<br />
+                Mumbra, Thane-400612
+              </p>
+            </div>
+
+            <!-- WhatsApp -->
+            <div
+              class="p-5 md:p-10 flex flex-col items-center lg:items-start text-center lg:text-left"
+            >
+              <a
+                href="https://wa.me/9324567890"
+                target="_blank"
+                class="bg-[#F1FAFF] p-4 mb-4 flex items-center justify-center cursor-pointer"
+              >
+                <iconify-icon
+                  icon="mdi:whatsapp"
+                  width="36"
+                  height="36"
+                  class="text-[#14B8A6]"
+                ></iconify-icon>
+              </a>
+              <h4 class="text-[#1D265F] font-bold text-base mb-1">
+                Whatsapp Us
+              </h4>
+              <a
+                href="https://wa.me/9324567890"
+                target="_blank"
+                class="text-[#334155] text-sm font-bold underline cursor-pointer"
+              >
+                +91 9324566111
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- service page Section 3 -->
+      <section class="px-6 pb-20 md:px-6">
+        <div class="max-w-7xl mx-auto text-center">
+          <div
+            class="inline-flex items-center justify-center space-x-2 text-sm font-semibold text-[#031B1D] bg-gray-200 bg-opacity-30 uppercase tracking-wide rounded-full px-3 border border-gray-300 py-2"
+          >
+            <img
+              src="/assets/home-page/shrimp.png"
+              alt="Shrimp"
+              class="w-5 h-5 object-contain"
+            />
+            <span>From Query to Resolution</span>
+          </div>
+
+          <h2
+            class="mt-5 text-[48px] text-[#1D265F] uppercase leading-none custom-heading"
+          >
+            How We Support You
+          </h2>
+          <p
+            class="mt-5 text-[#334155] mx-auto text-base md:text-lg font-medium leading-relaxed max-w-full md:max-w-3xl lg:max-w-5xl"
+          >
+            Our workflow takes you from request to resolution smoothly. Each
+            step is handled by our team to ensure quick, reliable support.
+          </p>
+        </div>
+      </section>
+
+      <!-- service page Section 4 -->
+      <section class="relative max-w-7xl mx-auto px-6 md:px-6 py-20 pt-5">
+        <!-- Center Line -->
+        <div
+          class="absolute left-0 top-[28px] w-full h-0.5 bg-gray-300 z-0 hidden md:block"
+        ></div>
+
+        <!-- Timeline Items -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 relative z-10 gap-12 text-center"
+        >
+          <!-- Timeline Item 1 -->
+          <div class="relative">
+            <!-- Circle -->
+            <div
+              class="absolute top-0 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#14B8A6] rounded-full z-10"
+            >
+              <span
+                class="relative inline-flex h-full w-full rounded-full bg-[#14B8A6] opacity-75 animate-ping [animation-duration:1.7s]"
+              ></span>
+            </div>
+
+            <!-- Text below -->
+            <h4 class="mt-10 text-[#1D265F] font-semibold text-lg md:text-xl">
+              Submit Request
+            </h4>
+            <p class="mt-2 text-[#334155] text-sm md:text-base leading-relaxed">
+              Through Contact Page / Chatbot
+            </p>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="relative">
+            <div
+              class="absolute top-0 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#14B8A6] rounded-full z-10"
+            >
+              <span
+                class="relative inline-flex h-full w-full rounded-full bg-[#14B8A6] opacity-75 animate-ping [animation-duration:1.7s]"
+              ></span>
+            </div>
+            <h4 class="mt-10 text-[#1D265F] font-semibold text-lg md:text-xl">
+              Quick Response
+            </h4>
+            <p class="mt-2 text-[#334155] text-sm md:text-base leading-relaxed">
+              Team acknowledges with case ID
+            </p>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="relative">
+            <div
+              class="absolute top-0 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#14B8A6] rounded-full z-10"
+            >
+              <span
+                class="relative inline-flex h-full w-full rounded-full bg-[#14B8A6] opacity-75 animate-ping [animation-duration:1.7s]"
+              ></span>
+            </div>
+            <h4 class="mt-10 text-[#1D265F] font-semibold text-lg md:text-xl">
+              Resolution
+            </h4>
+            <p class="mt-2 text-[#334155] text-sm md:text-base leading-relaxed">
+              Technical/Shipping/ <br />Quality experts resolve
+            </p>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="relative">
+            <div
+              class="absolute top-0 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#14B8A6] rounded-full z-10"
+            >
+              <span
+                class="relative inline-flex h-full w-full rounded-full bg-[#14B8A6] opacity-75 animate-ping [animation-duration:1.7s]"
+              ></span>
+            </div>
+            <h4 class="mt-10 text-[#1D265F] font-semibold text-lg md:text-xl">
+              Follow-Up
+            </h4>
+            <p class="mt-2 text-[#334155] text-sm md:text-base leading-relaxed">
+              Ensuring satisfaction & trust
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer placeholder -->
+    <div x-ref="footer"></div>
+
+    <script src="/data/chatbase.js"></script>
+
+    <script>
+      function initPageLayout() {
+        return {
+          async loadTemplates() {
+            const headerRes = await fetch("/templates/header.html");
+            const headerHtml = await headerRes.text();
+            this.$refs.header.innerHTML = headerHtml;
+            Alpine.initTree(this.$refs.header);
+
+            const footerRes = await fetch("/templates/footer.html");
+            const footerHtml = await footerRes.text();
+            this.$refs.footer.innerHTML = footerHtml;
+            Alpine.initTree(this.$refs.footer);
+          },
+        };
+      }
+    </script>
+    <script src="/index.js"></script>
+  </body>
+</html>
