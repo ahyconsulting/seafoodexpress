@@ -1244,12 +1244,12 @@
             function initPageLayout() {
                 return {
                     async loadTemplates() {
-                        const headerRes = await fetch("/templates/header.html");
+                        const headerRes = await fetch("templates/header.html");
                         const headerHtml = await headerRes.text();
                         this.$refs.header.innerHTML = headerHtml;
                         Alpine.initTree(this.$refs.header);
 
-                        const footerRes = await fetch("/templates/footer.html");
+                        const footerRes = await fetch("templates/footer.html");
                         const footerHtml = await footerRes.text();
                         this.$refs.footer.innerHTML = footerHtml;
                         Alpine.initTree(this.$refs.footer);
@@ -1257,6 +1257,6 @@
                 };
             }
         </script>
-        <script src="/index.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
