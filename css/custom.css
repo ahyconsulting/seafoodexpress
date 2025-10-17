@@ -1,0 +1,47 @@
+/* Global font */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Disable text selection for all elements */
+* {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+}
+
+/* Alpine.js cloak utility */
+[x-cloak] {
+  display: none !important;
+}
+
+/* Utility: Hide horizontal scrollbar but allow scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Custom heading style */
+.custom-heading {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.7px;
+}
+
+/* Iconify color */
+.iconify-colored {
+  color: #14B8A6;
+}
+
+/* Banner height */
+.banner-img {
+  height: 400px;
+}
+.list-dash li::before {
+  content: "- ";
+  color: #334155; /* same as your text color */
+}
+

@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Processing - Marinexe</title>
+    <meta
+      name="description"
+      content="Learn how Marinexe processes seafood with the highest industry standards to ensure global quality and safety."
+    />
+    <meta
+      name="keywords"
+      content="Seafood processing, Marinexe, food safety, seafood quality, export standards"
+    />
+    <meta name="author" content="Marinexe" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Processing - Marinexe" />
+    <meta
+      property="og:description"
+      content="See how Marinexe ensures quality and safety in seafood processing for export."
+    />
+    <meta
+      property="og:image"
+      content="https://yourdomain.com/assets/processing-og.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://yourdomain.com/pages/processing.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="https://marinexe.blogspot.com/favicon.ico" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-P7WGPTWND1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-P7WGPTWND1");
+    </script>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles & Scripts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/custom.css" />
+  </head>
+  <body
+    x-data="initPageLayout()"
+    x-init="loadTemplates()"
+    class="min-h-screen flex flex-col bg-white"
+  >
+    <!-- Header placeholder -->
+    <div x-ref="header"></div>
+    <main class="flex-grow">
+      <!-- Hero Section with Background Image -->
+      <div class="relative h-[70vh] w-full overflow-hidden">
+        <img
+          src="/assets/processing-page/header-image.jpg"
+          alt="About Image"
+          class="absolute top-0 left-0 w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+        <!-- Optional overlay content -->
+        <div class="relative z-10 h-full flex items-center justify-center">
+          <div
+            class="max-w-7xl mx-auto absolute bottom-0 left-4 right-4 sm:left-6 sm:right-6 md:left-8 md:right-8 lg:left-16 lg:right-16 xl:left-24 xl:right-24 2xl:left-[100px] 2xl:right-[100px] flex flex-col items-center sm:items-start justify-end text-center sm:text-left z-10 pb-8 md:pb-12 lg:pb-12"
+          >
+            <div class="max-w-full space-y-6 md:space-y-7">
+              <h1
+                class="text-white text-3xl md:text-5xl font-medium drop-shadow-lg custom-heading leading-none tracking-wider"
+              >
+                STATE-OF-THE-ART SEAFOOD PROCESSING & STORAGE
+              </h1>
+
+              <p
+                class="text-white text-lg md:text-lg font-medium drop-shadow leading-relaxed max-w-2xl"
+              >
+                From Ocean To Table — Maintaining Freshness, Hygiene, And Global
+                Standards In Every Step.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Processing page Section 1 -->
+      <section class="px-6 py-20 md:px-6">
+        <div class="max-w-7xl mx-auto text-center">
+          <div
+            class="inline-flex items-center justify-center space-x-2 text-sm font-semibold text-black bg-gray-200 bg-opacity-30 uppercase tracking-wide rounded-full px-3 border border-gray-300 py-2"
+          >
+            <img
+              src="/assets/home-page/shrimp.png"
+              alt="Shrimp"
+              class="w-5 h-5 object-contain"
+            />
+            <span>our process</span>
+          </div>
+
+          <h2
+            class="mt-5 text-[48px] text-[#1D265F] uppercase leading-none custom-heading"
+          >
+            Our step-by-step processing excellence
+          </h2>
+          <p
+            class="mt-5 text-[#334155] mx-auto text-base md:text-lg font-medium leading-relaxed max-w-full md:max-w-3xl lg:max-w-4xl"
+          >
+            Follow the journey from fresh catch to export-ready seafood. Our
+            six-stage process ensures every product meets the highest standards
+            of freshness, hygiene, and quality before it reaches global markets
+            with top-quality fish and seafood varieties.
+          </p>
+        </div>
+      </section>
+      <!-- Processing page Section 2 -->
+      <section class="pb-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-0">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+          >
+            <!-- Step Template -->
+            <div
+              class="bg-blue-50 rounded-xl p-6 sm:p-12 flex flex-col min-h-[250px] items-center text-center md:items-start md:text-left transition duration-300"
+            >
+              <h3 class="text-2xl font-bold text-[#14B8A6] mb-2">01</h3>
+              <h4 class="text-lg font-semibold text-[#1D265F] my-4">
+                Catch Sourcing
+              </h4>
+              <p class="text-sm text-[#334155]">
+                Partnering with certified fishermen across Indian coasts for
+                fresh raw materials.
+              </p>
+            </div>
+
+            <!-- Step 02 -->
+            <div
+              class="bg-blue-50 rounded-xl p-6 sm:p-12 flex flex-col min-h-[250px] items-center text-center md:items-start md:text-left transition duration-300"
+            >
+              <h3 class="text-2xl font-bold text-[#14B8A6] mb-2">02</h3>
+              <h4 class="text-lg font-semibold text-[#1D265F] my-4">
+                Preliminary Inspection
+              </h4>
+              <p class="text-sm text-[#334155]">
+                Initial quality checks conducted at collection centers with
+                trained supervisors.
+              </p>
+            </div>
+
+            <!-- Step 03 -->
+            <div
+              class="bg-blue-50 rounded-xl p-6 sm:p-12 flex flex-col min-h-[250px] items-center text-center md:items-start md:text-left transition duration-300"
+            >
+              <h3 class="text-2xl font-bold text-[#14B8A6] mb-2">03</h3>
+              <h4 class="text-lg font-semibold text-[#1D265F] my-4">
+                Cleaning & Sorting
+              </h4>
+              <p class="text-sm text-[#334155]">
+                Hygienic cleaning, size grading, and type-wise sorting at
+                HACCP-certified plants.
+              </p>
+            </div>
+
+            <!-- Step 04 -->
+            <div
+              class="bg-blue-50 rounded-xl p-6 sm:p-12 flex flex-col min-h-[250px] items-center text-center md:items-start md:text-left transition duration-300"
+            >
+              <h3 class="text-2xl font-bold text-[#14B8A6] mb-2">04</h3>
+              <h4 class="text-lg font-semibold text-[#1D265F] my-4">
+                Processing & Cutting
+              </h4>
+              <p class="text-sm text-[#334155]">
+                Portioning, descaling, deveining (for shrimp), and filleting
+                using automated tools.
+              </p>
+            </div>
+
+            <!-- Step 05 -->
+            <div
+              class="bg-blue-50 rounded-xl p-6 sm:p-12 flex flex-col min-h-[250px] items-center text-center md:items-start md:text-left transition duration-300"
+            >
+              <h3 class="text-2xl font-bold text-[#14B8A6] mb-2">05</h3>
+              <h4 class="text-lg font-semibold text-[#1D265F] my-4">
+                Freezing
+              </h4>
+              <p class="text-sm text-[#334155]">
+                IQF, Blast Freezing, and Plate Freezing techniques to lock
+                freshness instantly.
+              </p>
+            </div>
+
+            <!-- Step 06 -->
+            <div
+              class="bg-blue-50 rounded-xl p-6 sm:p-12 flex flex-col min-h-[250px] items-center text-center md:items-start md:text-left transition duration-300"
+            >
+              <h3 class="text-2xl font-bold text-[#14B8A6] mb-2">06</h3>
+              <h4 class="text-lg font-semibold text-[#1D265F] my-4">Packing</h4>
+              <p class="text-sm text-[#334155]">
+                Vacuum sealing and export-grade packaging under controlled
+                conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Processing page Section 3 -->
+      <section class="px-6 pb-20 md:px-12 bg-[#F1FAFF]">
+        <div
+          class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-5 lg:gap-12 items-center pt-20"
+        >
+          <!-- Left Side: Label + Heading -->
+          <div class="w-full lg:w-1/2 text-center lg:text-left">
+            <div
+              class="inline-flex items-center justify-center lg:justify-start space-x-2 text-sm font-semibold text-[#031B1D] uppercase tracking-wide bg-[#F9FAFB] rounded-full px-3 border border-[#EAECF0] py-2"
+            >
+              <img
+                src="/assets/home-page/shrimp.png"
+                alt="Shrimp"
+                class="w-5 h-5 object-contain"
+              />
+              <span>Hygiene & safety</span>
+            </div>
+            <h2
+              class="mt-5 text-[48px] text-[#1D265F] uppercase leading-tight custom-heading"
+            >
+              Hygiene <br />
+              Is Our Promise
+            </h2>
+          </div>
+
+          <!-- Right Side: Bullet Paragraphs -->
+          <div
+            class="w-full lg:w-1/2 space-y-6 text-[#334155] text-base md:text-lg leading-relaxed font-medium lg:pt-0 text-center lg:text-left mt-5"
+          >
+            <div class="flex items-start gap-4">
+              <p>
+                Every batch processed under strict international standards —
+                because quality starts with cleanliness.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Images appear below the main flex row -->
+        <div
+          class="-mx-0 md:-mx-12 pt-20 flex flex-col sm:flex-row gap-3 overflow-hidden"
+        >
+          <div
+            class="relative overflow-hidden flex-1 min-w-full sm:min-w-[60%] max-h-[300px] sm:max-h-[500px] rounded-t-lg sm:rounded-tr-2xl sm:rounded-br-2xl sm:rounded-tl-none"
+          >
+            <img
+              src="/assets/processing-page/Hygiene-image-1.png"
+              alt="Image 1"
+              class="w-full h-full object-cover max-h-[500px]"
+            />
+            <div class="absolute inset-0 bg-black/10"></div>
+          </div>
+
+          <div
+            class="relative overflow-hidden flex-1 min-w-full sm:min-w-[40%] max-h-[300px] sm:max-h-[500px] rounded-b-lg sm:rounded-tl-2xl sm:rounded-bl-2xl sm:rounded-br-none"
+          >
+            <img
+              src="/assets/processing-page/Hygiene-image-2.png"
+              alt="Image 2"
+              class="w-full h-full object-cover max-h-[500px]"
+            />
+            <div class="absolute inset-0 bg-black/10"></div>
+          </div>
+        </div>
+
+        <h3
+          class="max-w-7xl mx-auto text-sm font-light pt-10 text-start text-[#334155] sm:text-base"
+        >
+          Our facilities operate under rigorous hygiene protocols designed to
+          safeguard the freshness, taste, and safety of every seafood product.
+          From the moment raw material enters our plant to the moment it is
+          packed for export, we maintain strict cleanliness at every stage.
+        </h3>
+        <!-- Final Checklist -->
+        <div
+          class="max-w-7xl mx-auto mt-10 flex justify-between flex-wrap gap-y-8 gap-x-6 text-gray-700 text-base md:text-lg font-medium leading-relaxed"
+        >
+          <!-- Item 1 -->
+          <div class="flex items-start gap-4 w-full md:w-[48%]">
+            <div class="text-[#14B8A6] mt-1">
+              <iconify-icon
+                icon="mdi:checkbox-marked"
+                width="24"
+                height="24"
+              ></iconify-icon>
+            </div>
+            <div>
+              <h4 class="text-[#1D265F] font-semibold text-lg">
+                HACCP Certified Facilities
+              </h4>
+              <p class="pt-3 text-[#334155] text-sm md:text-base">
+                Global-standard Hazard Analysis protocols to ensure seafood
+                safety from start to finish.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="flex items-start gap-4 w-full md:w-[48%]">
+            <div class="text-[#14B8A6] mt-1">
+              <iconify-icon
+                icon="mdi:checkbox-marked"
+                width="24"
+                height="24"
+              ></iconify-icon>
+            </div>
+            <div>
+              <h4 class="text-[#1D265F] font-semibold text-lg">
+                EU & USFDA Approved Units
+              </h4>
+              <p class="pt-3 text-[#334155] text-sm md:text-base">
+                Compliance with the strictest international export regulations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="flex items-start gap-4 w-full md:w-[48%]">
+            <div class="text-[#14B8A6] mt-1">
+              <iconify-icon
+                icon="mdi:checkbox-marked"
+                width="24"
+                height="24"
+              ></iconify-icon>
+            </div>
+            <div>
+              <h4 class="text-[#1D265F] font-semibold text-lg">
+                Cleanroom Packing Zones
+              </h4>
+              <p class="pt-3 text-[#334155] text-sm md:text-base">
+                Air-filtered, contamination-free environments for secure
+                packaging.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="flex items-start gap-4 w-full md:w-[48%]">
+            <div class="text-[#14B8A6] mt-1">
+              <iconify-icon
+                icon="mdi:checkbox-marked"
+                width="24"
+                height="24"
+              ></iconify-icon>
+            </div>
+            <div>
+              <h4 class="text-[#1D265F] font-semibold text-lg">
+                Trained Food Safety Teams
+              </h4>
+              <p class="pt-3 text-[#334155] text-sm md:text-base">
+                Expert staff following rigorous hygiene and handling protocols.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="flex items-start gap-4 w-full md:w-[48%]">
+            <div class="text-[#14B8A6] mt-1">
+              <iconify-icon
+                icon="mdi:checkbox-marked"
+                width="24"
+                height="24"
+              ></iconify-icon>
+            </div>
+            <div>
+              <h4 class="text-[#1D265F] font-semibold text-lg">
+                Regular Audits & Microbiological Tests
+              </h4>
+              <p class="pt-3 text-[#334155] text-sm md:text-base">
+                Continuous monitoring to guarantee product safety and freshness.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="flex items-start gap-4 w-full md:w-[48%]">
+            <div class="text-[#14B8A6] mt-1">
+              <iconify-icon
+                icon="mdi:checkbox-marked"
+                width="24"
+                height="24"
+              ></iconify-icon>
+            </div>
+            <div>
+              <h4 class="text-[#1D265F] font-semibold text-lg">
+                Daily Equipment Sterilization
+              </h4>
+              <p class="pt-3 text-[#334155] text-sm md:text-base">
+                Food-grade sanitization for all tools, surfaces, and machinery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Processing page Section 4 -->
+      <section class="px-6 py-20 md:px-6">
+        <div class="max-w-7xl mx-auto text-center">
+          <div
+            class="inline-flex items-center justify-center space-x-2 text-sm font-semibold text-[#031B1D] bg-gray-200 bg-opacity-30 uppercase tracking-wide rounded-full px-3 border border-gray-300 py-2"
+          >
+            <img
+              src="/assets/home-page/shrimp.png"
+              alt="Shrimp"
+              class="w-5 h-5 object-contain"
+            />
+            <span>Freezing technology</span>
+          </div>
+
+          <h2
+            class="mt-5 text-[48px] text-[#1D265F] uppercase leading-none custom-heading"
+          >
+            Freezing that preserves freshness
+          </h2>
+          <p
+            class="mt-5 text-[#334155] mx-auto text-base md:text-lg font-medium leading-relaxed max-w-full md:max-w-3xl lg:max-w-4xl"
+          >
+            From catch to export - freezing methods that lock in taste, texture,
+            and nutrition.
+          </p>
+        </div>
+        <div
+          class="max-w-7xl mx-auto pt-10 grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
+          <!-- Card Wrapper -->
+          <div class="flex justify-center">
+            <div class="bg-[#F1FAFF] rounded-xl overflow-hidden w-full">
+              <img
+                src="/assets/processing-page/freezing-img1.jpg"
+                alt="Scampi"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-8">
+                <h3 class="text-lg font-semibold text-[#1D265F] text-center">
+                  IQF – Individual Quick Freezing
+                </h3>
+                <p class="text-sm text-[#334155] mt-2 text-center">
+                  Freezes each piece separately to prevent clumping and keep
+                  natural texture.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center">
+            <div class="bg-[#F1FAFF] rounded-xl overflow-hidden w-full">
+              <img
+                src="/assets/processing-page/freezing-img2.jpg"
+                alt="Black Tiger Shrimp"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-8">
+                <h3 class="text-lg font-semibold text-[#1D265F] text-center">
+                  Blast Freezing
+                </h3>
+                <p class="text-sm text-[#334155] mt-2 text-center">
+                  High-speed cold air freezes large batches in hours for
+                  ultimate freshness.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center">
+            <div class="bg-[#F1FAFF] rounded-xl overflow-hidden w-full">
+              <img
+                src="/assets/processing-page/freezing-img3.png"
+                alt="Vannamei Shrimp"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-8">
+                <h3 class="text-lg font-semibold text-[#1D265F] text-center">
+                  Tunnel Freezing
+                </h3>
+                <p class="text-sm text-[#334155] mt-2 text-center">
+                  Continuous freezing for high-volume seafood with consistent
+                  quality.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="max-w-7xl mx-auto pt-10 grid grid-cols-1 md:grid-cols-2 gap-12"
+        >
+          <!-- Card Wrapper -->
+          <div class="flex justify-center">
+            <div
+              class="bg-[#F1FAFF] rounded-xl overflow-hidden w-full h-[24rem] flex flex-col"
+            >
+              <img
+                src="/assets/processing-page/freezing-img4.png"
+                alt="Scampi"
+                class="w-full h-1/2 object-cover"
+              />
+              <div class="p-8 h-1/2 flex flex-col justify-center">
+                <h3 class="text-lg font-semibold text-[#1D265F] text-center">
+                  Ultra-Low Cold Rooms (-40°C)
+                </h3>
+                <p class="text-sm text-[#334155] mt-2 text-center">
+                  24/7 monitored storage that locks freshness until shipment
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center">
+            <div
+              class="bg-[#F1FAFF] rounded-xl overflow-hidden w-full h-[24rem] flex flex-col"
+            >
+              <img
+                src="/assets/processing-page/freezing-img5.jpg"
+                alt="Black Tiger Shrimp"
+                class="w-full h-1/2 object-cover"
+              />
+              <div class="p-8 h-1/2 flex flex-col justify-center">
+                <h3 class="text-lg font-semibold text-[#1D265F] text-center">
+                  Real-Time Temperature Monitoring
+                </h3>
+                <p class="text-sm text-[#334155] mt-2 text-center">
+                  Digital sensors ensure constant cold chain compliance
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Processing page Section 5 -->
+      <section class="px-6 pb-20 md:px-12">
+        <div class="max-w-7xl mx-auto text-center">
+          <div
+            class="inline-flex items-center justify-center tracking-tight space-x-2 text-sm font-semibold text-[#031B1D] bg-gray-200 bg-opacity-30 uppercase tracking-wide rounded-full px-3 border border-gray-300 py-2"
+          >
+            <img
+              src="/assets/home-page/shrimp.png"
+              alt="Shrimp"
+              class="w-5 h-5 object-contain"
+            />
+            <span>Export-Grade Packaging</span>
+          </div>
+
+          <h2
+            class="mt-5 text-[48px] text-[#1D265F] uppercase leading-none custom-heading"
+          >
+            Packaging That Travels the World
+          </h2>
+          <p
+            class="mt-5 text-[#334155] mx-auto text-base md:text-lg font-medium leading-relaxed max-w-full md:max-w-3xl lg:max-w-4xl"
+          >
+            Custom-engineered packaging solutions that keep seafood fresh, safe,
+            and traceable — from our facility to your market
+          </p>
+        </div>
+        <!-- Image below the flex content -->
+        <div class="-mx-0 md:-mx-12 pt-20 overflow-hidden">
+          <img
+            src="/assets/processing-page/export-banner-img.jpg"
+            alt="Marine Excellence"
+            class="w-full object-cover rounded-xl lg:rounded-none banner-img"
+          />
+        </div>
+      </section>
+      <section class="relative max-w-7xl mx-auto px-6 md:px-6 py-20 pt-5">
+        <!-- Center Line -->
+        <div
+          class="absolute left-0 top-[28px] w-full h-0.5 bg-gray-300 z-0 hidden md:block"
+        ></div>
+
+        <!-- Timeline Items -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 relative z-10 gap-12 text-center"
+        >
+          <!-- Timeline Item 1 -->
+          <div class="relative">
+            <!-- Circle -->
+            <div
+              class="absolute top-0 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#14B8A6] rounded-full z-10"
+            >
+              <span
+                class="relative inline-flex h-full w-full rounded-full bg-[#14B8A6] opacity-75 animate-ping [animation-duration:1.7s]"
+              ></span>
+            </div>
+
+            <!-- Text below -->
+            <h4 class="mt-10 text-[#1D265F] font-semibold text-lg md:text-xl">
+              Moisture-Proof Export Cartons
+            </h4>
+            <p class="mt-2 text-[#334155] text-sm md:text-base leading-relaxed">
+              Moisture-proof cartons keep seafood fresh in transit.
+            </p>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="relative">
+            <div
+              class="absolute top-0 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#14B8A6] rounded-full z-10"
+            >
+              <span
+                class="relative inline-flex h-full w-full rounded-full bg-[#14B8A6] opacity-75 animate-ping [animation-duration:1.7s]"
+              ></span>
+            </div>
+            <h4 class="mt-10 text-[#1D265F] font-semibold text-lg md:text-xl">
+              Vacuum-Sealed Pouches
+            </h4>
+            <p class="mt-2 text-[#334155] text-sm md:text-base leading-relaxed">
+              Air-tight sealing that locks in freshness, flavor, and texture for
+              extended shelf life.
+            </p>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="relative">
+            <div
+              class="absolute top-0 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#14B8A6] rounded-full z-10"
+            >
+              <span
+                class="relative inline-flex h-full w-full rounded-full bg-[#14B8A6] opacity-75 animate-ping [animation-duration:1.7s]"
+              ></span>
+            </div>
+            <h4 class="mt-10 text-[#1D265F] font-semibold text-lg md:text-xl">
+              Food-Safe LDPE Packaging
+            </h4>
+            <p class="mt-2 text-[#334155] text-sm md:text-base leading-relaxed">
+              Food-grade LDPE packaging keeps products safe from contamination
+              and physical damage.
+            </p>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="relative">
+            <div
+              class="absolute top-0 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-[#14B8A6] rounded-full z-10"
+            >
+              <span
+                class="relative inline-flex h-full w-full rounded-full bg-[#14B8A6] opacity-75 animate-ping [animation-duration:1.7s]"
+              ></span>
+            </div>
+            <h4 class="mt-10 text-[#1D265F] font-semibold text-lg md:text-xl">
+              QR-Coded Traceability
+            </h4>
+            <p class="mt-2 text-[#334155] text-sm md:text-base leading-relaxed">
+              Digital traceability ensures buyers can verify origin, batch, and
+              cold chain compliance.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer placeholder -->
+    <div x-ref="footer"></div>
+
+    <script src="/data/chatbase.js"></script>
+
+    <script>
+      function initPageLayout() {
+        return {
+          async loadTemplates() {
+            const headerRes = await fetch("/templates/header.html");
+            const headerHtml = await headerRes.text();
+            this.$refs.header.innerHTML = headerHtml;
+            Alpine.initTree(this.$refs.header);
+
+            const footerRes = await fetch("/templates/footer.html");
+            const footerHtml = await footerRes.text();
+            this.$refs.footer.innerHTML = footerHtml;
+            Alpine.initTree(this.$refs.footer);
+          },
+        };
+      }
+    </script>
+    <script src="/index.js"></script>
+  </body>
+</html>

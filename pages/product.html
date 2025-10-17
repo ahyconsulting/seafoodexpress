@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Products - Marinexe</title>
+    <meta
+      name="description"
+      content="Discover Marinexe’s export-quality seafood products, including fish, prawns, and more. Certified, fresh, and shipped globally."
+    />
+    <meta
+      name="keywords"
+      content="Marinexe products, seafood exporter India, fish export, prawn export, marine food"
+    />
+    <meta name="author" content="Marinexe" />
+
+    <!-- Open Graph (OG) Meta Tags -->
+    <meta property="og:title" content="Seafood Products - Marinexe" />
+    <meta
+      property="og:description"
+      content="Explore Marinexe's wide range of certified seafood products exported globally."
+    />
+    <meta
+      property="og:image"
+      content="https://yourdomain.com/assets/product-og.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://yourdomain.com/pages/products.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="https://marinexe.blogspot.com/favicon.ico" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-P7WGPTWND1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-P7WGPTWND1");
+    </script>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles + Scripts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"
+    ></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/css/custom.css" />
+  </head>
+  <body
+    x-data="initPageLayout()"
+    x-init="loadTemplates()"
+    x-cloak
+    class="min-h-screen flex flex-col bg-white"
+  >
+    <!-- Header placeholder -->
+    <div x-ref="header"></div>
+
+    <main class="flex-grow">
+      <!-- Hero Section with Background Image -->
+      <div class="relative h-[70vh] w-full overflow-hidden">
+        <img
+          src="/assets/product-page/header-image.jpg"
+          alt="About Image"
+          class="absolute top-0 left-0 w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+        <!-- Optional overlay content -->
+        <div class="relative z-10 h-full flex items-center justify-center">
+          <div
+            class="max-w-7xl mx-auto absolute bottom-0 left-4 right-4 sm:left-6 sm:right-6 md:left-8 md:right-8 lg:left-16 lg:right-16 xl:left-24 xl:right-24 2xl:left-[100px] 2xl:right-[100px] flex flex-col items-center sm:items-start justify-end text-center sm:text-left z-10 pb-8 md:pb-12 lg:pb-12"
+          >
+            <div class="max-w-full md:max-w-2xl space-y-6 md:space-y-7">
+              <h1
+                class="text-white text-3xl md:text-[50px] font-medium drop-shadow-lg leading-none uppercase lg:whitespace-nowrap custom-heading tracking-wider"
+              >
+                Exporting India's Best Seafood
+              </h1>
+
+              <p
+                class="text-white text-lg md:text-lg font-medium drop-shadow leading-relaxed max-w-2xl"
+              >
+                Certified, Processed & Globally Shipped.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product page Section 1 -->
+      <section id="product-section" class="px-6 pt-20 md:px-6">
+        <div class="max-w-7xl mx-auto text-center">
+          <h2
+            class="text-[48px] text-[#1D265F] uppercase leading-none custom-heading"
+          >
+            Our Seafood products
+          </h2>
+          <p
+            class="mt-4 text-[#334155] mx-auto text-base md:text-lg font-medium leading-relaxed max-w-full md:max-w-3xl lg:max-w-4xl"
+          >
+            Explore a wide range of export-quality fish and seafood varieties
+          </p>
+        </div>
+      </section>
+
+      <!-- Product page Section 2 -->
+      <section class="px-6 py-20 md:px-8 lg:px-12">
+        <div class="max-w-7xl mx-auto" x-data="productStore()" x-init="init()">
+          <!-- Filter Buttons -->
+          <div class="overflow-x-auto sm:overflow-visible mb-6 no-scrollbar">
+            <div
+              class="flex flex-nowrap sm:flex-wrap gap-2 sm:gap-4 justify-start sm:justify-center"
+            >
+              <template x-for="filter in filters" :key="filter">
+                <button
+                  @click="selected = filter"
+                  :aria-pressed="selected === filter"
+                  :class="selected === filter 
+                    ? 'text-[#007B8F] underline' 
+                    : 'text-[#334155] no-underline'"
+                  class="whitespace-nowrap px-4 py-2 text-sm md:text-base font-medium cursor-pointer transition-colors duration-200 bg-none rounded-none"
+                >
+                  <span x-text="filter"></span>
+                </button>
+              </template>
+            </div>
+          </div>
+
+          <div
+            class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+          >
+            <template x-for="product in paginatedProducts" :key="product.id">
+              <div
+                @click="openModal(product)"
+                :data-product-slug="product.slug"
+                :class="product.categories.includes(selected) ? 
+                  'bg-green-50 shadow-md rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer' 
+                  : 'bg-blue-50 shadow-md rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer'"
+              >
+                <img
+                  :src="product.image"
+                  :alt="product.name"
+                  loading="lazy"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h3
+                    class="text-lg font-semibold"
+                    :class="product.categories.includes(selected) ? 'text-[#1D265F]' : 'text-[#1D265F]'"
+                    x-text="product.name"
+                  ></h3>
+                  <p
+                    class="text-sm text-[#334155] mt-2"
+                    x-text="product.description"
+                  ></p>
+
+                  <!-- Add More button -->
+                  <span
+                    @click="openModal(product)"
+                    class="mt-3 inline-block text-black cursor-pointer hover:underline text-sm font-medium"
+                  >
+                    More
+                  </span>
+                </div>
+              </div>
+            </template>
+          </div>
+          <!-- Pagination Controls -->
+          <div
+            x-show="products.length > 0"
+            x-cloak
+            class="mt-16 flex flex-col items-center justify-center gap-3 text-base font-medium"
+          >
+            <!-- Prev & Next Buttons -->
+            <div class="flex items-center gap-2">
+              <!-- Prev -->
+              <button
+                @click="currentPage = Math.max(currentPage - 1, 1); scrollToTop()"
+                :disabled="currentPage === 1"
+                class="w-20 h-12 flex justify-center items-center rounded-lg bg-gray-100 text-[#1D265F] hover:bg-gray-200 disabled:opacity-50 transition"
+              >
+                Prev
+              </button>
+
+              <!-- Numbers for md+ screens -->
+              <template x-if="totalPages > 1">
+                <div class="hidden md:flex items-center gap-2">
+                  <template x-for="page in totalPages" :key="page">
+                    <button
+                      @click="currentPage = page; scrollToTop()"
+                      :class="currentPage === page 
+                      ? 'bg-[#14B8A6] text-white text-xl' 
+                      : 'bg-gray-100 text-[#1D265F] hover:bg-gray-200'"
+                      class="w-12 h-12 flex justify-center items-center rounded-lg transition text-xl"
+                      x-text="page"
+                    ></button>
+                  </template>
+                </div>
+              </template>
+
+              <!-- Next -->
+              <button
+                @click="currentPage = Math.min(currentPage + 1, totalPages); scrollToTop()"
+                :disabled="currentPage === totalPages"
+                class="w-20 h-12 flex justify-center items-center rounded-lg bg-gray-100 text-[#1D265F] hover:bg-gray-200 disabled:opacity-50 transition"
+              >
+                Next
+              </button>
+            </div>
+
+            <!-- Tiny Dots for Mobile Only -->
+            <div class="md:hidden flex items-center gap-2 mt-2">
+              <template x-for="page in totalPages" :key="'dot-' + page">
+                <div
+                  class="w-2.5 h-2.5 rounded-full transition"
+                  :class="page === currentPage ? 'bg-[#14B8A6]' : 'bg-gray-100'"
+                ></div>
+              </template>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div
+            x-show="modalOpen"
+            x-cloak
+            @keydown.escape.window="closeModal()"
+            @click.self="closeModal()"
+            class="fixed inset-0 z-[2000] flex items-center justify-center bg-black bg-opacity-60 transition duration-300"
+            :class="{ 'backdrop-blur-sm': modalOpen }"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
+          >
+            <div
+              @click.stop
+              class="bg-white rounded-2xl shadow-lg w-full max-w-5xl mx-4 relative overflow-visible flex flex-col md:flex-row h-[500px]"
+              x-transition:enter="transition ease-out duration-200 transform"
+              x-transition:enter-start="scale-95 opacity-0"
+              x-transition:enter-end="scale-100 opacity-100"
+              x-transition:leave="transition ease-in duration-150 transform"
+              x-transition:leave-start="scale-100 opacity-100"
+              x-transition:leave-end="scale-95 opacity-0"
+            >
+              <!-- Close Button (Floating Outside Top-Right) -->
+              <button
+                @click="closeModal()"
+                class="absolute -top-3 -right-3 p-3 rounded-lg shadow-lg bg-[#14B8A6] hover:brightness-90 z-20"
+                aria-label="Close modal"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="4"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+
+              <!-- Carousel Image Section -->
+              <div class="md:w-1/2 w-full h-full relative overflow-hidden">
+                <template
+                  x-if="modalProduct.images && modalProduct.images.length"
+                >
+                  <div class="relative w-full h-full">
+                    <!-- Images -->
+                    <template
+                      x-for="(img, index) in modalProduct.images"
+                      :key="index"
+                    >
+                      <img
+                        :src="img"
+                        x-show="index === currentSlide"
+                        class="absolute inset-0 w-full h-full object-cover rounded-2xl transition-opacity duration-300"
+                        x-transition:enter="ease-out duration-300"
+                        x-transition:enter-start="opacity-0"
+                        x-transition:enter-end="opacity-100"
+                        x-transition:leave="ease-in duration-200"
+                        x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0"
+                      />
+                    </template>
+
+                    <!-- Left arrow -->
+                    <button
+                      class="absolute left-2 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 text-black p-2 rounded-lg z-10"
+                      @click="currentSlide = (currentSlide - 1 + modalProduct.images.length) % modalProduct.images.length"
+                      aria-label="Previous Image"
+                    >
+                      <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <!-- Right arrow -->
+                    <button
+                      class="absolute right-2 top-1/2 -translate-y-1/2 bg-white hover:bg-gary-100 text-black p-2 rounded-lg z-10"
+                      @click="currentSlide = (currentSlide + 1) % modalProduct.images.length"
+                      aria-label="Next Image"
+                    >
+                      <i class="fas fa-chevron-right"></i>
+                    </button>
+                  </div>
+                </template>
+              </div>
+
+              <!-- Right: Text Content -->
+              <div
+                class="md:w-2/3 w-full relative overflow-hidden rounded-tr-2xl rounded-br-2xl"
+              >
+                <div class="h-full max-h-[500px] overflow-y-auto p-6">
+                  <h2
+                    class="mt-4 text-3xl md:text-[48px] text-[#1D265F] uppercase leading-tight custom-heading"
+                    x-text="modalProduct.modalTitle || modalProduct.name"
+                  ></h2>
+                  <p
+                    class="text-base font-medium text-[#334155] my-4"
+                    x-show="modalProduct.modalName"
+                    x-text="modalProduct.modalName"
+                  ></p>
+                  <hr class="border-gray-300 mb-4" />
+                  <!-- Product Details List -->
+                  <template
+                    x-if="modalProduct.details && modalProduct.details.length"
+                  >
+                    <ul
+                      class="list-inside text-sm text-[#334155] leading-[48px]"
+                    >
+                      <template
+                        x-for="(item, index) in modalProduct.details"
+                        :key="index"
+                      >
+                        <li x-text="`- ${item}`"></li>
+                      </template>
+                    </ul>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer placeholder -->
+    <div x-ref="footer"></div>
+
+    <script src="/data/chatbase.js"></script>
+
+    <script>
+      function productStore() {
+        return {
+          selected: "All Products",
+          filters: ["All Products", "Most Exported"],
+          products: [],
+          currentPage: 1,
+          itemsPerPage: 16,
+          modalOpen: false,
+          modalProduct: {},
+          currentSlide: 0,
+
+          async init() {
+            try {
+              const res = await fetch("/data/product.json");
+              const data = await res.json();
+
+              this.products = data.map((p) => ({
+                ...p,
+                slug: `${p.name
+                  .toLowerCase()
+                  .replace(/\s+/g, "-")
+                  .replace(/[^a-z0-9-]/g, "")}-${p.id}`,
+              }));
+              // Check sessionStorage for selected product and page (from search)
+              const selectedProduct = sessionStorage.getItem("selectedProduct");
+              const productPage = parseInt(
+                sessionStorage.getItem("productPage")
+              );
+
+              if (selectedProduct && productPage) {
+                this.currentPage = productPage;
+                this.$nextTick(() => {
+                  this.scrollToProduct(selectedProduct);
+                });
+                // Clear sessionStorage after use
+                sessionStorage.removeItem("selectedProduct");
+                sessionStorage.removeItem("productPage");
+              } else {
+                // Parse URL query param instead of hash
+                const urlParams = new URLSearchParams(window.location.search);
+                const productSlug = urlParams.get("product");
+                if (productSlug) {
+                  const prod = this.products.find(
+                    (p) => p.slug === productSlug
+                  );
+                  if (prod) {
+                    this.openModal(prod, false); // open modal without updating URL again
+                  }
+                }
+              }
+            } catch (error) {
+              console.error("Failed to load products:", error);
+            }
+          },
+
+          get paginatedProducts() {
+            const filtered = this.allProductsSorted;
+            const start = (this.currentPage - 1) * this.itemsPerPage;
+            const end = start + this.itemsPerPage;
+            return filtered.slice(start, end);
+          },
+
+          get totalPages() {
+            return Math.ceil(this.allProductsSorted.length / this.itemsPerPage);
+          },
+
+          get allProductsSorted() {
+            if (this.selected === "All Products") return this.products;
+
+            const highlighted = this.products.filter((p) =>
+              Array.isArray(p.categories)
+                ? p.categories.includes(this.selected)
+                : p.categories === this.selected
+            );
+
+            const others = this.products.filter((p) =>
+              Array.isArray(p.categories)
+                ? !p.categories.includes(this.selected)
+                : p.categories !== this.selected
+            );
+
+            return [...highlighted, ...others];
+          },
+
+          openModal(product, updateUrl = true) {
+            this.modalProduct = product;
+            this.modalOpen = true;
+            this.currentSlide = 0;
+
+            if (updateUrl) {
+              const url = new URL(window.location);
+              url.searchParams.set("product", product.slug);
+              window.history.replaceState(null, "", url);
+            }
+          },
+          closeModal() {
+            this.modalOpen = false;
+            // Delay clearing modalProduct until after transition (e.g., 300ms)
+            setTimeout(() => {
+              this.modalProduct = {};
+            }, 300); // Match this to your x-transition duration
+            const url = new URL(window.location);
+            url.searchParams.delete("product");
+            window.history.replaceState(null, "", url.pathname + url.search);
+          },
+          scrollToTop() {
+            // Scroll to top of product section
+            const section = document.querySelector("#product-section");
+            if (section)
+              section.scrollIntoView({ behavior: "smooth", block: "start" });
+          },
+          scrollToProduct(productName, retryCount = 0) {
+            const MAX_RETRIES = this.totalPages; // Try each page at most once
+
+            // Find product on current paginated page
+            const product = this.paginatedProducts.find(
+              (p) => p.name.toLowerCase() === productName.toLowerCase()
+            );
+
+            if (product) {
+              // Product found! Scroll and highlight it
+              this.$nextTick(() => {
+                const el =
+                  document.querySelector(
+                    `[data-product-slug="${product.slug}"]`
+                  ) ||
+                  document.querySelector(
+                    `[data-product-name="${product.name}"]`
+                  );
+                if (el) {
+                  el.scrollIntoView({ behavior: "smooth", block: "center" });
+                  el.classList.add("ring-2", "ring-blue-800");
+                  setTimeout(
+                    () => el.classList.remove("ring-2", "ring-blue-800"),
+                    3000
+                  );
+                }
+              });
+            } else if (retryCount < MAX_RETRIES - 1) {
+              // Not found on this page: go to next page and try again
+              this.currentPage =
+                this.currentPage < this.totalPages ? this.currentPage + 1 : 1;
+
+              this.$nextTick(() => {
+                this.scrollToProduct(productName, retryCount + 1);
+              });
+            } else {
+              // Searched all pages, product not found
+              console.warn(
+                `Product "${productName}" not found after searching all pages.`
+              );
+            }
+          },
+        };
+      }
+
+      function initPageLayout() {
+        return {
+          async loadTemplates() {
+            const headerRes = await fetch("/templates/header.html");
+            const headerHtml = await headerRes.text();
+            this.$refs.header.innerHTML = headerHtml;
+            Alpine.initTree(this.$refs.header);
+
+            const footerRes = await fetch("/templates/footer.html");
+            const footerHtml = await footerRes.text();
+            this.$refs.footer.innerHTML = footerHtml;
+            Alpine.initTree(this.$refs.footer);
+          },
+        };
+      }
+    </script>
+    <script src="/index.js"></script>
+  </body>
+</html>

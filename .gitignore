@@ -1,0 +1,11 @@
+# Ignore rough.html
+rough.html
+
+# Ignore macOS system file
+.DS_Store
+
+# Ignore image
+image.png
+
+# Ignore test.txt
+test.txt
