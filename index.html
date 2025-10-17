@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home - Marinexe</title>
+    <meta
+      name="description"
+      content="India's premium seafood exporter — certified, processed, and shipped globally by Marinexe."
+    />
+    <meta
+      name="keywords"
+      content="Marinexe, seafood export, Indian seafood, marine products, fish export"
+    />
+    <meta name="author" content="Marinexe" />
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Home - Marinexe" />
+    <meta
+      property="og:description"
+      content="Certified seafood exports from India to the world — explore Marinexe's quality marine products."
+    />
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+    <meta property="og:url" content="https://yourdomain.com/index.html" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="https://marinexe.blogspot.com/favicon.ico" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-P7WGPTWND1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-P7WGPTWND1");
+    </script>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind + Alpine + Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body
+    x-data="initPageLayout()"
+    x-init="loadTemplates()"
+    class="min-h-screen flex flex-col bg-white"
+  >
+    <!-- Header placeholder -->
+    <div x-ref="header"></div>
+    <!-- Main content starts here -->
+    <main class="flex-grow">
+      <div
+        class="relative min-h-screen w-full overflow-hidden bg-black pt-24 sm:pt-28"
+        x-data="{
+          videos: [
+            'assets/home-page/video1.mp4',
+            'assets/home-page/video2.mp4',
+            'assets/home-page/video3.mp4',
+            'assets/home-page/video4.mp4',
+            'assets/home-page/video5.mp4',
+            'assets/home-page/video6.mp4'
+          ],
+          selected: '',
+          loaded: false,
+          init() {
+            const hasVisited = localStorage.getItem('hasVisitedBefore');
+            
+            if (!hasVisited) {
+              console.log('First visit: playing default video');
+              this.selected = 'assets/home-page/video6.mp4';
+              localStorage.setItem('hasVisitedBefore', 'true');
+            } else {
+              this.selected = this.videos[Math.floor(Math.random() * this.videos.length)];
+              console.log('Returning visit: random video ->', this.selected);
+            }
+
+            this.$nextTick(() => {
+              const videoEl = this.$refs.video;
+              videoEl.oncanplaythrough = () => {
+                if (!this.loaded) {
+                  this.loaded = true;
+                }
+              };
+              videoEl.load();
+            });
+          }
+        }"
+      >
+        <!-- Static black background, never changed -->
+        <div class="absolute inset-0 bg-black z-0"></div>
+
+        <!-- Video fades in on load -->
+        <video
+          x-ref="video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          :src="selected"
+          class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700"
+          :class="loaded ? 'opacity-100' : 'opacity-0'"
+        ></video>
+
+        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+
+        <section
+          class="max-w-7xl mx-auto relative overflow-hidden min-h-screen"
+        >
+          <!-- Hero Wrapper -->
+          <div
+            class="flex flex-col justify-end md:items-start 2xl:items-end md:justify-end 2xl:flex-row max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-8 xl:px-8 2xl:px-0 py-12 md:py-20 lg:py-32 gap-10 min-h-screen"
+          >
+            <!-- Left Content -->
+            <div
+              class="max-w-full md:max-w-2xl space-y-6 text-center md:text-left"
+            >
+              <div
+                x-data="searchComponent()"
+                class="relative w-full max-w-sm md:max-w-md mx-auto md:mx-0"
+                x-cloak
+              >
+                <!-- Search Input -->
+                <input
+                  type="text"
+                  x-model="query"
+                  @input="filterProducts"
+                  @keydown.escape="clearResults"
+                  @keydown.arrow-down.prevent="highlightNext"
+                  @keydown.arrow-up.prevent="highlightPrev"
+                  @keydown.enter.prevent="selectHighlighted"
+                  autocomplete="off"
+                  placeholder="Search"
+                  class="w-full px-0 py-2 border-b-2 border-white bg-transparent text-white placeholder-white focus:outline-none focus:border-[#007B8F] transition"
+                />
+
+                <!-- Suggestions Dropdown -->
+                <div
+                  x-show="filtered.length > 0"
+                  @click.away="clearResults"
+                  class="absolute mt-2 w-full bg-white/20 backdrop-blur-[20px] rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto text-white no-scrollbar"
+                  x-transition
+                >
+                  <template
+                    x-for="(product, index) in filtered"
+                    :key="product.name + '-' + index"
+                  >
+                    <div
+                      @click="goToProduct(product)"
+                      @mouseenter="highlightedIndex = index"
+                      :class="{
+                        'bg-white/40 text-white': highlightedIndex === index,
+                        'hover:bg-white/40 cursor-pointer': true
+                      }"
+                      class="px-4 py-2 transition"
+                      x-text="product.name"
+                    ></div>
+                  </template>
+                </div>
+              </div>
+              <div
+                class="text-white font-medium text-sm md:text-base bg-black/30 rounded-full px-3 md:px-6 py-1 md:py-2 max-w-max mx-auto md:mx-0 drop-shadow-md tracking-widest flex items-center gap-2"
+              >
+                <img
+                  src="/assets/home-page/shrimp.png"
+                  alt="Shrimp"
+                  class="w-5 h-5 object-contain"
+                />
+                PREMIUM SCAMPI & SEAFOOD
+              </div>
+
+              <h1
+                class="text-white text-3xl md:text-[50px] font-medium drop-shadow-lg leading-none custom-heading tracking-wider uppercase"
+              >
+                <span class="block sm:inline">Harvested With Care</span>
+                <span class="block sm:inline">Delivered With Trust</span>
+              </h1>
+
+              <p
+                class="text-white text-lg font-medium drop-shadow leading-relaxed"
+              >
+                From Indian Waters To Global Ports, Our Seafood Meets <br />
+                The Highest Hygiene And Freshness Standards.
+              </p>
+
+              <a
+                href="/pages/about.html"
+                class="inline-block text-white px-6 py-3 bg-[#007B8F] hover:brightness-90 font-medium shadow-md max-w-xs text-center tracking-wider"
+              >
+                LEARN MORE
+              </a>
+            </div>
+
+            <!-- Right Boxes -->
+            <div
+              class="flex flex-wrap lg:flex-nowrap gap-6 items-stretch justify-center md:justify-start w-full md:w-auto"
+            >
+              <!-- Box 1 -->
+              <div
+                class="rounded-2xl overflow-hidden shadow-lg w-full sm:w-[48%] md:w-80 flex flex-col"
+              >
+                <div class="relative h-36 w-full">
+                  <img
+                    src="/assets/home-page/hero-img1.png"
+                    alt="Seafood Image"
+                    class="w-full h-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black bg-opacity-10 pointer-events-none"
+                  ></div>
+                </div>
+                <div
+                  class="bg-white/20 backdrop-blur-[20px] px-8 py-5 flex flex-col gap-2"
+                >
+                  <h3
+                    class="text-sm font-semibold uppercase tracking-wide text-white"
+                  >
+                    India’s Seafood, <br />Global Standards
+                  </h3>
+                  <hr class="border-white border-opacity-30 my-2" />
+                  <p class="text-sm font-light leading-relaxed text-white">
+                    Certified quality from coast <br />to container.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Box 2 -->
+              <div
+                class="rounded-2xl overflow-hidden shadow-lg w-full sm:w-[48%] md:w-80 flex flex-col"
+              >
+                <div class="relative h-36 w-full">
+                  <img
+                    src="assets/home-page/hero-img2.jpg"
+                    alt="Fishing Nets"
+                    class="w-full h-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black bg-opacity-10 pointer-events-none"
+                  ></div>
+                </div>
+                <div
+                  class="bg-white/20 backdrop-blur-[20px] px-8 py-5 flex flex-col gap-2"
+                >
+                  <h3
+                    class="text-sm font-semibold uppercase tracking-wide text-white"
+                  >
+                    Global Export<br />Network
+                  </h3>
+                  <hr class="border-white border-opacity-30 my-2" />
+                  <p class="text-sm font-light leading-relaxed text-white">
+                    Expertly processed seafood, exported from India to the
+                    world.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section
+        class="px-6 py-20 md:px-6"
+        x-data="{
+          categories: {
+            'Scampi': 'our-product-img1.jpg',
+            'Black Tiger Shrimp': 'our-product-img2.jpeg',
+            'Vannamei Shrimp': 'our-product-img3.png',
+            'Lobster': 'our-product-img4.png',
+            'Tuna Varieties': 'our-product-img5.jpg',
+            'Crustaceans': 'our-product-img6.jpg',
+            'Fishes': 'our-product-img7.jpg',
+            'Cephalopods': 'our-product-img8.jpg',
+            'Surimi': 'our-product-img9.png'
+          },
+          selected: 'Scampi',
+          keys() {
+            return Object.keys(this.categories);
+          },
+          selectCategory(name) {
+            this.selected = name;
+          },
+          nextCategory() {
+            const keys = this.keys();
+            let index = keys.indexOf(this.selected);
+            this.selected = keys[(index + 1) % keys.length];
+          },
+          prevCategory() {
+            const keys = this.keys();
+            let index = keys.indexOf(this.selected);
+            this.selected = keys[(index - 1 + keys.length) % keys.length];
+          }
+        }"
+      >
+        <!-- Title now appears above everything and is aligned left -->
+        <div class="mb-8 max-w-7xl mx-auto text-center md:text-left">
+          <div
+            class="inline-flex items-center justify-center md:justify-start space-x-2 text-sm font-medium text-black bg-gray-200 bg-opacity-30 uppercase tracking-wide rounded-full px-3 border border-gray-300 py-2"
+          >
+            <img
+              src="/assets/home-page/shrimp.png"
+              alt="Shrimp"
+              class="w-5 h-5 object-contain"
+            />
+            <span>Explore</span>
+          </div>
+          <h2
+            class="mt-5 text-[48px] text-[#1D265F] uppercase leading-none custom-heading"
+          >
+            OUR PRODUCTS CATEGORIES
+          </h2>
+        </div>
+
+        <!-- Two Column Layout -->
+        <div
+          class="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-4"
+        >
+          <!-- Sidebar: Categories (desktop) -->
+          <aside
+            class="w-full md:[width:40%] flex flex-col space-y-0 text-lg hidden md:flex bg-[#F1FAFF] rounded-xl"
+          >
+            <template x-for="(img, name) in categories" :key="name">
+              <button
+                @click="selectCategory(name)"
+                :class="selected === name
+        ? 'bg-[#14B8A6] text-white rounded-xl'
+        : 'text-[#1D265F] bg-transparent'"
+                class="text-left py-6 px-12 whitespace-nowrap text-xl font-bold w-full flex items-center justify-between overflow-hidden"
+              >
+                <!-- Category name -->
+                <span class="truncate" x-text="name"></span>
+
+                <!-- Arrow icon (always rendered, only visible when selected) -->
+                <span
+                  x-show="selected === name"
+                  x-cloak
+                  class="ml-4 flex-shrink-0 bg-[#ABFFF6] p-2 rounded-sm"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 text-[#000000]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="3"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </template>
+          </aside>
+
+          <!-- Main Image Container -->
+          <div
+            class="w-full md:[width:60%] flex flex-col items-center relative"
+          >
+            <div
+              class="w-full flex items-center justify-center relative bg-gray-100 rounded-xl overflow-hidden h-[400px] md:h-[697px] lg:h-[695px]"
+              :key="selected"
+            >
+              <!-- Fishes Category (stacked images) -->
+              <template x-if="selected === 'Fishes'">
+                <div class="w-full h-full flex flex-col gap-2">
+                  <!-- Freshwater Fish -->
+                  <div class="relative w-full flex-1 min-h-0">
+                    <img
+                      src="assets/home-page/fish-category1.jpg"
+                      alt="Freshwater Fish"
+                      class="w-full h-full object-cover rounded-xl"
+                    />
+                    <div
+                      class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-lg font-semibold py-5 px-4 text-center rounded-b-xl"
+                    >
+                      Freshwater Fish
+                    </div>
+                  </div>
+
+                  <!-- Seawater Fish -->
+                  <div class="relative w-full flex-1 min-h-0">
+                    <img
+                      src="assets/home-page/fish-category2.jpg"
+                      alt="Seawater Fish"
+                      class="w-full h-full object-cover rounded-xl"
+                    />
+                    <div
+                      class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-lg font-semibold py-5 px-4 text-center"
+                    >
+                      Seawater Fish
+                    </div>
+                  </div>
+                </div>
+              </template>
+
+              <!-- All other categories -->
+              <template x-if="selected !== 'Fishes'">
+                <img
+                  :src="'assets/home-page/' + categories[selected]"
+                  :alt="selected + ' seafood product image'"
+                  class="w-full h-full object-cover"
+                />
+              </template>
+
+              <!-- Category Label -->
+
+              <template x-if="selected !== 'Fishes'">
+                <div
+                  class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-lg font-semibold py-5 px-4 text-center"
+                  x-text="selected"
+                ></div>
+              </template>
+            </div>
+
+            <!-- Carousel Navigation (moved below image container on mobile only) -->
+            <div
+              class="w-full flex justify-end items-center gap-4 mt-4 md:hidden opacity-0 transition-opacity duration-300"
+              x-init="$nextTick(() => $el.classList.remove('opacity-0'))"
+            >
+              <button
+                @click="prevCategory"
+                class="w-12 h-12 flex items-center justify-center bg-blue-900 text-white rounded-full backdrop-blur-md shadow"
+                aria-label="Previous Category"
+              >
+                <iconify-icon icon="mdi:chevron-left" width="24"></iconify-icon>
+              </button>
+
+              <button
+                @click="nextCategory"
+                class="w-12 h-12 flex items-center justify-center bg-blue-900 text-white rounded-full backdrop-blur-md shadow"
+                aria-label="Next Category"
+              >
+                <iconify-icon
+                  icon="mdi:chevron-right"
+                  width="24"
+                ></iconify-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-7xl mx-auto py-20 pt-20 pb-0">
+          <div class="flex flex-col md:flex-row md:items-center md:gap-16">
+            <!-- Left: Heading -->
+            <div class="md:w-1/3 w-full flex items-start md:items-center">
+              <h2
+                class="text-[48px] text-[#1D265F] uppercase leading-none custom-heading"
+              >
+                OUR BUSINESSES
+              </h2>
+            </div>
+            <!-- Right: Paragraph container, right-aligned on desktop, stacked below on mobile -->
+            <div
+              class="md:w-2/3 w-full flex items-start md:justify-end mt-6 md:mt-0"
+            >
+              <p
+                class="text-base md:text-lg text-[#334155] text-left max-w-2xl leading-relaxed font-medium"
+              >
+                From coastlines to global kitchens, our seamless export
+                logistics, cold chain integrity, and packaging excellence ensure
+                your seafood arrives fresh, safe, and on time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Horizontal Image Row -->
+      <div class="hidden md:block w-full">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[10px] w-full rounded-t-xl"
+        >
+          <!-- Image 1 -->
+          <div
+            class="overflow-hidden shadow-lg md:shadow-none flex items-center justify-center w-full"
+          >
+            <img
+              src="assets/home-page/our-business-1.png"
+              alt="Image 1"
+              class="w-full h-80 md:h-[400px] lg:h-[500px] object-cover"
+            />
+          </div>
+          <!-- Image 2 -->
+          <div
+            class="overflow-hidden md:shadow-none flex items-center justify-center w-full"
+          >
+            <img
+              src="assets/home-page/our-business-2.png"
+              alt="Image 2"
+              class="w-full h-80 md:h-[400px] lg:h-[500px] object-cover"
+            />
+          </div>
+          <!-- Image 3 -->
+          <div
+            class="overflow-hidden shadow-lg md:shadow-none flex items-center justify-center w-full"
+          >
+            <img
+              src="assets/home-page/our-business-3.jpg"
+              alt="Image 3"
+              class="w-full h-80 md:h-[400px] lg:h-[500px] object-cover"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Wrapper with Alpine.js component -->
+      <div
+        x-data="initImageSlider()"
+        x-init="startRotation()"
+        class="w-full bg-white"
+      >
+        <!-- Mobile Slider: Only visible on small screens -->
+        <div
+          class="block md:hidden px-[20px] pt-10 pb-10 text-center relative overflow-hidden h-[500px] bg-white"
+        >
+          <template x-for="(item, index) in items" :key="index">
+            <div
+              x-show="current === index"
+              x-transition:enter="transform transition ease-in-out duration-500"
+              x-transition:enter-start="translate-x-full opacity-0"
+              x-transition:enter-end="translate-x-0 opacity-100"
+              x-transition:leave="transform transition ease-in-out duration-500 absolute inset-0"
+              x-transition:leave-start="translate-x-0 opacity-100"
+              x-transition:leave-end="-translate-x-full opacity-0"
+              class="absolute inset-0 flex flex-col items-center text-center px-6"
+            >
+              <div
+                class="relative w-full aspect-[9/16] mb-6 rounded-xl overflow-hidden shadow-lg"
+              >
+                <img
+                  :src="item.img"
+                  class="w-full h-full object-cover"
+                  :alt="item.title"
+                />
+
+                <!-- Black overlay with some transparency -->
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+                <!-- Description block on top of image -->
+                <div
+                  class="absolute bottom-0 left-0 right-0 p-4 text-white text-center"
+                >
+                  <span class="inline-block mb-2">
+                    <iconify-icon
+                      :icon="item.icon"
+                      width="48"
+                      class="iconify-colored"
+                    ></iconify-icon>
+                  </span>
+                  <h3 class="text-xl font-bold mb-1" x-text="item.title"></h3>
+                  <p
+                    class="text-sm font-medium leading-relaxed"
+                    x-text="item.desc"
+                  ></p>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+
+        <!-- Desktop Grid: Visible on md+ -->
+        <div
+          class="hidden md:grid grid-cols-3 gap-8 px-[20px] pt-10 pb-20 bg-[#F1FAFF]"
+        >
+          <!-- Description 1 -->
+          <div class="flex flex-col items-center text-center">
+            <span class="inline-block mb-4">
+              <iconify-icon
+                icon="mdi:ferry"
+                class="iconify-colored"
+                width="48"
+              ></iconify-icon>
+            </span>
+            <h3 class="text-xl md:text-xl font-bold text-[#1D265F] mb-2">
+              Seafood Express Exporters
+            </h3>
+            <p class="text-[#334155] text-base md:text-base font-medium">
+              We export high-quality Scampi, Shrimp, Prawns, Squid, Cuttlefish
+              and variety of frozen fish.
+            </p>
+          </div>
+
+          <!-- Description 2 -->
+          <div class="flex flex-col items-center text-center">
+            <span class="inline-block mb-4">
+              <iconify-icon
+                icon="mdi:lifebuoy"
+                class="iconify-colored"
+                width="48"
+              ></iconify-icon>
+            </span>
+            <h3 class="text-xl md:text-xl font-bold text-[#1D265F] mb-2">
+              Seafood Express (Marketing Seafood)
+            </h3>
+            <p class="text-[#334155] text-base md:text-base font-medium">
+              We are specialise in promoting sustainable farming of vannamel
+              shrimp and Giant Freshwater Scampi.
+            </p>
+          </div>
+
+          <!-- Description 3 -->
+          <div class="flex flex-col items-center text-center">
+            <span class="inline-block mb-4">
+              <iconify-icon
+                icon="mdi:fish"
+                class="iconify-colored"
+                width="48"
+              ></iconify-icon>
+            </span>
+            <h3 class="text-xl md:text-xl font-bold text-[#1D265F] mb-2">
+              Seafood Express Consultants
+            </h3>
+            <p class="text-[#334155] text-base md:text-base font-medium">
+              Specialists in shrimp farming, pond infrastructure, disease
+              prevention, and harvesting.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section class="px-6 py-20 md:px-6">
+        <div class="max-w-7xl mx-auto space-y-6">
+          <!-- Row 1: Title and Badge -->
+          <div
+            class="text-center md:text-left lg:flex lg:items-end lg:justify-between"
+          >
+            <div>
+              <div
+                class="inline-flex items-center justify-center md:justify-start space-x-2 text-sm font-medium text-[#031B1D] bg-gray-200 bg-opacity-30 uppercase tracking-wide rounded-full px-3 border border-gray-300 py-2"
+              >
+                <img
+                  src="/assets/home-page/shrimp.png"
+                  alt="Shrimp"
+                  class="w-5 h-5 object-contain"
+                />
+                <span>Premium Selection</span>
+              </div>
+
+              <h2
+                class="mt-5 text-[48px] text-[#1D265F] uppercase leading-none custom-heading"
+              >
+                Explore Our Premium Seafood Range
+              </h2>
+            </div>
+
+            <!-- CTA Button - only shows on lg+ inline here -->
+            <div class="hidden lg:block">
+              <a
+                href="/pages/product.html"
+                class="inline-block px-6 py-3 text-white uppercase font-semibold shadow-md bg-[#007B8F] hover:brightness-90"
+              >
+                Explore More
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: Paragraph Description -->
+          <p
+            class="text-[#334155] text-base md:text-lg font-medium max-w-xl mx-auto md:mx-0 text-center md:text-left"
+          >
+            From Scampi, Black Tiger shrimp to Surimi, each product is
+            handpicked, hygienically packed, and globally trusted.
+          </p>
+
+          <!-- CTA Button - shows only on sm & md below paragraph -->
+          <div class="block lg:hidden text-center md:text-left">
+            <a
+              href="/pages/product.html"
+              class="inline-block px-6 py-3 text-white uppercase font-semibold shadow-md bg-[#007B8F] hover:brightness-90"
+            >
+              Explore More
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto overflow-x-hidden">
+        <!-- Mobile/Tablet: Horizontal scroll -->
+        <div class="overflow-x-auto no-scrollbar lg:hidden px-4">
+          <div class="flex gap-4 snap-x snap-mandatory">
+            <!-- Card 1 -->
+            <div
+              class="relative flex-shrink-0 w-48 sm:w-52 md:w-64 h-80 rounded-md overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 snap-start"
+            >
+              <img
+                src="assets/home-page/product-img1.png"
+                alt="Scampi"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-20 flex items-center max-h-[25%] mt-auto"
+              >
+                <div class="w-full p-4">
+                  <h3 class="text-white text-xl font-semibold text-center">
+                    Scampi
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="relative flex-shrink-0 w-48 sm:w-52 md:w-64 h-80 rounded-md overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 snap-start"
+            >
+              <img
+                src="assets/home-page/our-product-img2.jpeg"
+                alt="Black Tiger Shrimp"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-30 flex items-center max-h-[25%] mt-auto"
+              >
+                <div class="w-full p-4">
+                  <h3 class="text-white text-xl font-semibold text-center">
+                    Black tiger shrimp
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="relative flex-shrink-0 w-48 sm:w-52 md:w-64 h-80 rounded-md overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 snap-start"
+            >
+              <img
+                src="assets/home-page/our-product-img3.png"
+                alt="Vannamei Shrimp"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-30 flex items-center max-h-[25%] mt-auto"
+              >
+                <div class="w-full p-4">
+                  <h3 class="text-white text-xl font-semibold text-center">
+                    Vannamei shrimp
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="relative flex-shrink-0 w-48 sm:w-52 md:w-64 h-80 rounded-md overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 snap-start"
+            >
+              <img
+                src="assets/home-page/our-product-img5.jpg"
+                alt="Tuna"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-30 flex items-center max-h-[25%] mt-auto"
+              >
+                <div class="w-full p-4">
+                  <h3 class="text-white text-xl font-semibold text-center">
+                    Tuna
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:hidden flex justify-center mt-6">
+          <svg
+            width="60"
+            height="20"
+            viewBox="0 0 60 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 10 Q25 0 45 10"
+              stroke="#999"
+              stroke-width="2"
+              fill="none"
+            />
+            <path
+              d="M45 10 L43 5 M45 10 L40 15"
+              stroke="#999"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+
+        <!-- Desktop: Grid 4-column layout -->
+        <div class="hidden lg:grid grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="relative h-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+          >
+            <img
+              src="assets/home-page/product-img1.png"
+              alt="Scampi"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-30 flex items-center max-h-[25%] mt-auto"
+            >
+              <div class="w-full p-4">
+                <h3 class="text-white text-lg font-semibold text-center">
+                  Scampi
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="relative h-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+          >
+            <img
+              src="assets/home-page/our-product-img2.jpeg"
+              alt="Black Tiger Shrimp"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-30 flex items-center max-h-[25%] mt-auto"
+            >
+              <div class="w-full p-4">
+                <h3 class="text-white text-lg font-semibold text-center">
+                  Black tiger shrimp
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="relative h-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+          >
+            <img
+              src="assets/home-page/our-product-img3.png"
+              alt="Vannamei Shrimp"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-30 flex items-center max-h-[25%] mt-auto"
+            >
+              <div class="w-full p-4">
+                <h3 class="text-white text-lg font-semibold text-center">
+                  Vannamei shrimp
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="relative h-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+          >
+            <img
+              src="assets/home-page/our-product-img5.jpg"
+              alt="Tuna"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-30 flex items-center max-h-[25%] mt-auto"
+            >
+              <div class="w-full p-4">
+                <h3 class="text-white text-lg font-semibold text-center">
+                  Tuna
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="px-6 py-20 md:px-6">
+        <div class="max-w-7xl mx-auto space-y-6">
+          <!-- Row 1: Title and Badge -->
+          <div
+            class="text-center md:text-left lg:flex lg:items-end lg:justify-between"
+          >
+            <div>
+              <div
+                class="inline-flex items-center justify-center md:justify-start space-x-2 text-sm font-medium text-[#031B1D] bg-gray-200 bg-opacity-30 uppercase tracking-wide rounded-full px-3 border border-gray-300 py-2"
+              >
+                <img
+                  src="/assets/home-page/shrimp.png"
+                  alt="Shrimp"
+                  class="w-5 h-5 object-contain"
+                />
+                <span>Passion. Purpose. Progress.</span>
+              </div>
+
+              <h2
+                class="mt-5 text-[48px] text-[#1D265F] uppercase leading-none custom-heading"
+              >
+                Our Story, Your Seafood
+              </h2>
+            </div>
+
+            <!-- CTA Button - only shows on lg+ inline here -->
+            <div class="hidden lg:block">
+              <a
+                href="/pages/about.html"
+                class="inline-block px-6 py-3 text-white uppercase font-semibold shadow-md bg-[#007B8F] hover:brightness-90"
+              >
+                Read More
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2: Paragraph Description -->
+          <p
+            class="text-[#334155] text-base md:text-lg font-medium max-w-2xl mx-auto md:mx-0 text-center md:text-left"
+          >
+            Built on relationships with fishermen, farmers, and global buyers,
+            our story is a journey of quality, sustainability, and dedication to
+            the ocean's offerings.
+          </p>
+
+          <!-- CTA Button - shows only on sm & md below paragraph -->
+          <div class="block lg:hidden text-center md:text-left">
+            <a
+              href="/pages/about.html"
+              class="inline-block px-6 py-3 text-white uppercase font-semibold shadow-md bg-[#007B8F] hover:brightness-90"
+            >
+              Read More
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="w-full pb-20">
+        <div
+          class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-[120px_1.5fr_1fr_1fr] w-full rounded-t-xl gap-0"
+        >
+          <!-- First Box: Vertical text rotated on lg, horizontal on smaller -->
+          <div
+            class="bg-[#14B8A6] text-white flex items-center justify-center rounded-t-lg lg:rounded-l-lg lg:rounded-tr-none min-h-[100px] lg:min-h-[500px] px-6 py-4 lg:px-0 lg:py-0"
+          >
+            <p
+              class="text-lg font-light tracking-wide text-center lg:transform lg:-rotate-90 lg:whitespace-nowrap"
+            >
+              DIVE INTO OUR STORY SECTION
+            </p>
+          </div>
+
+          <!-- Second Box: Text Content -->
+          <div
+            class="bg-[#F1FAFF] p-6 flex flex-col justify-center gap-5 min-h-[200px] lg:min-h-[350px]"
+          >
+            <div class="flex items-start gap-3">
+              <span
+                class="w-2.5 h-2.5 mt-1.5 rounded-full bg-[#14B8A6] flex-shrink-0"
+              ></span>
+              <p>
+                2016 – Founded in India with a mission to deliver world-class
+                frozen seafood to global markets.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="w-2.5 h-2.5 mt-1.5 rounded-full bg-[#14B8A6] flex-shrink-0"
+              ></span>
+              <p>
+                7+ Coastal States – Sourcing directly from fishing ports across
+                Maharashtra, Gujarat, Kerala, and beyond.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="w-2.5 h-2.5 mt-1.5 rounded-full bg-[#14B8A6] flex-shrink-0"
+              ></span>
+              <p>
+                Certified Excellence – Partnered with HACCP, MPEDA, and
+                EIC-approved facilities for top-tier quality.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="w-2.5 h-2.5 mt-1.5 rounded-full bg-[#14B8A6] flex-shrink-0"
+              ></span>
+              <p>
+                Cold Chain Innovation – Centralized logistics and packaging
+                systems to preserve freshness end-to-end.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span
+                class="w-2.5 h-2.5 mt-1.5 rounded-full bg-[#14B8A6] flex-shrink-0"
+              ></span>
+              <p>
+                Global Reach – Trusted by importers and seafood distributors
+                across Asia, Europe, and the Middle East.
+              </p>
+            </div>
+          </div>
+
+          <!-- Images Container -->
+          <div
+            class="flex gap-2 min-h-[300px] lg:min-h-[500px] col-span-1 lg:col-span-2 flex-wrap sm:flex-nowrap rounded-b-lg lg:rounded-b-none lg:rounded-r-lg bg-none"
+          >
+            <div
+              class="relative overflow-hidden flex-1 rounded-l-lg min-w-[70%] max-h-[500px]"
+            >
+              <img
+                src="assets/home-page/category3.jpeg"
+                alt="Image 1"
+                class="w-full h-full object-cover max-h-[500px]"
+              />
+              <div class="absolute inset-0 bg-black/10"></div>
+            </div>
+
+            <div
+              class="relative overflow-hidden flex-1 rounded-r-lg min-w-[20%] max-h-[500px]"
+            >
+              <img
+                src="assets/home-page/category4.jpg"
+                alt="Image 2"
+                class="w-full h-full object-cover max-h-[500px]"
+              />
+              <div class="absolute inset-0 bg-black/10"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="px-6 pb-20 md:px-6">
+        <div class="mb-12 max-w-7xl mx-auto text-center">
+          <div
+            class="inline-flex items-center justify-center space-x-2 text-sm font-medium text-[#031B1D] bg-gray-200 bg-opacity-30 uppercase tracking-wide rounded-full px-3 border border-gray-300 py-2"
+          >
+            <img
+              src="/assets/home-page/shrimp.png"
+              alt="Shrimp"
+              class="w-5 h-5 object-contain"
+            />
+            <span>Globally Certified</span>
+          </div>
+          <h2
+            class="mt-5 text-[48px] text-[#1D265F] uppercase leading-none custom-heading"
+          >
+            Approved to Export. Certified to Impress
+          </h2>
+        </div>
+
+        <div
+          class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16"
+        >
+          <!-- Card 1 -->
+          <div
+            class="flex flex-col items-center h-[220px] max-w-sm w-full mx-auto"
+          >
+            <div
+              class="bg-[#F1FAFF] rounded-t-2xl pt-6 pb-4 text-center w-full"
+            >
+              <h3 class="text-lg font-bold text-[#1D265F] opacity-80 pb-5">
+                MPEDA India
+              </h3>
+            </div>
+            <div
+              class="-mt-4 bg-white rounded-2xl border border-gray-200 px-4 py-6 text-center shadow-sm flex-1 flex items-center justify-center w-full"
+            >
+              <p class="text-gray-600 leading-relaxed text-sm">
+                (Marine Products Export<br />Development Authority)<br />Certificate
+                Of Exporter
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="flex flex-col items-center h-[220px] max-w-sm w-full mx-auto"
+          >
+            <div
+              class="bg-[#F1FAFF] rounded-t-2xl pt-6 pb-4 text-center w-full"
+            >
+              <h3 class="text-lg font-bold text-[#1D265F] opacity-80 pb-5">
+                EIC
+              </h3>
+            </div>
+            <div
+              class="-mt-4 bg-white rounded-2xl border border-gray-200 px-4 py-6 text-center shadow-sm flex-1 flex items-center justify-center w-full"
+            >
+              <p class="text-gray-600 leading-relaxed text-sm">
+                (Export Development Council)<br />Certified
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="flex flex-col items-center h-[220px] max-w-sm w-full mx-auto sm:col-span-2 sm:justify-self-center lg:col-span-1 lg:justify-self-auto"
+          >
+            <div
+              class="bg-[#F1FAFF] rounded-t-2xl pt-6 pb-4 text-center w-full"
+            >
+              <h3 class="text-lg font-bold text-[#1D265F] opacity-80 pb-5">
+                HACCP
+              </h3>
+            </div>
+            <div
+              class="-mt-4 bg-white rounded-2xl border border-gray-200 px-4 py-6 text-center shadow-sm flex-1 flex items-center justify-center w-full"
+            >
+              <p class="text-gray-600 leading-relaxed text-sm">
+                HACCP-Certified<br />Processing Unit
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer placeholder -->
+    <div x-ref="footer"></div>
+
+    <script src="/data/chatbase.js"></script>
+
+    <script>
+      function initImageSlider() {
+        return {
+          current: 0,
+          items: [
+            {
+              img: "assets/home-page/our-business-1.png",
+              title: "Seafood Express Exporters",
+              desc: "We export high-quality Scampi, Shrimp, Prawns, Squid, Cuttlefish and variety of frozen fish.",
+              icon: "mdi:ferry",
+            },
+            {
+              img: "assets/home-page/our-business-2.png",
+              title: "Seafood Express (Marketing Seafood)",
+              desc: "We are specialise in promoting sustainable farming of vannamel shrimp and Giant Freshwater Scampi.",
+              icon: "mdi:lifebuoy",
+            },
+            {
+              img: "assets/home-page/our-business-3.jpg",
+              title: "Seafood Express Consultants",
+              desc: "Specialists in shrimp farming, pond infrastructure, disease prevention, and harvesting.",
+              icon: "mdi:fish",
+            },
+          ],
+          startRotation() {
+            setInterval(() => {
+              this.current = (this.current + 1) % this.items.length;
+            }, 3000);
+          },
+        };
+      }
+
+      function initPageLayout() {
+        return {
+          async loadTemplates() {
+            const headerRes = await fetch("templates/header.html");
+            const headerHtml = await headerRes.text();
+            this.$refs.header.innerHTML = headerHtml;
+            Alpine.initTree(this.$refs.header);
+
+            const footerRes = await fetch("templates/footer.html");
+            const footerHtml = await footerRes.text();
+            this.$refs.footer.innerHTML = footerHtml;
+            Alpine.initTree(this.$refs.footer);
+          },
+        };
+      }
+    </script>
+    <script src="/index.js"></script>
+  </body>
+</html>
