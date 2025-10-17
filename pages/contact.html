@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - Marinexe</title>
+    <meta
+      name="description"
+      content="Get in touch with Marinexe for inquiries, partnerships, or custom seafood orders. We're here to help."
+    />
+    <meta
+      name="keywords"
+      content="Marinexe contact, seafood inquiry, contact us, get in touch, export seafood contact"
+    />
+    <meta name="author" content="Marinexe" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact - Marinexe" />
+    <meta
+      property="og:description"
+      content="Reach out to Marinexe for inquiries, support, or custom seafood orders."
+    />
+    <meta
+      property="og:image"
+      content="https://yourdomain.com/assets/contact-og.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://yourdomain.com/pages/contact.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="https://marinexe.blogspot.com/favicon.ico" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-P7WGPTWND1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-P7WGPTWND1");
+    </script>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles & Scripts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/custom.css" />
+  </head>
+  <body
+    x-data="initPageLayout()"
+    x-init="loadTemplates()"
+    class="min-h-screen flex flex-col bg-white"
+  >
+    <!-- Header placeholder -->
+    <div x-ref="header"></div>
+
+    <main class="flex-grow">
+      <!-- Hero Section with Background Image -->
+      <div class="relative h-[70vh] w-full overflow-hidden">
+        <img
+          src="/assets/contact-page/header-img.jpg"
+          alt="About Image"
+          class="absolute top-0 left-0 w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+
+        <!-- Optional overlay content -->
+        <div class="relative z-10 h-full flex items-center justify-center">
+          <div
+            class="max-w-7xl mx-auto absolute bottom-0 left-4 right-4 sm:left-6 sm:right-6 md:left-8 md:right-8 lg:left-16 lg:right-16 xl:left-24 xl:right-24 2xl:left-[100px] 2xl:right-[100px] flex flex-col items-center sm:items-start justify-end text-center sm:text-left z-10 pb-8 md:pb-12 lg:pb-12"
+          >
+            <div class="max-w-full space-y-6 md:space-y-7">
+              <h1
+                class="text-white text-3xl md:text-[50px] font-medium drop-shadow-lg uppercase custom-heading tracking-wider leading-none"
+              >
+                GET IN TOUCH WITH US
+              </h1>
+
+              <p
+                class="text-white text-lg md:text-lg font-medium drop-shadow leading-relaxed max-w-xl"
+              >
+                We’re Here To Answer Your Questions On Seafood Exports,
+                Partnerships, And Logistics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- contact page Section 1 -->
+      <section class="py-20 px-6" x-data="{ activeTab: 'inquiry' }">
+        <div
+          class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-start"
+        >
+          <!-- Left Side -->
+          <div
+            class="w-full lg:w-1/2 text-left flex flex-col gap-10 max-w-2xl mx-auto"
+          >
+            <!-- Heading + Paragraph -->
+            <div>
+              <h2
+                class="text-[48px] text-[#1D265F] uppercase leading-none custom-heading"
+              >
+                Get in quick touch with us
+              </h2>
+              <p
+                class="mt-6 text-[#334155] text-base md:text-lg leading-relaxed font-medium"
+              >
+                Connect with us for quick support on seafood orders,<br />
+                logistics, and global trade inquiries.
+              </p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="flex gap-6 pb-1 w-fit">
+              <!-- Inquiry Tab -->
+              <button
+                @click="activeTab = 'inquiry'"
+                class="relative pb-2 text-lg font-semibold"
+                :class="activeTab === 'inquiry' ? 'text-[#1D265F] font-semibold' : 'text-[#1D265F]'"
+              >
+                Inquiry Form
+                <span
+                  class="absolute left-0 -bottom-1 w-full h-0.5 bg-[#14B8A6] transition-all duration-400"
+                  x-show="activeTab === 'inquiry'"
+                ></span>
+              </button>
+
+              <!-- Feedback Tab -->
+              <button
+                @click="activeTab = 'feedback'"
+                class="relative pb-2 text-lg font-semibold"
+                :class="activeTab === 'feedback' ? 'text-[#1D265F] font-semibold' : 'text-[#1D265F]'"
+              >
+                Feedback Form
+                <span
+                  class="absolute left-0 -bottom-1 w-full h-0.5 bg-[#14B8A6] transition-all duration-400"
+                  x-show="activeTab === 'feedback'"
+                ></span>
+              </button>
+            </div>
+
+            <!-- Form Area -->
+            <div
+              x-data="{ showToast: false, showFeedbackToast: false }"
+              class="mt-6 relative"
+            >
+              <div
+                x-show="showToast"
+                x-transition:enter="transition ease-out duration-500"
+                x-transition:enter-start="opacity-0 -translate-y-4"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-500"
+                x-transition:leave-start="opacity-100 translate-y-0"
+                x-transition:leave-end="opacity-0 -translate-y-4"
+                class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-blue-800 text-white px-4 py-2 rounded shadow-lg z-50"
+                x-cloak
+              >
+                Message sent successfully!
+              </div>
+              <!-- Inquiry Form -->
+              <form
+                x-show="activeTab === 'inquiry'"
+                @submit.prevent="
+                  showToast = true;
+                  setTimeout(() => showToast = false, 3000);
+                  event.target.reset();"
+                class="space-y-6 text-left"
+              >
+                <div class="flex flex-col md:flex-row md:space-x-6">
+                  <div class="flex-1">
+                    <label
+                      for="inq-fullName"
+                      class="block text-[#334155] text-base font-medium mb-2"
+                      >Full Name</label
+                    >
+                    <input
+                      type="text"
+                      id="inq-fullName"
+                      name="inq-fullName"
+                      required
+                      class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"
+                    />
+                  </div>
+                  <div class="flex-1 mt-6 md:mt-0">
+                    <label
+                      for="inq-email"
+                      class="block text-[#334155] text-base font-medium mb-2"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="inq-email"
+                      name="inq-email"
+                      required
+                      class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="inq-phone"
+                    class="block text-[#334155] text-base font-medium mb-2"
+                    >Phone Number</label
+                  >
+                  <input
+                    type="tel"
+                    id="inq-phone"
+                    name="inq-phone"
+                    required
+                    class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="inq-message"
+                    class="block text-[#334155] text-base font-medium mb-2"
+                    >Write Message</label
+                  >
+                  <textarea
+                    id="inq-message"
+                    name="inq-message"
+                    rows="4"
+                    required
+                    class="w-full bg-[#F1FAFF] p-6 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400 resize-none"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="text-white px-6 py-3 bg-[#007B8F] hover:brightness-90"
+                >
+                  SEND MESSAGE
+                </button>
+              </form>
+
+              <div
+                x-show="showFeedbackToast"
+                x-transition:enter="transition ease-out duration-500"
+                x-transition:enter-start="opacity-0 -translate-y-4"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-500"
+                x-transition:leave-start="opacity-100 translate-y-0"
+                x-transition:leave-end="opacity-0 -translate-y-4"
+                class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-blue-800 text-white px-4 py-2 rounded shadow-lg z-50"
+                x-cloak
+              >
+                Feedback sent successfully!
+              </div>
+              <!-- Feedback Form -->
+              <form
+                x-show="activeTab === 'feedback'"
+                x-cloak
+                @submit.prevent="
+                  showFeedbackToast = true;
+                  setTimeout(() => showFeedbackToast = false, 3000);
+                  event.target.reset();"
+                class="space-y-6 text-left"
+              >
+                <div class="flex flex-col md:flex-row md:space-x-6">
+                  <div class="flex-1">
+                    <label
+                      for="fb-fullName"
+                      class="block text-[#334155] text-base font-medium mb-2"
+                      >Full Name</label
+                    >
+                    <input
+                      type="text"
+                      id="fb-fullName"
+                      name="fb-fullName"
+                      required
+                      class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"
+                    />
+                  </div>
+                  <div class="flex-1 mt-6 md:mt-0">
+                    <label
+                      for="fb-email"
+                      class="block text-[#334155] text-base font-medium mb-2"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="fb-email"
+                      name="fb-email"
+                      required
+                      class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="fb-message"
+                    class="block text-[#334155] text-base font-medium mb-2"
+                    >Your Feedback</label
+                  >
+                  <textarea
+                    id="fb-message"
+                    name="fb-message"
+                    rows="4"
+                    required
+                    class="w-full bg-[#F1FAFF] p-6 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400 resize-none"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="text-white px-6 py-3 bg-[#007B8F] hover:brightness-90"
+                >
+                  SEND FEEDBACK
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Right Side: Map or Placeholder -->
+          <div
+            class="w-full max-w-2xl mx-auto lg:max-w-none lg:w-1/2 lg:mx-0 shadow-md rounded-xl overflow-hidden lg:mb-20 mb-0"
+          >
+            <iframe
+              title="Location map of Pawne Village, Off, Thane - Belapur Rd"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.398403010754!2d73.0231088!3d19.090170399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c11bd522203b%3A0xca6ed95243b24e5c!2sHMG%20Industries%20Limited!5e0!3m2!1sen!2sin!4v1759721421299!5m2!1sen!2sin"
+              class="w-full h-[500px] border-0"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              aria-label="Map showing location of Pawne Village, Off, Thane - Belapur Rd"
+              sandbox="allow-scripts allow-same-origin allow-popups"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact page Section 2 -->
+      <section class="px-6 pb-20" x-data="{ showChat: false }">
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center border border-gray-300 rounded-xl"
+          >
+            <!-- Live Chatbot (STATIC) -->
+            <div
+              class="p-5 md:p-10 flex flex-col items-center lg:items-start text-center lg:text-left"
+            >
+              <div
+                class="bg-[#F1FAFF] p-4 mb-4 flex items-center justify-center"
+              >
+                <iconify-icon
+                  icon="hugeicons:chatting-01"
+                  width="36"
+                  height="36"
+                  class="text-[#14B8A6]"
+                ></iconify-icon>
+              </div>
+              <h4 class="text-[#1D265F] font-bold text-base mb-1">
+                Live Chatbot
+              </h4>
+              <p class="text-[#334155] text-sm">Talk to get advice</p>
+              <p class="text-[#1D265F] font-bold text-base">
+                Contact With Chatbot
+              </p>
+            </div>
+
+            <!-- Contact Us -->
+            <div
+              class="p-5 md:p-10 flex flex-col items-center lg:items-start text-center lg:text-left"
+            >
+              <a
+                href="/pages/contact.html"
+                class="bg-[#F1FAFF] p-4 mb-4 flex items-center justify-center cursor-pointer"
+              >
+                <iconify-icon
+                  icon="solar:phone-bold"
+                  width="36"
+                  height="36"
+                  class="text-[#14B8A6]"
+                ></iconify-icon>
+              </a>
+              <h4 class="text-[#1D265F] font-bold text-base mb-1">
+                Contact Us
+              </h4>
+              <a
+                href="tel:+919324566111"
+                class="text-[#334155] text-sm hover:underline cursor-pointer"
+              >
+                +91 9324566111
+              </a>
+              <a
+                href="mailto:sales@seafoodexpress.in"
+                class="text-[#334155] text-sm hover:underline cursor-pointer"
+              >
+                sales@seafoodexpress.in
+              </a>
+            </div>
+
+            <!-- Address -->
+            <div
+              class="p-5 md:p-10 flex flex-col items-center lg:items-start text-center lg:text-left"
+            >
+              <div
+                class="bg-[#F1FAFF] p-4 mb-4 flex items-center justify-center"
+              >
+                <iconify-icon
+                  icon="mdi:map-marker"
+                  width="36"
+                  height="36"
+                  class="text-[#14B8A6]"
+                ></iconify-icon>
+              </div>
+              <h4 class="text-[#1D265F] font-bold text-base mb-1">Address</h4>
+              <p class="text-[#334155] text-sm leading-relaxed">
+                Survey No 104,<br />
+                Near Sahara Colony,<br />
+                Wadiya Farha, Gala No 2,<br />
+                Mahape Road, Shilphata,<br />
+                Mumbra, Thane-400612
+              </p>
+            </div>
+
+            <!-- WhatsApp -->
+            <div
+              class="p-5 md:p-10 flex flex-col items-center lg:items-start text-center lg:text-left"
+            >
+              <a
+                href="https://wa.me/1234567890"
+                target="_blank"
+                class="bg-[#F1FAFF] p-4 mb-4 flex items-center justify-center cursor-pointer"
+              >
+                <iconify-icon
+                  icon="mdi:whatsapp"
+                  width="36"
+                  height="36"
+                  class="text-[#14B8A6]"
+                ></iconify-icon>
+              </a>
+              <h4 class="text-[#1D265F] font-bold text-base mb-1">
+                Whatsapp Us
+              </h4>
+              <a
+                href="https://wa.me/1234567890"
+                target="_blank"
+                class="text-[#334155] text-sm font-bold underline cursor-pointer"
+              >
+                +91 9324566111
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer placeholder -->
+    <div x-ref="footer"></div>
+
+    <script src="/data/chatbase.js"></script>
+
+    <script>
+      function initPageLayout() {
+        return {
+          async loadTemplates() {
+            const headerRes = await fetch("/templates/header.html");
+            const headerHtml = await headerRes.text();
+            this.$refs.header.innerHTML = headerHtml;
+            Alpine.initTree(this.$refs.header);
+
+            const footerRes = await fetch("/templates/footer.html");
+            const footerHtml = await footerRes.text();
+            this.$refs.footer.innerHTML = footerHtml;
+            Alpine.initTree(this.$refs.footer);
+          },
+        };
+      }
+    </script>
+    <script src="/index.js"></script>
+  </body>
+</html>
