@@ -3,5 +3,5 @@ type = "javascript"
 compatibility_date = "2025-07-01"
 
 [assets]
-directory = "./deploy"
+directory = "deploy"
 exclude = [".git", ".github", "node_modules", ".vscode", "*.log", "README.md"]
