@@ -173,172 +173,77 @@
               x-data="{ showToast: false, showFeedbackToast: false }"
               class="mt-6 relative"
             >
-              <div
-                x-show="showToast"
-                x-transition:enter="transition ease-out duration-500"
-                x-transition:enter-start="opacity-0 -translate-y-4"
-                x-transition:enter-end="opacity-100 translate-y-0"
-                x-transition:leave="transition ease-in duration-500"
-                x-transition:leave-start="opacity-100 translate-y-0"
-                x-transition:leave-end="opacity-0 -translate-y-4"
-                class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-blue-800 text-white px-4 py-2 rounded shadow-lg z-50"
-                x-cloak
-              >
-                Message sent successfully!
-              </div>
               <!-- Inquiry Form -->
               <form
                 x-show="activeTab === 'inquiry'"
+                x-data
                 @submit.prevent="
-                  showToast = true;
-                  setTimeout(() => showToast = false, 3000);
-                  event.target.reset();"
+                  const name = $refs.inqName.value;
+                  const email = $refs.inqEmail.value;
+                  const phone = $refs.inqPhone.value;
+                  const message = $refs.inqMessage.value;
+                  const mailtoLink = `mailto:sales@seafoodexpress.in?subject=Inquiry from ${encodeURIComponent(
+                    name
+                  )}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`)}`;
+                  window.location.href = mailtoLink;
+                "
                 class="space-y-6 text-left"
               >
                 <div class="flex flex-col md:flex-row md:space-x-6">
                   <div class="flex-1">
-                    <label
-                      for="inq-fullName"
-                      class="block text-[#334155] text-base font-medium mb-2"
-                      >Full Name</label
-                    >
-                    <input
-                      type="text"
-                      id="inq-fullName"
-                      name="inq-fullName"
-                      required
-                      class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"
-                    />
+                    <label for="inq-fullName" class="block text-[#334155] text-base font-medium mb-2">Full Name</label>
+                    <input type="text" id="inq-fullName" x-ref="inqName" required class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"/>
                   </div>
                   <div class="flex-1 mt-6 md:mt-0">
-                    <label
-                      for="inq-email"
-                      class="block text-[#334155] text-base font-medium mb-2"
-                      >Email</label
-                    >
-                    <input
-                      type="email"
-                      id="inq-email"
-                      name="inq-email"
-                      required
-                      class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"
-                    />
+                    <label for="inq-email" class="block text-[#334155] text-base font-medium mb-2">Email</label>
+                    <input type="email" id="inq-email" x-ref="inqEmail" required class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"/>
                   </div>
                 </div>
 
                 <div>
-                  <label
-                    for="inq-phone"
-                    class="block text-[#334155] text-base font-medium mb-2"
-                    >Phone Number</label
-                  >
-                  <input
-                    type="tel"
-                    id="inq-phone"
-                    name="inq-phone"
-                    required
-                    class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"
-                  />
+                  <label for="inq-phone" class="block text-[#334155] text-base font-medium mb-2">Phone Number</label>
+                  <input type="tel" id="inq-phone" x-ref="inqPhone" required class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"/>
                 </div>
 
                 <div>
-                  <label
-                    for="inq-message"
-                    class="block text-[#334155] text-base font-medium mb-2"
-                    >Write Message</label
-                  >
-                  <textarea
-                    id="inq-message"
-                    name="inq-message"
-                    rows="4"
-                    required
-                    class="w-full bg-[#F1FAFF] p-6 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400 resize-none"
-                  ></textarea>
+                  <label for="inq-message" class="block text-[#334155] text-base font-medium mb-2">Write Message</label>
+                  <textarea id="inq-message" x-ref="inqMessage" rows="4" required class="w-full bg-[#F1FAFF] p-6 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400 resize-none"></textarea>
                 </div>
 
-                <button
-                  type="submit"
-                  class="text-white px-6 py-3 bg-[#007B8F] hover:brightness-90"
-                >
-                  SEND MESSAGE
-                </button>
+                <button type="submit" class="text-white px-6 py-3 bg-[#007B8F] hover:brightness-90">SEND MESSAGE</button>
               </form>
-
-              <div
-                x-show="showFeedbackToast"
-                x-transition:enter="transition ease-out duration-500"
-                x-transition:enter-start="opacity-0 -translate-y-4"
-                x-transition:enter-end="opacity-100 translate-y-0"
-                x-transition:leave="transition ease-in duration-500"
-                x-transition:leave-start="opacity-100 translate-y-0"
-                x-transition:leave-end="opacity-0 -translate-y-4"
-                class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-blue-800 text-white px-4 py-2 rounded shadow-lg z-50"
-                x-cloak
-              >
-                Feedback sent successfully!
-              </div>
               <!-- Feedback Form -->
               <form
                 x-show="activeTab === 'feedback'"
-                x-cloak
+                x-data
                 @submit.prevent="
-                  showFeedbackToast = true;
-                  setTimeout(() => showFeedbackToast = false, 3000);
-                  event.target.reset();"
+                  const name = $refs.fbName.value;
+                  const email = $refs.fbEmail.value;
+                  const message = $refs.fbMessage.value;
+                  const mailtoLink = `mailto:sales@seafoodexpress.in?subject=Feedback from ${encodeURIComponent(
+                    name
+                  )}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nFeedback:\n${message}`)}`;
+                  window.location.href = mailtoLink;
+                "
                 class="space-y-6 text-left"
               >
                 <div class="flex flex-col md:flex-row md:space-x-6">
                   <div class="flex-1">
-                    <label
-                      for="fb-fullName"
-                      class="block text-[#334155] text-base font-medium mb-2"
-                      >Full Name</label
-                    >
-                    <input
-                      type="text"
-                      id="fb-fullName"
-                      name="fb-fullName"
-                      required
-                      class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"
-                    />
+                    <label for="fb-fullName" class="block text-[#334155] text-base font-medium mb-2">Full Name</label>
+                    <input type="text" id="fb-fullName" x-ref="fbName" required class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"/>
                   </div>
                   <div class="flex-1 mt-6 md:mt-0">
-                    <label
-                      for="fb-email"
-                      class="block text-[#334155] text-base font-medium mb-2"
-                      >Email</label
-                    >
-                    <input
-                      type="email"
-                      id="fb-email"
-                      name="fb-email"
-                      required
-                      class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"
-                    />
+                    <label for="fb-email" class="block text-[#334155] text-base font-medium mb-2">Email</label>
+                    <input type="email" id="fb-email" x-ref="fbEmail" required class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"/>
                   </div>
                 </div>
 
                 <div>
-                  <label
-                    for="fb-message"
-                    class="block text-[#334155] text-base font-medium mb-2"
-                    >Your Feedback</label
-                  >
-                  <textarea
-                    id="fb-message"
-                    name="fb-message"
-                    rows="4"
-                    required
-                    class="w-full bg-[#F1FAFF] p-6 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400 resize-none"
-                  ></textarea>
+                  <label for="fb-message" class="block text-[#334155] text-base font-medium mb-2">Your Feedback</label>
+                  <textarea id="fb-message" x-ref="fbMessage" rows="4" required class="w-full bg-[#F1FAFF] p-6 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400 resize-none"></textarea>
                 </div>
 
-                <button
-                  type="submit"
-                  class="text-white px-6 py-3 bg-[#007B8F] hover:brightness-90"
-                >
-                  SEND FEEDBACK
-                </button>
+                <button type="submit" class="text-white px-6 py-3 bg-[#007B8F] hover:brightness-90">SEND FEEDBACK</button>
               </form>
             </div>
           </div>

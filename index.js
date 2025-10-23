@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
       if (currentPath === linkPath || currentPath.startsWith(linkPath)) {
-        link.classList.add("text-[#007B8F]", "font-semibold");
-        link.classList.remove("text-white");
+        link.classList.remove("text-white", "text-[#007B8F]", "font-semibold");
+        link.classList.add("underline");
       }
     });
   }

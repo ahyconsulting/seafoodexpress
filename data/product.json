@@ -3,12 +3,11 @@
     "id": 1,
     "name": "Scampi",
     "categories": [],
-    "image": "/assets/product-page/product-img1.png",
+    "image": "/assets/product-page/product-img1.1.jpg",
     "images": [
-      "/assets/product-page/product-img1.png",
       "/assets/product-page/product-img1.1.jpg",
-      "/assets/product-page/product-img1.2.jpg",
-      "/assets/product-page/product-img1.3.jpg"
+      "/assets/product-page/product-img1.3.jpg",
+      "/assets/product-page/product-img1.2.jpg"
   ],
     "description": "Freshwater scampi with delicate flavor, sourced from trusted farms.",
     "modalTitle": "SCAMPI / FRESHWATER SHRIMP",
@@ -25,9 +24,9 @@
     "id": 2,
     "name": "Black Tiger Shrimp",
     "categories": [],
-    "image": "/assets/product-page/product-img2.jpeg",
+    "image": "/assets/product-page/product-img2.jpg",
     "images": [
-      "/assets/product-page/product-img2.jpeg",
+      "/assets/product-page/product-img2.jpg",
       "/assets/product-page/product-img2.1.jpg",
       "/assets/product-page/product-img2.2.jpg",
       "/assets/product-page/product-img2.3.jpg"
@@ -45,11 +44,11 @@
     "id": 3,
     "name": "Vannamei Shrimp",
     "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img3.png",
+    "image": "/assets/product-page/product-img3.2.webp",
     "images": [
-      "/assets/product-page/product-img3.png",
-      "/assets/product-page/product-img3.1.jpg",
       "/assets/product-page/product-img3.2.webp",
+      "/assets/product-page/product-img3.1.jpg",
+      "/assets/product-page/product-img3.png",
       "/assets/product-page/product-img3.3.webp"
   ],
     "description": "Farmed white shrimp — processed and exported globally.",
@@ -65,11 +64,11 @@
     "id": 4,
     "name": "Tuna",
     "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img4.png",
+    "image": "/assets/product-page/product-img4.2.jpg",
     "images": [
-      "/assets/product-page/product-img4.png",
-      "/assets/product-page/product-img4.1.jpg",
       "/assets/product-page/product-img4.2.jpg",
+      "/assets/product-page/product-img4.1.jpg",
+      "/assets/product-page/product-img4.png",
       "/assets/product-page/product-img4.3.webp"
     ],
     "description": "Cleaned and processed tuna, export-ready.",
@@ -84,11 +83,11 @@
     "id": 5,
     "name": "Cuttle Fish",
     "categories": [],
-    "image": "/assets/product-page/product-img5.jpg",
+    "image": "/assets/product-page/product-img5.2.jpg",
     "images": [
-      "/assets/product-page/product-img5.jpg",
-      "/assets/product-page/product-img5.1.jpg",
       "/assets/product-page/product-img5.2.jpg",
+      "/assets/product-page/product-img5.1.jpg",
+      "/assets/product-page/product-img5.jpg",
       "/assets/product-page/product-img5.3.jpg"
   ],
     "description": "Export-grade, cleaned and frozen for global delivery.",
@@ -106,11 +105,11 @@
     "id": 6,
     "name": "Semi Needle Loligo Squid",
     "categories": [],
-    "image": "/assets/product-page/product-img6.jpg",
+    "image": "/assets/product-page/product-img6.2.jpg",
     "images": [
-      "/assets/product-page/product-img6.jpg",
+      "/assets/product-page/product-img6.2.jpg",
       "/assets/product-page/product-img6.1.jpg",
-      "/assets/product-page/product-img6.2.png",
+      "/assets/product-page/product-img6.jpg",
       "/assets/product-page/product-img6.3.jpg"
   ],
     "description": "Premium semi-needle squid, frozen and export ready.",
@@ -139,10 +138,10 @@
     "id": 7,
     "name": "Loligo Squid",
     "categories": [],
-    "image": "/assets/product-page/product-img7.jpg",
+    "image": "/assets/product-page/product-img7.png",
     "images": [
-      "/assets/product-page/product-img7.jpg",
       "/assets/product-page/product-img7.png",
+      "/assets/product-page/product-img7.jpg",
       "/assets/product-page/product-img7.1.jpg",
       "/assets/product-page/product-img7.2.jpg"
   ],
@@ -158,11 +157,11 @@
     "id": 8,
     "name": "Ribbon Fish",
     "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img8.jpg",
+    "image": "/assets/product-page/product-img8.2.jpg",
     "images": [
-      "/assets/product-page/product-img8.jpg",
-      "/assets/product-page/product-img8.1.png",
       "/assets/product-page/product-img8.2.jpg",
+      "/assets/product-page/product-img8.1.png",
+      "/assets/product-page/product-img8.jpg",
       "/assets/product-page/product-img8.3.jpg"
   ],
     "description": "Wild-caught, frozen ribbon fish for export demand.",
@@ -200,9 +199,9 @@
     "id": 10,
     "name": "Queen Fish (Frozen)",
     "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img10.webp",
+    "image": "/assets/product-page/product-img10.jpg",
     "images": [
-      "/assets/product-page/product-img10.webp",
+      "/assets/product-page/product-img10.jpg",
       "/assets/product-page/product-img10.1.png",
       "/assets/product-page/product-img10.2.webp",
       "/assets/product-page/product-img10.3.webp"
@@ -213,12 +212,12 @@
     "id": 11,
     "name": "Yellow Croaker (Frozen)",
     "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img11.jpg",
+    "image": "/assets/product-page/product-img11.3.jpg",
     "images": [
-      "/assets/product-page/product-img11.jpg",
+      "/assets/product-page/product-img11.3.jpg",
       "/assets/product-page/product-img11.1.png",
       "/assets/product-page/product-img11.2.webp",
-      "/assets/product-page/product-img11.3.webp"
+      "/assets/product-page/product-img11.jpg"
   ],
     "description": "High-demand yellow croaker, frozen for global trade.",
     "modalTitle": "Fish",
@@ -275,10 +274,10 @@
     "id": 14,
     "name": "Yellowfin Tuna",
     "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img14.jpeg",
+    "image": "/assets/product-page/product-img14.1.jpg",
     "images": [
-      "/assets/product-page/product-img14.jpeg",
       "/assets/product-page/product-img14.1.jpg",
+      "/assets/product-page/product-img14.jpeg",
       "/assets/product-page/product-img14.2.jpg",
       "/assets/product-page/product-img14.3.jpg"
   ],
@@ -294,9 +293,9 @@
     "id": 15,
     "name": "Dorab (Wolf Herring)",
     "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img15.png",
+    "image": "/assets/product-page/product-img15.jpg",
     "images": [
-      "/assets/product-page/product-img15.png",
+      "/assets/product-page/product-img15.jpg",
       "/assets/product-page/product-img15.1.webp",
       "/assets/product-page/product-img15.2.jpg",
       "/assets/product-page/product-img15.3.jpg"
@@ -313,12 +312,12 @@
     "id": 16,
     "name": "Seawater Shrimps",
     "categories": [],
-    "image": "/assets/product-page/product-img16.png",
+    "image": "/assets/product-page/product-img16.3.webp",
     "images": [
-      "/assets/product-page/product-img16.png",
+      "/assets/product-page/product-img16.3.webp",
       "/assets/product-page/product-img16.1.webp",
       "/assets/product-page/product-img16.2.jpg",
-      "/assets/product-page/product-img16.3.webp"
+      "/assets/product-page/product-img16.png"
   ],
     "description": "Wild-caught shrimps, frozen for premium export markets."
   },
@@ -348,11 +347,11 @@
     "id": 18,
     "name": "Cooked Black Tiger Shrimp (Peeled)",
     "categories": [],
-    "image": "/assets/product-page/product-img18.png",
+    "image": "/assets/product-page/product-img18.2.jpg",
     "images": [
-      "/assets/product-page/product-img18.png",
-      "/assets/product-page/product-img18.1.jpeg",
       "/assets/product-page/product-img18.2.jpg",
+      "/assets/product-page/product-img18.1.jpeg",
+      "/assets/product-page/product-img18.png",
       "/assets/product-page/product-img18.3.webp"
   ],
     "description": "Convenient peeled shrimp retaining natural sweetness and freshness for quick preparation.",
@@ -430,9 +429,9 @@
     "id": 22,
     "name": "Cooked Vannamei Shrimp (Shellon)",
     "categories": [],
-    "image": "/assets/product-page/product-img22.webp",
+    "image": "/assets/product-page/product-img22.jpg",
     "images": [
-      "/assets/product-page/product-img22.webp",
+      "/assets/product-page/product-img22.jpg",
       "/assets/product-page/product-img22.1.jpg",
       "/assets/product-page/product-img22.2.jpg",
       "/assets/product-page/product-img22.3.jpg"
@@ -472,9 +471,7 @@
     "image": "/assets/product-page/product-img32.jpg",
     "images": [
       "/assets/product-page/product-img32.jpg",
-      "/assets/product-page/product-img4.png",
-      "/assets/product-page/product-img3.png",
-      "/assets/product-page/product-img5.png"
+      "/assets/product-page/product-img32.1.jpg"
   ],
     "description": "Premium ocean-caught shrimp with superior flavor and freshness.",
     "modalTitle": "CRUSTACEANS",
@@ -488,11 +485,11 @@
     "id": 33,
     "name": "Flower Shrimp",
     "categories": [],
-    "image": "/assets/product-page/product-img33.jpeg",
+    "image": "/assets/product-page/product-img33.jpg",
     "images": [
-      "/assets/product-page/product-img33.jpeg",
+      "/assets/product-page/product-img33.jpg",
       "/assets/product-page/product-img33.1.webp",
-      "/assets/product-page/product-img33.2.webp",
+      "/assets/product-page/product-img33.2.jpeg",
       "/assets/product-page/product-img33.3.jpg"
   ],
     "description": "High-quality shrimp with delicate texture and sweet, fresh taste.",
@@ -507,12 +504,11 @@
     "id": 34,
     "name": "Karikkadi (Tiny Shrimps)",
     "categories": [],
-    "image": "/assets/product-page/product-img34.png",
+    "image": "/assets/product-page/product-img34.jpg",
     "images": [
-      "/assets/product-page/product-img34.png",
+      "/assets/product-page/product-img34.jpg",
       "/assets/product-page/product-img34.1.jpg",
-      "/assets/product-page/product-img3.png",
-      "/assets/product-page/product-img5.png"
+      "/assets/product-page/product-img34.2.png"
   ],
     "description": "Tiny shrimps with rich flavor, perfect for traditional seafood recipes.",
     "modalTitle": "CRUSTACEANS",
@@ -568,10 +564,7 @@
     "categories": [],
     "image": "/assets/product-page/product-img37.jpg",
     "images": [
-      "/assets/product-page/product-img37.jpg",
-      "/assets/product-page/product-img4.png",
-      "/assets/product-page/product-img3.png",
-      "/assets/product-page/product-img5.png"
+      "/assets/product-page/product-img37.jpg"
   ],
     "description": "Premium white shrimp with mild taste and excellent freshness.",
     "modalTitle": "CRUSTACEANS",
@@ -585,9 +578,9 @@
     "id": 38,
     "name": "Cooked Spiny lobster whole",
     "categories": [],
-    "image": "/assets/product-page/product-img38.webp",
+    "image": "/assets/product-page/product-img38.jpg",
     "images": [
-      "/assets/product-page/product-img38.webp",
+      "/assets/product-page/product-img38.jpg",
       "/assets/product-page/product-img38.1.webp",
       "/assets/product-page/product-img38.2.webp",
       "/assets/product-page/product-img38.3.jpg"
@@ -604,11 +597,11 @@
     "id": 39,
     "name": "Green Mud Crab",
     "categories": [],
-    "image": "/assets/product-page/product-img39.jpeg",
+    "image": "/assets/product-page/product-img39.2.jpg",
     "images": [
-      "/assets/product-page/product-img39.jpeg",
-      "/assets/product-page/product-img39.1.jpg",
       "/assets/product-page/product-img39.2.jpg",
+      "/assets/product-page/product-img39.1.jpg",
+      "/assets/product-page/product-img39.jpeg",
       "/assets/product-page/product-img39.3.webp"
   ],
     "description": "Meaty, fresh crab with firm texture and ocean-fresh taste.",
@@ -623,10 +616,10 @@
     "id": 40,
     "name": "Catla",
     "categories": [],
-    "image": "/assets/product-page/product-img40.jpg",
+    "image": "/assets/product-page/product-img40.1.jpeg",
     "images": [
-      "/assets/product-page/product-img40.jpg",
       "/assets/product-page/product-img40.1.jpeg",
+      "/assets/product-page/product-img40.jpg",
       "/assets/product-page/product-img40.2.jpg",
       "/assets/product-page/product-img40.3.webp"
   ],
@@ -645,11 +638,11 @@
     "id": 41,
     "name": "Pearl Spot Fish",
     "categories": [],
-    "image": "/assets/product-page/product-img41.webp",
+    "image": "/assets/product-page/product-img41.2.jpg",
     "images": [
-      "/assets/product-page/product-img41.webp",
-      "/assets/product-page/product-img41.1.webp",
       "/assets/product-page/product-img41.2.jpg",
+      "/assets/product-page/product-img41.1.webp",
+      "/assets/product-page/product-img41.webp",
       "/assets/product-page/product-img41.3.jpg"
   ],
     "description": "Delicately flavored fish with tender, moist meat.",
@@ -665,10 +658,10 @@
     "id": 42,
     "name": "Rohu",
     "categories": [],
-    "image": "/assets/product-page/product-img42.jpg",
+    "image": "/assets/product-page/product-img42.1.jpg",
     "images": [
-      "/assets/product-page/product-img42.jpg",
       "/assets/product-page/product-img42.1.jpg",
+      "/assets/product-page/product-img42.jpg",
       "/assets/product-page/product-img42.2.jpg",
       "/assets/product-page/product-img42.3.jpg"
   ],
@@ -687,10 +680,10 @@
     "id": 43,
     "name": "Tilapia",
     "categories": [],
-    "image": "/assets/product-page/product-img43.webp",
+    "image": "/assets/product-page/product-img43.1.jpg",
     "images": [
-      "/assets/product-page/product-img43.webp",
       "/assets/product-page/product-img43.1.jpg",
+      "/assets/product-page/product-img43.webp",
       "/assets/product-page/product-img43.2.jpg",
       "/assets/product-page/product-img43.3.jpg"
   ],
@@ -706,11 +699,11 @@
     "id": 44,
     "name": "Tilapia Fillet",
     "categories": [],
-    "image": "/assets/product-page/product-img44.jpg",
+    "image": "/assets/product-page/product-img44.2.jpg",
     "images": [
-      "/assets/product-page/product-img44.jpg",
-      "/assets/product-page/product-img44.1.webp",
       "/assets/product-page/product-img44.2.jpg",
+      "/assets/product-page/product-img44.1.webp",
+      "/assets/product-page/product-img44.jpg",
       "/assets/product-page/product-img44.3.jpg"
   ],
     "description": "Boneless tilapia fillets, fresh and ready for cooking.",
@@ -725,10 +718,10 @@
     "id": 45,
     "name": "Silver Pomfret",
     "categories": [],
-    "image": "/assets/product-page/product-img45.jpg",
+    "image": "/assets/product-page/product-img45.1.webp",
     "images": [
-      "/assets/product-page/product-img45.jpg",
       "/assets/product-page/product-img45.1.webp",
+      "/assets/product-page/product-img45.jpg",
       "/assets/product-page/product-img45.2.jpeg",
       "/assets/product-page/product-img45.3.webp"
   ],
@@ -744,12 +737,12 @@
     "id": 46,
     "name": "Black Pomfret",
     "categories": [],
-    "image": "/assets/product-page/product-img46.jpg",
+    "image": "/assets/product-page/product-img46.3.webp",
     "images": [
-      "/assets/product-page/product-img46.jpg",
+      "/assets/product-page/product-img46.3.webp",
       "/assets/product-page/product-img46.1.webp",
       "/assets/product-page/product-img46.2.jpg",
-      "/assets/product-page/product-img46.3.webp"
+      "/assets/product-page/product-img46.jpg"
   ],
     "description": "Rich, flavorful black pomfret suitable for steaming or frying.",
     "modalTitle": "SEA WATER FISHES",
@@ -763,10 +756,10 @@
     "id": 47,
     "name": "Chinese Pomfret",
     "categories": [],
-    "image": "/assets/product-page/product-img47.webp",
+    "image": "/assets/product-page/product-img47.1.jpg",
     "images": [
-      "/assets/product-page/product-img47.webp",
       "/assets/product-page/product-img47.1.jpg",
+      "/assets/product-page/product-img47.webp",
       "/assets/product-page/product-img47.2.jpg",
       "/assets/product-page/product-img47.3.webp"
   ],
@@ -782,10 +775,10 @@
     "id": 48,
     "name": "Croacker Silver",
     "categories": [],
-    "image": "/assets/product-page/product-img48.jpeg",
+    "image": "/assets/product-page/product-img48.1.webp",
     "images": [
-      "/assets/product-page/product-img48.jpeg",
       "/assets/product-page/product-img48.1.webp",
+      "/assets/product-page/product-img48.jpeg",
       "/assets/product-page/product-img48.2.jpg",
       "/assets/product-page/product-img48.3.jpg"
   ],
@@ -801,9 +794,9 @@
     "id": 49,
     "name": "Indian Mackerel",
     "categories": [],
-    "image": "/assets/product-page/product-img49.webp",
+    "image": "/assets/product-page/product-img49.jpg",
     "images": [
-      "/assets/product-page/product-img49.webp",
+      "/assets/product-page/product-img49.jpg",
       "/assets/product-page/product-img49.1.jpg",
       "/assets/product-page/product-img49.2.jpg",
       "/assets/product-page/product-img49.3.jpg"
@@ -820,11 +813,11 @@
     "id": 50,
     "name": "Horse Mackerel",
     "categories": [],
-    "image": "/assets/product-page/product-img50.webp",
+    "image": "/assets/product-page/product-img50.2.jpg",
     "images": [
-      "/assets/product-page/product-img50.webp",
+      "/assets/product-page/product-img50.2.jpg",
       "/assets/product-page/product-img50.1.webp",
-      "/assets/product-page/product-img50.2.webp",
+      "/assets/product-page/product-img50.webp",
       "/assets/product-page/product-img50.3.jpg"
   ],
     "description": "Fresh horse mackerel ideal for grilling or pan-frying.",
@@ -858,10 +851,10 @@
     "id": 52,
     "name": "Kingfish",
     "categories": [],
-    "image": "/assets/product-page/product-img52.webp",
+    "image": "/assets/product-page/product-img52.1.webp",
     "images": [
-      "/assets/product-page/product-img52.webp",
       "/assets/product-page/product-img52.1.webp",
+      "/assets/product-page/product-img52.webp",
       "/assets/product-page/product-img52.2.webp",
       "/assets/product-page/product-img52.3.jpeg"
   ],
@@ -915,10 +908,10 @@
     "id": 55,
     "name": "Baracuda",
     "categories": [],
-    "image": "/assets/product-page/product-img55.jpg",
+    "image": "/assets/product-page/product-img55.1.jpg",
     "images": [
-      "/assets/product-page/product-img55.jpg",
       "/assets/product-page/product-img55.1.jpg",
+      "/assets/product-page/product-img55.jpg",
       "/assets/product-page/product-img55.2.jpg",
       "/assets/product-page/product-img55.3.png"
   ],
@@ -934,10 +927,10 @@
     "id": 56,
     "name": "Reefcod",
     "categories": [],
-    "image": "/assets/product-page/product-img56.webp",
+    "image": "/assets/product-page/product-img56.1.jpg",
     "images": [
-      "/assets/product-page/product-img56.webp",
       "/assets/product-page/product-img56.1.jpg",
+      "/assets/product-page/product-img56.webp",
       "/assets/product-page/product-img56.2.webp",
       "/assets/product-page/product-img56.3.webp"
   ],
@@ -955,10 +948,7 @@
     "categories": [],
     "image": "/assets/product-page/product-img57.jpg",
     "images": [
-      "/assets/product-page/product-img57.jpg",
-      "/assets/product-page/product-img4.png",
-      "/assets/product-page/product-img3.png",
-      "/assets/product-page/product-img5.png"
+      "/assets/product-page/product-img57.jpg"
   ],
     "description": "Vibrant red snapper with juicy, succulent meat.",
     "modalTitle": "SEA WATER FISHES",
@@ -975,9 +965,7 @@
     "image": "/assets/product-page/product-img58.jpg",
     "images": [
       "/assets/product-page/product-img58.jpg",
-      "/assets/product-page/product-img4.png",
-      "/assets/product-page/product-img3.png",
-      "/assets/product-page/product-img5.png"
+      "/assets/product-page/product-img58.1.jpg"
   ],
     "description": "Mild-tasting fish with firm texture and premium freshness.",
     "modalTitle": "SEA WATER FISHES",
@@ -991,12 +979,10 @@
     "id": 59,
     "name": "Indian Oil Sardine",
     "categories": [],
-    "image": "/assets/product-page/product-img59.jpeg",
+    "image": "/assets/product-page/product-img59.jpg",
     "images": [
-      "/assets/product-page/product-img59.jpeg",
-      "/assets/product-page/product-img4.png",
-      "/assets/product-page/product-img3.png",
-      "/assets/product-page/product-img5.png"
+      "/assets/product-page/product-img59.jpg",
+      "/assets/product-page/product-img59.1.jpeg"
   ],
     "description": "Oil-packed sardines with rich flavor for traditional dishes.",
     "modalTitle": "SEA WATER FISHES",
@@ -1010,9 +996,9 @@
     "id": 60,
     "name": "Dolphin Fish",
     "categories": [],
-    "image": "/assets/product-page/product-img60.webp",
+    "image": "/assets/product-page/product-img60.jpg",
     "images": [
-      "/assets/product-page/product-img60.webp",
+      "/assets/product-page/product-img60.jpg",
       "/assets/product-page/product-img60.1.jpg",
       "/assets/product-page/product-img60.2.jpg",
       "/assets/product-page/product-img60.3.jpg"
@@ -1032,9 +1018,7 @@
     "image": "/assets/product-page/product-img61.jpg",
     "images": [
       "/assets/product-page/product-img61.jpg",
-      "/assets/product-page/product-img4.png",
-      "/assets/product-page/product-img3.png",
-      "/assets/product-page/product-img5.png"
+      "/assets/product-page/product-img61.1.jpg"
   ],
     "description": "Tender, high-quality octopus perfect for gourmet cooking.",
     "modalTitle": "CEPHALOPODS",
@@ -1048,12 +1032,10 @@
     "id": 62,
     "name": "Itoyori surimi",
     "categories": [],
-    "image": "/assets/product-page/product-img63.jpg",
+    "image": "/assets/product-page/product-img62.jpg",
     "images": [
-      "/assets/product-page/product-img63.jpg",
-      "/assets/product-page/product-img4.png",
-      "/assets/product-page/product-img3.png",
-      "/assets/product-page/product-img5.png"
+      "/assets/product-page/product-img62.jpg",
+      "/assets/product-page/product-img62.1.jpg"
   ],
     "description": "Processed fish with smooth texture and mild, fresh flavor.",
     "modalTitle": "SURIMI",
