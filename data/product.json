@@ -3,9 +3,9 @@
     "id": 1,
     "name": "Scampi",
     "categories": [],
-    "image": "/assets/product-page/product-img1.1.jpg",
+    "image": "/assets/product-page/product-img1.1.webp",
     "images": [
-      "/assets/product-page/product-img1.1.jpg",
+      "/assets/product-page/product-img1.1.webp",
       "/assets/product-page/product-img1.3.jpg",
       "/assets/product-page/product-img1.2.jpg"
   ],
@@ -47,8 +47,8 @@
     "image": "/assets/product-page/product-img3.2.webp",
     "images": [
       "/assets/product-page/product-img3.2.webp",
-      "/assets/product-page/product-img3.1.jpg",
-      "/assets/product-page/product-img3.png",
+      "/assets/product-page/product-img3.1.webp",
+      "/assets/product-page/product-img3.webp",
       "/assets/product-page/product-img3.3.webp"
   ],
     "description": "Farmed white shrimp — processed and exported globally.",
@@ -83,9 +83,9 @@
     "id": 5,
     "name": "Cuttle Fish",
     "categories": [],
-    "image": "/assets/product-page/product-img5.2.jpg",
+    "image": "/assets/product-page/product-img5.2.webp",
     "images": [
-      "/assets/product-page/product-img5.2.jpg",
+      "/assets/product-page/product-img5.2.webp",
       "/assets/product-page/product-img5.1.jpg",
       "/assets/product-page/product-img5.jpg",
       "/assets/product-page/product-img5.3.jpg"
@@ -105,9 +105,9 @@
     "id": 6,
     "name": "Semi Needle Loligo Squid",
     "categories": [],
-    "image": "/assets/product-page/product-img6.2.jpg",
+    "image": "/assets/product-page/product-img6.2.webp",
     "images": [
-      "/assets/product-page/product-img6.2.jpg",
+      "/assets/product-page/product-img6.2.webp",
       "/assets/product-page/product-img6.1.jpg",
       "/assets/product-page/product-img6.jpg",
       "/assets/product-page/product-img6.3.jpg"
@@ -157,9 +157,9 @@
     "id": 8,
     "name": "Ribbon Fish",
     "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img8.2.jpg",
+    "image": "/assets/product-page/product-img8.2.webp",
     "images": [
-      "/assets/product-page/product-img8.2.jpg",
+      "/assets/product-page/product-img8.2.webp",
       "/assets/product-page/product-img8.1.png",
       "/assets/product-page/product-img8.jpg",
       "/assets/product-page/product-img8.3.jpg"
@@ -178,9 +178,9 @@
     "id": 9,
     "name": "Catfish (Frozen)",
     "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img9.jpg",
+    "image": "/assets/product-page/product-img9.webp",
     "images": [
-      "/assets/product-page/product-img9.jpg",
+      "/assets/product-page/product-img9.webp",
       "/assets/product-page/product-img9.1.png",
       "/assets/product-page/product-img9.2.jpg",
       "/assets/product-page/product-img9.3.jpg"
@@ -199,9 +199,9 @@
     "id": 10,
     "name": "Queen Fish (Frozen)",
     "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img10.jpg",
+    "image": "/assets/product-page/product-img10.webp",
     "images": [
-      "/assets/product-page/product-img10.jpg",
+      "/assets/product-page/product-img10.webp",
       "/assets/product-page/product-img10.1.png",
       "/assets/product-page/product-img10.2.webp",
       "/assets/product-page/product-img10.3.webp"
@@ -274,9 +274,9 @@
     "id": 14,
     "name": "Yellowfin Tuna",
     "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img14.1.jpg",
+    "image": "/assets/product-page/product-img14.1.webp",
     "images": [
-      "/assets/product-page/product-img14.1.jpg",
+      "/assets/product-page/product-img14.1.webp",
       "/assets/product-page/product-img14.jpeg",
       "/assets/product-page/product-img14.2.jpg",
       "/assets/product-page/product-img14.3.jpg"
@@ -293,9 +293,9 @@
     "id": 15,
     "name": "Dorab (Wolf Herring)",
     "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img15.jpg",
+    "image": "/assets/product-page/product-img15.webp",
     "images": [
-      "/assets/product-page/product-img15.jpg",
+      "/assets/product-page/product-img15.webp",
       "/assets/product-page/product-img15.1.webp",
       "/assets/product-page/product-img15.2.jpg",
       "/assets/product-page/product-img15.3.jpg"
@@ -324,13 +324,13 @@
   {
     "id": 17,
     "name": "Raw Black Tiger Shrimp",
-    "categories": [],
-    "image": "/assets/product-page/product-img17.jpg",
+    "categories": ["Most Exported"],
+    "image": "/assets/product-page/product-img17.webp",
     "images": [
-      "/assets/product-page/product-img17.jpg",
-      "/assets/product-page/product-img17.1.jpg",
-      "/assets/product-page/product-img17.2.jpg",
-      "/assets/product-page/product-img17.jpg"
+      "/assets/product-page/product-img17.webp",
+      "/assets/product-page/product-img17.1.webp",
+      "/assets/product-page/product-img17.2.webp",
+      "/assets/product-page/product-img17.3.webp"
   ],
     "description": "Wild-caught, premium shrimp with firm texture and rich flavor, perfect for gourmet dishes",
     "modalTitle": "BLACK TIGER SHRIMPS (Penaeus Monodon)",
@@ -386,7 +386,7 @@
   {
     "id": 20,
     "name": "Raw Vannamei Shrimp",
-    "categories": [],
+    "categories": ["Most Exported"],
     "image": "/assets/product-page/product-img20.jpg",
     "images": [
       "/assets/product-page/product-img20.jpg",
@@ -485,9 +485,9 @@
     "id": 33,
     "name": "Flower Shrimp",
     "categories": [],
-    "image": "/assets/product-page/product-img33.jpg",
+    "image": "/assets/product-page/product-img33.webp",
     "images": [
-      "/assets/product-page/product-img33.jpg",
+      "/assets/product-page/product-img33.webp",
       "/assets/product-page/product-img33.1.webp",
       "/assets/product-page/product-img33.2.jpeg",
       "/assets/product-page/product-img33.3.jpg"
@@ -615,7 +615,7 @@
   {
     "id": 40,
     "name": "Catla",
-    "categories": [],
+    "categories": ["Most Exported"],
     "image": "/assets/product-page/product-img40.1.jpeg",
     "images": [
       "/assets/product-page/product-img40.1.jpeg",
@@ -685,7 +685,7 @@
       "/assets/product-page/product-img43.1.jpg",
       "/assets/product-page/product-img43.webp",
       "/assets/product-page/product-img43.2.jpg",
-      "/assets/product-page/product-img43.3.jpg"
+      "/assets/product-page/product-img43.3.webp"
   ],
     "description": "Mild-flavored tilapia with firm, fresh fillets.",
     "modalTitle": "FRESH WATER FISHES",
@@ -717,7 +717,7 @@
   {
     "id": 45,
     "name": "Silver Pomfret",
-    "categories": [],
+    "categories": ["Most Exported"],
     "image": "/assets/product-page/product-img45.1.webp",
     "images": [
       "/assets/product-page/product-img45.1.webp",
@@ -850,7 +850,7 @@
   {
     "id": 52,
     "name": "Kingfish",
-    "categories": [],
+    "categories": ["Most Exported"],
     "image": "/assets/product-page/product-img52.1.webp",
     "images": [
       "/assets/product-page/product-img52.1.webp",
@@ -869,10 +869,10 @@
   {
     "id": 53,
     "name": "Tuna Bonito",
-    "categories": [],
-    "image": "/assets/product-page/product-img53.jpg",
+    "categories": ["Most Exported"],
+    "image": "/assets/product-page/product-img53.webp",
     "images": [
-      "/assets/product-page/product-img53.jpg",
+      "/assets/product-page/product-img53.webp",
       "/assets/product-page/product-img53.1.jpg",
       "/assets/product-page/product-img53.2.jpg",
       "/assets/product-page/product-img53.3.jpg"
@@ -889,9 +889,9 @@
     "id": 54,
     "name": "Skip Jack",
     "categories": [],
-    "image": "/assets/product-page/product-img54.jpg",
+    "image": "/assets/product-page/product-img54.webp",
     "images": [
-      "/assets/product-page/product-img54.jpg",
+      "/assets/product-page/product-img54.webp",
       "/assets/product-page/product-img54.1.jpg",
       "/assets/product-page/product-img54.2.jpg",
       "/assets/product-page/product-img54.3.jpg"
@@ -948,7 +948,11 @@
     "categories": [],
     "image": "/assets/product-page/product-img57.jpg",
     "images": [
-      "/assets/product-page/product-img57.jpg"
+      "/assets/product-page/product-img57.jpg",
+      "/assets/product-page/product-img57.1.webp",
+      "/assets/product-page/product-img57.2.webp",
+      "/assets/product-page/product-img57.3.webp"
+
   ],
     "description": "Vibrant red snapper with juicy, succulent meat.",
     "modalTitle": "SEA WATER FISHES",
@@ -1113,7 +1117,7 @@
           {
     "id": 66,
     "name": "Bombay duck fish",
-    "categories": [],
+    "categories": ["Most Exported"],
     "image": "/assets/product-page/product-img67.jpg",
     "images": [
       "/assets/product-page/product-img67.jpg",

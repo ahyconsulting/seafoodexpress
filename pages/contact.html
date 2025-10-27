@@ -3,34 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact - Marinexe</title>
+    <title>Contact - Seafood Express</title>
     <meta
       name="description"
-      content="Get in touch with Marinexe for inquiries, partnerships, or custom seafood orders. We're here to help."
+      content="Get in touch with Seafood Express for inquiries, partnerships, or custom seafood orders. We're here to help."
     />
     <meta
       name="keywords"
-      content="Marinexe contact, seafood inquiry, contact us, get in touch, export seafood contact"
+      content="Seafood Express contact, seafood inquiry, contact us, get in touch, export seafood contact"
     />
-    <meta name="author" content="Marinexe" />
+    <meta name="author" content="Seafood Express" />
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Contact - Marinexe" />
+    <meta property="og:title" content="Contact - Seafood Express" />
     <meta
       property="og:description"
-      content="Reach out to Marinexe for inquiries, support, or custom seafood orders."
+      content="Reach out to Seafood Express for inquiries, support, or custom seafood orders."
     />
     <meta
       property="og:image"
-      content="https://yourdomain.com/assets/contact-og.jpg"
+      content="https://seafoodexpress.in/assets/home-page/logo.png"
     />
     <meta
       property="og:url"
-      content="https://yourdomain.com/pages/contact.html"
+      content="https://www.seafoodexpress.in/pages/contact"
     />
     <meta property="og:type" content="website" />
 
-    <link rel="icon" href="https://marinexe.blogspot.com/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/home-page/logo.png">
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -115,33 +115,22 @@
           </div>
         </div>
       </div>
-      <!-- contact page Section 1 -->
-      <section class="py-20 px-6" x-data="{ activeTab: 'inquiry' }">
-        <div
-          class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-start"
-        >
+      <section class="py-20 px-6" x-data="contactSection()">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-start">
           <!-- Left Side -->
-          <div
-            class="w-full lg:w-1/2 text-left flex flex-col gap-10 max-w-2xl mx-auto"
-          >
-            <!-- Heading + Paragraph -->
+          <div class="w-full lg:w-1/2 text-left flex flex-col gap-10 max-w-2xl mx-auto">
+            <!-- Heading -->
             <div>
-              <h2
-                class="text-[48px] text-[#1D265F] uppercase leading-none custom-heading"
-              >
+              <h2 class="text-[48px] text-[#1D265F] uppercase leading-none custom-heading">
                 Get in quick touch with us
               </h2>
-              <p
-                class="mt-6 text-[#334155] text-base md:text-lg leading-relaxed font-medium"
-              >
-                Connect with us for quick support on seafood orders,<br />
-                logistics, and global trade inquiries.
+              <p class="mt-6 text-[#334155] text-base md:text-lg leading-relaxed font-medium">
+                Connect with us for quick support on seafood orders, logistics, and global trade inquiries.
               </p>
             </div>
 
             <!-- Tabs -->
             <div class="flex gap-6 pb-1 w-fit">
-              <!-- Inquiry Tab -->
               <button
                 @click="activeTab = 'inquiry'"
                 class="relative pb-2 text-lg font-semibold"
@@ -154,7 +143,6 @@
                 ></span>
               </button>
 
-              <!-- Feedback Tab -->
               <button
                 @click="activeTab = 'feedback'"
                 class="relative pb-2 text-lg font-semibold"
@@ -168,90 +156,93 @@
               </button>
             </div>
 
-            <!-- Form Area -->
-            <div
-              x-data="{ showToast: false, showFeedbackToast: false }"
-              class="mt-6 relative"
-            >
+            <!-- Forms -->
+            <div class="mt-6 relative">
               <!-- Inquiry Form -->
               <form
                 x-show="activeTab === 'inquiry'"
-                x-data
-                @submit.prevent="
-                  const name = $refs.inqName.value;
-                  const email = $refs.inqEmail.value;
-                  const phone = $refs.inqPhone.value;
-                  const message = $refs.inqMessage.value;
-                  const mailtoLink = `mailto:linda.yadang@ahytech.com?subject=Inquiry from ${encodeURIComponent(
-                    name
-                  )}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`)}`;
-                  window.location.href = mailtoLink;
-                "
+                @submit.prevent="submitForm('inquiry')"
                 class="space-y-6 text-left"
               >
+                <input type="hidden" name="access_key" value="b59f5118-b7ce-453e-8432-476ec3217206" />
+                <input type="hidden" name="subject" value="Inquiry from Seafood Express Contact Page" />
+
                 <div class="flex flex-col md:flex-row md:space-x-6">
                   <div class="flex-1">
-                    <label for="inq-fullName" class="block text-[#334155] text-base font-medium mb-2">Full Name</label>
-                    <input type="text" id="inq-fullName" x-ref="inqName" required class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"/>
+                    <label class="block text-[#334155] text-base font-medium mb-2">Full Name <span class="text-red-600" aria-hidden="true">*</span></label>
+                    <input type="text" name="name" x-model="inquiry.name" required class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"/>
                   </div>
                   <div class="flex-1 mt-6 md:mt-0">
-                    <label for="inq-email" class="block text-[#334155] text-base font-medium mb-2">Email</label>
-                    <input type="email" id="inq-email" x-ref="inqEmail" required class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"/>
+                    <label class="block text-[#334155] text-base font-medium mb-2">Email <span class="text-red-600" aria-hidden="true">*</span></label>
+                    <input type="email" name="email" x-model="inquiry.email" required class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"/>
                   </div>
                 </div>
 
                 <div>
-                  <label for="inq-phone" class="block text-[#334155] text-base font-medium mb-2">Phone Number</label>
-                  <input type="tel" id="inq-phone" x-ref="inqPhone" required class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"/>
+                  <label class="block text-[#334155] text-base font-medium mb-2">Phone Number <span class="text-red-600" aria-hidden="true">*</span></label>
+                  <input type="tel" name="phone" x-model="inquiry.phone" required class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"/>
                 </div>
 
                 <div>
-                  <label for="inq-message" class="block text-[#334155] text-base font-medium mb-2">Write Message</label>
-                  <textarea id="inq-message" x-ref="inqMessage" rows="4" required class="w-full bg-[#F1FAFF] p-6 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400 resize-none"></textarea>
+                  <label class="block text-[#334155] text-base font-medium mb-2">Write Message <span class="text-red-600" aria-hidden="true">*</span></label>
+                  <textarea name="message" rows="4" x-model="inquiry.message" required class="w-full bg-[#F1FAFF] p-6 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400 resize-none"></textarea>
                 </div>
 
                 <button type="submit" class="text-white px-6 py-3 bg-[#007B8F] hover:brightness-90">SEND MESSAGE</button>
+               <div
+                x-show="inquiryStatus"
+                x-transition
+                class="mt-6 p-4 rounded-lg text-center font-semibold text-base"
+                :class="inquirySuccess 
+                  ? 'bg-green-100 text-green-800 border border-green-400' 
+                  : 'bg-red-100 text-red-800 border border-red-400'"
+                x-text="inquiryStatus"
+              ></div>
+
               </form>
+
               <!-- Feedback Form -->
               <form
                 x-show="activeTab === 'feedback'"
-                x-data
-                @submit.prevent="
-                  const name = $refs.fbName.value;
-                  const email = $refs.fbEmail.value;
-                  const message = $refs.fbMessage.value;
-                  const mailtoLink = `mailto:sales@seafoodexpress.in?subject=Feedback from ${encodeURIComponent(
-                    name
-                  )}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nFeedback:\n${message}`)}`;
-                  window.location.href = mailtoLink;
-                "
+                @submit.prevent="submitForm('feedback')"
                 class="space-y-6 text-left"
               >
+                <input type="hidden" name="access_key" value="b59f5118-b7ce-453e-8432-476ec3217206" />
+                <input type="hidden" name="subject" value="Feedback from Seafood Express Contact Page" />
+
                 <div class="flex flex-col md:flex-row md:space-x-6">
                   <div class="flex-1">
-                    <label for="fb-fullName" class="block text-[#334155] text-base font-medium mb-2">Full Name</label>
-                    <input type="text" id="fb-fullName" x-ref="fbName" required class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"/>
+                    <label class="block text-[#334155] text-base font-medium mb-2">Full Name <span class="text-red-600" aria-hidden="true">*</span></label>
+                    <input type="text" name="name" x-model="feedback.name" required class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"/>
                   </div>
                   <div class="flex-1 mt-6 md:mt-0">
-                    <label for="fb-email" class="block text-[#334155] text-base font-medium mb-2">Email</label>
-                    <input type="email" id="fb-email" x-ref="fbEmail" required class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"/>
+                    <label class="block text-[#334155] text-base font-medium mb-2">Email <span class="text-red-600" aria-hidden="true">*</span></label>
+                    <input type="email" name="email" x-model="feedback.email" required class="w-full bg-[#F1FAFF] p-4 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400"/>
                   </div>
                 </div>
 
                 <div>
-                  <label for="fb-message" class="block text-[#334155] text-base font-medium mb-2">Your Feedback</label>
-                  <textarea id="fb-message" x-ref="fbMessage" rows="4" required class="w-full bg-[#F1FAFF] p-6 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400 resize-none"></textarea>
+                  <label class="block text-[#334155] text-base font-medium mb-2">Your Feedback <span class="text-red-600" aria-hidden="true">*</span></label>
+                  <textarea name="message" rows="4" x-model="feedback.message" required class="w-full bg-[#F1FAFF] p-6 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-400 resize-none"></textarea>
                 </div>
 
                 <button type="submit" class="text-white px-6 py-3 bg-[#007B8F] hover:brightness-90">SEND FEEDBACK</button>
+                <div
+                  x-show="feedbackStatus"
+                  x-transition
+                  class="mt-6 p-4 rounded-lg text-center font-semibold text-base"
+                  :class="feedbackSuccess 
+                    ? 'bg-green-100 text-green-800 border border-green-400' 
+                    : 'bg-red-100 text-red-800 border border-red-400'"
+                  x-text="feedbackStatus"
+                ></div>
+
               </form>
             </div>
           </div>
 
-          <!-- Right Side: Map or Placeholder -->
-          <div
-            class="w-full max-w-2xl mx-auto lg:max-w-none lg:w-1/2 lg:mx-0 shadow-md rounded-xl overflow-hidden lg:mb-20 mb-0"
-          >
+          <!-- Right Side: Map -->
+          <div class="w-full max-w-2xl mx-auto lg:max-w-none lg:w-1/2 lg:mx-0 shadow-md rounded-xl overflow-hidden lg:mb-20 mb-0">
             <iframe
               title="Location map of Pawne Village, Off, Thane - Belapur Rd"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.398403010754!2d73.0231088!3d19.090170399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c11bd522203b%3A0xca6ed95243b24e5c!2sHMG%20Industries%20Limited!5e0!3m2!1sen!2sin!4v1759721421299!5m2!1sen!2sin"
@@ -300,7 +291,7 @@
               class="p-5 md:p-10 flex flex-col items-center lg:items-start text-center lg:text-left"
             >
               <a
-                href="/pages/contact.html"
+                href="tel:+919324566111"
                 class="bg-[#F1FAFF] p-4 mb-4 flex items-center justify-center cursor-pointer"
               >
                 <iconify-icon
@@ -356,7 +347,7 @@
               class="p-5 md:p-10 flex flex-col items-center lg:items-start text-center lg:text-left"
             >
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/919324566111"
                 target="_blank"
                 class="bg-[#F1FAFF] p-4 mb-4 flex items-center justify-center cursor-pointer"
               >
@@ -371,7 +362,7 @@
                 Whatsapp Us
               </h4>
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/919324566111"
                 target="_blank"
                 class="text-[#334155] text-sm font-bold underline cursor-pointer"
               >
@@ -402,6 +393,47 @@
             Alpine.initTree(this.$refs.footer);
           },
         };
+      }
+
+      function contactSection() {
+        return {
+          activeTab: 'inquiry',
+          inquiry: { name: '', email: '', phone: '', message: '' },
+          feedback: { name: '', email: '', message: '' },
+          inquiryStatus: '',
+          feedbackStatus: '',
+          inquirySuccess: false,
+          feedbackSuccess: false,
+
+          async submitForm(type) {
+            let dataObj = type === 'inquiry' ? this.inquiry : this.feedback;
+            let statusProp = type === 'inquiry' ? 'inquiryStatus' : 'feedbackStatus';
+
+            const formData = new FormData();
+            for (const key in dataObj) formData.append(key, dataObj[key]);
+            formData.append('access_key', 'b59f5118-b7ce-453e-8432-476ec3217206');
+
+            try {
+              const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
+              const result = await res.json();
+
+              if(result.success) {
+                this[statusProp] = type === 'inquiry' ? 'Message sent successfully!' : 'Feedback sent successfully!';
+                if(type === 'inquiry') this.inquirySuccess = true; else this.feedbackSuccess = true;
+                for(const key in dataObj) dataObj[key] = ''; // reset form
+              } else {
+                this[statusProp] = 'Something went wrong. Try again.';
+                if(type === 'inquiry') this.inquirySuccess = false; else this.feedbackSuccess = false;
+              }
+            } catch(e) {
+              console.error(e);
+              this[statusProp] = 'Network error. Please try later.';
+              if(type === 'inquiry') this.inquirySuccess = false; else this.feedbackSuccess = false;
+            }
+
+            setTimeout(() => this[statusProp] = '', 5000);
+          }
+        }
       }
     </script>
     <script src="/index.js"></script>
