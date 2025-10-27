@@ -3,34 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Products - Marinexe</title>
+    <title>Products - Seafood Express</title>
     <meta
       name="description"
-      content="Discover Marinexe’s export-quality seafood products, including fish, prawns, and more. Certified, fresh, and shipped globally."
+      content="Discover Seafood Express export-quality seafood products, including fish, prawns, and more. Certified, fresh, and shipped globally."
     />
     <meta
       name="keywords"
-      content="Marinexe products, seafood exporter India, fish export, prawn export, marine food"
+      content="Seafood Express products, seafood exporter India, fish export, prawn export, marine food"
     />
-    <meta name="author" content="Marinexe" />
+    <meta name="author" content="Seafood Express" />
 
     <!-- Open Graph (OG) Meta Tags -->
-    <meta property="og:title" content="Seafood Products - Marinexe" />
+    <meta property="og:title" content="Products - Seafood Express" />
     <meta
       property="og:description"
-      content="Explore Marinexe's wide range of certified seafood products exported globally."
+      content="Explore Seafood Express wide range of certified seafood products exported globally."
     />
     <meta
       property="og:image"
-      content="https://yourdomain.com/assets/product-og.jpg"
+      content="https://seafoodexpress.in/assets/home-page/logo.png"
     />
     <meta
       property="og:url"
-      content="https://yourdomain.com/pages/products.html"
+      content="https://www.seafoodexpress.in/pages/product"
     />
     <meta property="og:type" content="website" />
 
-    <link rel="icon" href="https://marinexe.blogspot.com/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/home-page/logo.png">
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -330,7 +330,7 @@
 
                     <!-- Right arrow -->
                     <button
-                      class="absolute right-2 top-1/2 -translate-y-1/2 bg-white hover:bg-gary-100 text-black p-2 rounded-lg z-10"
+                      class="absolute right-2 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 text-black p-2 rounded-lg z-10"
                       @click="currentSlide = (currentSlide + 1) % modalProduct.images.length"
                       aria-label="Next Image"
                     >
@@ -426,9 +426,15 @@
                 const urlParams = new URLSearchParams(window.location.search);
                 const productSlug = urlParams.get("product");
                 if (productSlug) {
-                  const prod = this.products.find(
-                    (p) => p.slug === productSlug
-                  );
+                  let prod = this.products.find((p) => p.slug === productSlug);
+
+                  // Fallback: try by product name (case-insensitive)
+                  if (!prod) {
+                    prod = this.products.find(
+                      (p) => p.name.toLowerCase() === productSlug.toLowerCase()
+                    );
+                  }
+
                   if (prod) {
                     this.openModal(prod, false); // open modal without updating URL again
                   }
@@ -440,10 +446,22 @@
           },
 
           get paginatedProducts() {
-            const filtered = this.allProductsSorted;
             const start = (this.currentPage - 1) * this.itemsPerPage;
-            const end = start + this.itemsPerPage;
-            return filtered.slice(start, end);
+            const end = this.currentPage * this.itemsPerPage;
+
+            // Take only items that belong to the current page
+            let pageItems = this.products.slice(start, end);
+
+            // Sort only within the current page
+            if (this.selected === "Most Exported") {
+              pageItems.sort((a, b) => {
+                const aHighlighted = a.categories.includes("Most Exported") ? 1 : 0;
+                const bHighlighted = b.categories.includes("Most Exported") ? 1 : 0;
+                return bHighlighted - aHighlighted; // highlighted goes on top
+              });
+            }
+
+            return pageItems;
           },
 
           get totalPages() {

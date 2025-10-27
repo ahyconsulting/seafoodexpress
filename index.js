@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
             { name: 'Black Pomfret', url: '/pages/product.html?product=black-pomfret-46', page: 3 },
             { name: 'Chinese Pomfret', url: '/pages/product.html?product=chinese-pomfret-47', page: 3 },
             { name: 'Croacker Silver', url: '/pages/product.html?product=croacker-silver-48', page: 3 },
-            { name: 'Indian Mackerel', url: '/pages/product.html?product=indian-mackerel-49', page: 4 },
+            { name: 'Indian Mackerel', url: '/pages/product.html?product=indian-mackerel-49', page: 3 },
             { name: 'Horse Mackerel', url: '/pages/product.html?product=horse-mackerel-50', page: 3 },
             { name: 'Spanish Mackerel', url: '/pages/product.html?product=spanish-mackerel-51', page: 3 },
             { name: 'Kingfish', url: '/pages/product.html?product=kingfish-52', page: 3 },
@@ -98,7 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
             { name: 'Itoyori surimi', url: '/pages/product.html?product=itoyori-surimi-62', page: 4 },
             { name: 'Cooked scampi', url: '/pages/product.html?product=cooked-scampi-63', page: 4 },
             { name: 'Baby Octopus', url: '/pages/product.html?product=baby-octopus-64', page: 4 },
-            { name: 'Grouper Fish', url: '/pages/product.html?product=grouper-fish-65', page: 4 }
+            { name: 'Grouper Fish', url: '/pages/product.html?product=grouper-fish-65', page: 4 },
+            { name: 'Bombay Duck Fish', url: '/pages/product.html?product=bombay-duck-fish-66', page: 4 }
           ], 
 
           filtered: [],

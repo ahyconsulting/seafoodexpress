@@ -3,31 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About Us - Marinexe</title>
+    <title>About Us - Seafood Express</title>
     <meta
       name="description"
-      content="Learn about Marinexe, India’s trusted seafood export company known for quality, certification, and global distribution."
+      content="Learn about Seafood Express, India’s trusted seafood export company known for quality, certification, and global distribution."
     />
     <meta
       name="keywords"
-      content="Marinexe, about Marinexe, seafood exporter India, marine company India"
+      content="Seafood Express, about Seafood Express, seafood exporter India, marine company India"
     />
-    <meta name="author" content="Marinexe" />
+    <meta name="author" content="Seafood Express" />
 
     <!-- Open Graph (OG) Meta Tags -->
-    <meta property="og:title" content="About Us - Marinexe" />
+    <meta property="og:title" content="About Us - Seafood Express" />
     <meta
       property="og:description"
-      content="Get to know Marinexe, our mission, values, and why we are India’s leading seafood exporter."
+      content="Get to know Seafood Express, our mission, values, and why we are India’s leading seafood exporter."
     />
     <meta
       property="og:image"
-      content="https://yourdomain.com/assets/about-og.jpg"
+      content="https://seafoodexpress.in/assets/home-page/logo.png"
     />
-    <meta property="og:url" content="https://yourdomain.com/pages/about.html" />
+    <meta property="og:url" content="https://www.seafoodexpress.in/pages/about" />
     <meta property="og:type" content="website" />
 
-    <link rel="icon" href="https://marinexe.blogspot.com/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/home-page/logo.png">
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -306,16 +306,11 @@
         </div>
       </div>
 
-      <!-- Wrapper with Alpine.js component -->
-      <div
-        x-data="initImageSlider()"
-        x-init="startRotation()"
-        class="w-full bg-[#F1FAFF] pb-20 md:pb-0"
-      >
+      <!-- Alpine.js component wrapper -->
+      <div x-data="initImageSlider()" x-init="startRotation()" class="w-full bg-white">
+
         <!-- Mobile Slider: Only visible on small screens -->
-        <div
-          class="block md:hidden px-[20px] pt-10 pb-10 text-center relative overflow-hidden h-[500px]"
-        >
+        <div class="block md:hidden px-[20px] pt-10 pb-10 text-center relative overflow-hidden h-[500px] bg-white">
           <template x-for="(item, index) in items" :key="index">
             <div
               x-show="current === index"
@@ -327,34 +322,26 @@
               x-transition:leave-end="-translate-x-full opacity-0"
               class="absolute inset-0 flex flex-col items-center text-center px-6"
             >
-              <div
-                class="relative w-full aspect-[9/16] mb-6 rounded-xl overflow-hidden shadow-lg"
-              >
-                <img
-                  :src="item.img"
-                  class="w-full h-full object-cover"
-                  :alt="item.title"
-                />
-
-                <!-- Black overlay with some transparency -->
+              <div class="relative w-full aspect-[9/16] mb-6 rounded-xl overflow-hidden shadow-lg">
+                <img :src="item.img" class="w-full h-full object-cover" :alt="item.title"/>
                 <div class="absolute inset-0 bg-black bg-opacity-40"></div>
 
-                <!-- Description block on top of image -->
-                <div
-                  class="absolute bottom-0 left-0 right-0 p-4 text-white text-center"
-                >
+                <!-- Description overlay -->
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
                   <span class="inline-block mb-2">
-                    <iconify-icon
-                      :icon="item.icon"
-                      width="48"
-                      class="iconify-colored"
-                    ></iconify-icon>
+                    <iconify-icon :icon="item.icon" width="48" class="iconify-colored"></iconify-icon>
                   </span>
                   <h3 class="text-xl font-bold mb-1" x-text="item.title"></h3>
-                  <p
-                    class="text-sm font-medium leading-relaxed"
-                    x-text="item.desc"
-                  ></p>
+                  <p class="text-sm font-medium leading-relaxed">
+                    <span x-text="item.shortDesc"></span>
+                    <button
+                      @click="openModal(index)"
+                      class="ml-1 text-[#14B8A6] underline text-sm"
+                      x-show="item.hasFullDesc"
+                    >
+                      View More
+                    </button>
+                  </p>
                 </div>
               </div>
             </div>
@@ -362,59 +349,35 @@
         </div>
 
         <!-- Desktop Grid: Visible on md+ -->
-        <div class="hidden md:grid grid-cols-3 gap-8 px-[20px] pt-10 pb-20">
-          <!-- Description 1 -->
-          <div class="flex flex-col items-center text-center">
-            <span class="inline-block mb-4">
-              <iconify-icon
-                icon="mdi:ferry"
-                class="iconify-colored"
-                width="48"
-              ></iconify-icon>
-            </span>
-            <h3 class="text-xl md:text-xl font-bold text-[#1D265F] mb-2">
-              Seafood Express Exporters
-            </h3>
-            <p class="text-gray-600 text-base md:text-base font-medium">
-              We export high-quality Shrimp. Prawns, Scampi, Squid, Cuttlefish
-              and variety of frozen fish.
-            </p>
-          </div>
+        <div class="hidden md:grid grid-cols-3 gap-8 px-[20px] pt-10 pb-20 bg-[#F1FAFF]">
+          <template x-for="(item, index) in items" :key="index">
+            <div class="flex flex-col items-center text-center">
+              <span class="inline-block mb-4">
+                <iconify-icon :icon="item.icon" class="iconify-colored" width="48"></iconify-icon>
+              </span>
+              <h3 class="text-xl font-bold text-[#1D265F] mb-2" x-text="item.title"></h3>
+              <p class="text-[#334155] text-base font-medium" x-text="item.shortDesc"></p>
+              <button
+                @click="openModal(index)"
+                class="mt-2 px-4 py-2 text-[#334155] rounded-lg text-sm hover:brightness-90 underline"
+                x-show="item.hasFullDesc"
+              >
+                View More
+              </button>
+            </div>
+          </template>
+        </div>
 
-          <!-- Description 2 -->
-          <div class="flex flex-col items-center text-center">
-            <span class="inline-block mb-4">
-              <iconify-icon
-                icon="mdi:lifebuoy"
-                class="iconify-colored"
-                width="48"
-              ></iconify-icon>
-            </span>
-            <h3 class="text-xl md:text-xl font-bold text-[#1D265F] mb-2">
-              Seafood Express (Marketing Seafood)
-            </h3>
-            <p class="text-gray-600 text-base md:text-base font-medium">
-              We specialise in promoting sustainable farming of vannamei shrimp
-              and Giant Freshwater Scampi.
-            </p>
-          </div>
-
-          <!-- Description 3 -->
-          <div class="flex flex-col items-center text-center">
-            <span class="inline-block mb-4">
-              <iconify-icon
-                icon="mdi:fish"
-                class="iconify-colored"
-                width="48"
-              ></iconify-icon>
-            </span>
-            <h3 class="text-xl md:text-xl font-bold text-[#1D265F] mb-2">
-              Seafood Express Consultants
-            </h3>
-            <p class="text-gray-600 text-base md:text-base font-medium">
-              We offer consulting services for shrimp farm infrastructure and
-              aquaculture operations.
-            </p>
+        <!-- Modal -->
+        <div
+          x-show="showModal"
+          x-transition.opacity
+          class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4"
+        >
+          <div class="bg-white rounded-xl max-w-xl w-full md:w-[90%] p-6 relative flex flex-col max-h-[80vh]" x-cloak>
+            <button @click="closeModal()" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800">&times;</button>
+            <h3 class="text-xl font-bold mb-4" x-text="modalContent.title"></h3>
+            <div class="overflow-y-auto text-gray-700 text-base leading-relaxed" style="flex: 1;" x-text="modalContent.fullDesc"></div>
           </div>
         </div>
       </div>
@@ -453,73 +416,73 @@
         <!-- Desktop Layout (md and above) -->
         <div class="hidden md:flex justify-between h-full gap-4">
           <!-- Image 1: Top -->
-          <div class="flex items-start w-1/4">
+          <a href="/pages/processing.html" class="flex items-start w-1/4">
             <img
               src="/assets/about-page/our-story-img1.png"
               alt="Product 1"
               class="w-full h-[90%] object-cover rounded-2xl"
             />
-          </div>
+          </a>
           <!-- Image 2: Bottom -->
-          <div class="flex items-end w-1/4">
+          <a href="/pages/product.html" class="flex items-end w-1/4">
             <img
               src="/assets/about-page/our-story-img2.jpg"
               alt="Product 2"
               class="w-full h-[90%] object-cover rounded-2xl"
             />
-          </div>
+          </a>
           <!-- Image 3: Top -->
-          <div class="flex items-start w-1/4">
+          <a href="/pages/export.html" class="flex items-start w-1/4">
             <img
               src="/assets/about-page/our-story-img3.png"
               alt="Product 3"
               class="w-full h-[90%] object-cover rounded-2xl"
             />
-          </div>
+          </a>
           <!-- Image 4: Bottom -->
-          <div class="flex items-end w-1/4">
+          <a href="/pages/product.html" class="flex items-end w-1/4">
             <img
               src="/assets/about-page/our-story-img4.png"
               alt="Product 4"
               class="w-full h-[90%] object-cover rounded-2xl"
             />
-          </div>
+          </a>
         </div>
 
         <!-- Mobile / Tablet Layout (below md) -->
         <div class="flex flex-col items-center gap-4 md:hidden">
           <!-- Image 1 -->
-          <div class="w-full max-w-md">
+          <a href="/pages/processing.html" class="w-full max-w-md">
             <img
               src="/assets/about-page/our-story-img1.png"
               alt="Product 1"
               class="w-full h-60 object-cover rounded-lg"
             />
-          </div>
+          </a>
           <!-- Image 2 -->
-          <div class="w-full max-w-md">
+          <a href="/pages/product.html" class="w-full max-w-md">
             <img
               src="/assets/about-page/our-story-img2.jpg"
               alt="Product 2"
               class="w-full h-60 object-cover rounded-lg"
             />
-          </div>
+          </a>
           <!-- Image 3 -->
-          <div class="w-full max-w-md">
+          <a href="/pages/export.html" class="w-full max-w-md">
             <img
               src="/assets/about-page/our-story-img3.png"
               alt="Product 3"
               class="w-full h-60 object-cover rounded-lg"
             />
-          </div>
+          </a>
           <!-- Image 4 -->
-          <div class="w-full max-w-md">
+          <a href="/pages/product.html" class="w-full max-w-md">
             <img
               src="/assets/about-page/our-story-img4.png"
               alt="Product 4"
               class="w-full h-60 object-cover rounded-lg"
             />
-          </div>
+          </a>
         </div>
       </section>
 
@@ -750,32 +713,51 @@
       function initImageSlider() {
         return {
           current: 0,
+          showModal: false,
+          modalContent: { title: '', fullDesc: '' },
           items: [
             {
               img: "/assets/about-page/our-business-1.png",
-              title: "Seafood Express Exporters",
-              desc: "We export high-quality Shrimp. Prawns, Scampi, Squid, Cuttlefish and variety of frozen fish.",
+              title: "Seafood Express Exports",
+              shortDesc: "We process and export high-quality frozen Scampi, Tuna Varieties, Lobster, Squid, Shrimp (Black tiger & Vannamei) and many more varieties.",
+              fullDesc: "We process and export high-quality frozen Scampi, Tuna Varieties, Lobster, Squid, Shrimp (Black tiger & Vannamei) and many more varieties. Our main markets are Maritius, Malaysia, Middle East, EU countries, China, Japan, Vietnam and Hongkong.",
               icon: "mdi:ferry",
+              hasFullDesc: true
             },
             {
               img: "/assets/about-page/our-business-2.png",
               title: "Seafood Express (Marketing Seafood)",
-              desc: "We specialise in promoting sustainable farming of vannamei shrimp and Giant Freshwater Scampi.",
+              shortDesc: "We specialize in marketing of frozen seafood of many other companies. Once the buyer order is confirmed.",
+              fullDesc: "We specialize in marketing of frozen seafood of many other companies. Once the buyer order is confirmed, we get the product processed as per availability and distribution of different varieties of Tuna, fishes, shrimp, prawns etc in our associate factories throughout India. We have a very large network of fishing boats, inland & sea caught seafood suppliers, farmers who contribute to the fishing, harvesting & supply of high quality diet for human consumption. With their effort and support of government policies & export market demand, the fisheries sector has created employment to many people. Our network helps to process the marine food in factories nearest to the fishing place which are approved by EIA & MPEDA.",
               icon: "mdi:lifebuoy",
+              hasFullDesc: true
             },
             {
               img: "/assets/about-page/our-business-3.jpg",
               title: "Seafood Express Consultants",
-              desc: "We offer consulting services for shrimp farm infrastructure and aquaculture operations.",
+              shortDesc: "We can plan and construct the shrimp ponds. Prepare full infrastructure with proper pond planning.",
+              fullDesc: "We can plan and construct the shrimp ponds. Prepare full infrastructure with proper pond planning, water inlet & treatment, pond treatment, power line & equipment, Aerators etc. The ponds for reservoir, treatment, nursery & culture are properly planned. Labour management & AI-based feed management. Stocking of shrimp seeds/fingerlings, feed management, best practices for proper health & growth of shrimp/fish etc. Disease prevention & Bio-security. Harvesting is done by trained workers. Proper Ice is arranged for chilling of shrimp/Fish before filling it into crates and sending it to processing plants nearest to the farm area.",
               icon: "mdi:fish",
-            },
+              hasFullDesc: true
+            }
           ],
+
           startRotation() {
             setInterval(() => {
               this.current = (this.current + 1) % this.items.length;
-            }, 3000);
+            }, 6000);
           },
-        };
+
+          openModal(index) {
+            this.modalContent.title = this.items[index].title;
+            this.modalContent.fullDesc = this.items[index].fullDesc;
+            this.showModal = true;
+          },
+
+          closeModal() {
+            this.showModal = false;
+          }
+        }
       }
 
       function initPageLayout() {
