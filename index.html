@@ -20,11 +20,11 @@
       property="og:description"
       content="Certified seafood exports from India to the world — explore Seafood Express quality marine products."
     />
-    <meta property="og:image" content="https://seafoodexpress.in/assets/home-page/logo.png" />
+    <meta property="og:image" content="https://seafoodexpress.in/assets/home-page/logo.webp" />
     <meta property="og:url" content="https://www.seafoodexpress.in/" />
     <meta property="og:type" content="website" />
 
-    <link rel="icon" type="image/png" sizes="64x64" href="/assets/home-page/logo.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/home-page/logo.webp">
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -39,6 +39,50 @@
       gtag("js", new Date());
 
       gtag("config", "G-P7WGPTWND1");
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Seafood Express",
+        "url": "https://www.seafoodexpress.in/",
+        "logo": "https://www.seafoodexpress.in/assets/home-page/logo.webp",
+        "description": "Seafood Express is a global seafood exporter specializing in over 60 certified fresh seafood products. We hold certifications from MPEDA India, EIC, and HACCP, ensuring high standards of quality and safety. Our export markets include the UK, Japan, the Middle East, Tunisia, Malaysia, Thailand, South Africa, Mauritius, Réunion Island, China, Vietnam, Taiwan, and the European Union. We focus on product freshness, adhere to strict hygiene standards, and provide comprehensive shipping and export documentation to meet the requirements of various countries.",
+        "telephone": "+91-9324566111",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Survey No 104, Near Sahara Colony, Wadiya Farha, Gala No 2, Mahape Road, Shilphata, Mumbra",
+          "addressLocality": "Thane",
+          "postalCode": "400612",
+          "addressRegion": "Maharashtra",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://in.linkedin.com/in/suhail-sait-b8932b54",
+          "https://mobile.x.com/seafoodexpress",
+          "https://www.facebook.com/sfe.suhail/"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-9324566111",
+          "contactType": "Customer Service",
+          "areaServed": [
+            "United Kingdom",
+            "Japan",
+            "United Arab Emirates",
+            "Tunisia",
+            "Malaysia",
+            "Thailand",
+            "South Africa",
+            "Mauritius",
+            "Réunion Island",
+            "China",
+            "Vietnam",
+            "Taiwan",
+            "European Union"
+          ]
+        }
+      }
     </script>
 
     <!-- Fonts -->
@@ -64,7 +108,7 @@
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
-    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js" defer></script>
     
 
     <!-- Custom Styles -->
@@ -234,6 +278,7 @@
                     src="/assets/home-page/hero-img1.webp"
                     alt="Seafood Image"
                     class="w-full h-full object-cover"
+                    fetchpriority="high"
                   />
                   <div
                     class="absolute inset-0 bg-black bg-opacity-10 pointer-events-none"
@@ -263,6 +308,7 @@
                     src="assets/home-page/hero-img2.webp"
                     alt="Fishing Nets"
                     class="w-full h-full object-cover"
+                    loading="lazy"
                   />
                   <div
                     class="absolute inset-0 bg-black bg-opacity-10 pointer-events-none"
@@ -296,7 +342,7 @@
             'Black Tiger Shrimp': 'our-product-img2.webp',
             'Vannamei Shrimp': 'our-product-img3.webp',
             'Lobster': 'our-product-img4.png',
-            'Tuna Varieties': 'our-product-img5.jpg',
+            'Tuna Varieties': 'our-product-img5.webp',
             'Crustaceans': 'our-product-img6.jpg',
             'Fishes': 'our-product-img7.jpg',
             'Cephalopods': 'our-product-img8.jpg',
@@ -526,9 +572,10 @@
             class="overflow-hidden shadow-lg md:shadow-none flex items-center justify-center w-full"
           >
             <img
-              src="assets/home-page/our-business-1.png"
-              alt="Image 1"
+              src="assets/home-page/our-business-1.webp"
+              alt="Seafood Express Exports"
               class="w-full h-80 md:h-[400px] lg:h-[500px] object-cover"
+              loading="lazy"
             />
           </div>
           <!-- Image 2 -->
@@ -546,9 +593,10 @@
             class="overflow-hidden shadow-lg md:shadow-none flex items-center justify-center w-full"
           >
             <img
-              src="assets/home-page/our-business-3.jpg"
-              alt="Image 3"
+              src="assets/home-page/our-business-3.webp"
+              alt="Seafood Express Consultants"
               class="w-full h-80 md:h-[400px] lg:h-[500px] object-cover"
+              loading="lazy"
             />
           </div>
         </div>
@@ -698,6 +746,7 @@
                 src="assets/home-page/product-img1.webp"
                 alt="Scampi"
                 class="w-full h-full object-cover"
+                loading="lazy"
                 @click="
                   const sel = 'scampi';
                   if(sel === 'scampi') window.location.href = 'pages/product.html?product=scampi-1';
@@ -767,7 +816,7 @@
               class="relative flex-shrink-0 w-48 sm:w-52 md:w-64 h-80 rounded-md overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 snap-start"
             >
               <img
-                src="assets/home-page/our-product-img5.jpg"
+                src="assets/home-page/our-product-img5.webp"
                 alt="Tuna"
                 class="w-full h-full object-cover"
                 @click="
@@ -819,6 +868,7 @@
               src="assets/home-page/product-img1.webp"
               alt="Scampi"
               class="w-full h-full object-cover"
+              loading="lazy"
               @click="
                 const sel = 'scampi';
                 if(sel === 'scampi') window.location.href = 'pages/product.html?product=scampi-1';
@@ -888,7 +938,7 @@
             class="relative h-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer "
           >
             <img
-              src="assets/home-page/our-product-img5.jpg"
+              src="assets/home-page/our-product-img5.webp"
               alt="Tuna"
               class="w-full h-full object-cover"
               @click="
@@ -1038,7 +1088,7 @@
               class="relative overflow-hidden flex-1 rounded-l-lg min-w-[70%] max-h-[500px]"
             >
               <img
-                src="assets/home-page/category3.jpeg"
+                src="assets/home-page/category3.webp"
                 alt="Image 1"
                 class="w-full h-full object-cover max-h-[500px]"
               />
@@ -1049,9 +1099,10 @@
               class="relative overflow-hidden flex-1 rounded-r-lg min-w-[20%] max-h-[500px]"
             >
               <img
-                src="assets/home-page/category4.jpg"
+                src="assets/home-page/category4.webp"
                 alt="Image 2"
                 class="w-full h-full object-cover max-h-[500px]"
+                loading="lazy"
               />
               <div class="absolute inset-0 bg-black/10"></div>
             </div>
@@ -1157,7 +1208,7 @@
           modalContent: { title: '', fullDesc: '' },
           items: [
             {
-              img: "assets/home-page/our-business-1.png",
+              img: "assets/home-page/our-business-1.webp",
               title: "Seafood Express Exports",
               shortDesc: "We process and export high-quality frozen Scampi, Tuna Varieties, Lobster, Squid, Shrimp (Black tiger & Vannamei) and many more varieties.",
               fullDesc: "We process and export high-quality frozen Scampi, Tuna Varieties, Lobster, Squid, Shrimp (Black tiger & Vannamei) and many more varieties. Our main markets are Maritius, Malaysia, Middle East, EU countries, China, Japan, Vietnam and Hongkong.",
@@ -1168,12 +1219,12 @@
               img: "assets/home-page/our-business-2.png",
               title: "Seafood Express (Marketing Seafood)",
               shortDesc: "We specialize in marketing of frozen seafood of many other companies. Once the buyer order is confirmed.",
-              fullDesc: "We specialize in marketing of frozen seafood of many other companies. Once the buyer order is confirmed, we get the product processed as per availability and distribution of different varieties of Tuna, fishes, shrimp, prawns etc in our associate factories throughout India. We have a very large network of fishing boats, inland & sea caught seafood suppliers, farmers who contribute to the fishing, harvesting & supply of high quality diet for human consumption. With their effort and support of government policies & export market demand, the fisheries sector has created employment to many people. Our network helps to process the marine food in factories nearest to the fishing place which are approved by EIA & MPEDA.",
+              fullDesc: "We specialize in marketing of frozen seafood of many other companies. Once the buyer order is confirmed, we get the product processed as per availability and distribution of different varieties of Tuna, fishes, shrimp, prawns etc in our associate factories throughout India. We have a very large network of fishing boats, inland & sea caught seafood suppliers, farmers who contribute to the fishing, harvesting & supply of high quality diet for human consumption. With their effort and support of government policies & export market demand, the fisheries sector has created employment to many people. Our network helps to process the marine food in factories nearest to the fishing place which are approved by EIC & MPEDA.",
               icon: "mdi:lifebuoy",
               hasFullDesc: true
             },
             {
-              img: "assets/home-page/our-business-3.jpg",
+              img: "assets/home-page/our-business-3.webp",
               title: "Seafood Express Consultants",
               shortDesc: "We can plan and construct the shrimp ponds. Prepare full infrastructure with proper pond planning.",
               fullDesc: "We can plan and construct the shrimp ponds. Prepare full infrastructure with proper pond planning, water inlet & treatment, pond treatment, power line & equipment, Aerators etc. The ponds for reservoir, treatment, nursery & culture are properly planned. Labour management & AI-based feed management. Stocking of shrimp seeds/fingerlings, feed management, best practices for proper health & growth of shrimp/fish etc. Disease prevention & Bio-security. Harvesting is done by trained workers. Proper Ice is arranged for chilling of shrimp/Fish before filling it into crates and sending it to processing plants nearest to the farm area.",
