@@ -103,9 +103,10 @@
       <!-- Hero Section with Background Image -->
       <div class="relative h-[70vh] w-full overflow-hidden">
         <img
-          src="/assets/about-page/header-image.jpg"
+          src="/assets/about-page/header-image.webp"
           alt="About Image"
           class="absolute top-0 left-0 w-full h-full object-cover"
+          fetchpriority="high"
         />
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
 
@@ -192,9 +193,9 @@
         <!-- Image below the flex content -->
         <div class="-mx-0 md:-mx-12 pt-20 overflow-hidden">
           <img
-            src="/assets/about-page/banner-shrimp.png"
+            src="/assets/about-page/banner-shrimp.webp"
             alt="Marine Excellence"
-            class="w-full object-cover rounded-xl lg:rounded-none banner-img"
+            class="w-full object-cover rounded-xl lg:rounded-none h-[400px]"
           />
           <h3
             class="text-sm font-light mt-5 text-center text-[#334155] sm:text-base"
@@ -309,7 +310,7 @@
           <!-- Image 2 -->
           <div class="overflow-hidden flex items-center justify-center w-full">
             <img
-              src="/assets/about-page/our-business-2.png"
+              src="/assets/about-page/our-business-2.webp"
               alt="Image 2"
               class="w-full h-80 md:h-[400px] lg:h-[500px] object-cover"
             />
@@ -348,7 +349,7 @@
                 <!-- Description overlay -->
                 <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
                   <span class="inline-block mb-2">
-                    <iconify-icon :icon="item.icon" width="48" class="iconify-colored"></iconify-icon>
+                    <iconify-icon :icon="item.icon" width="48" class="text-[#14B8A6]"></iconify-icon>
                   </span>
                   <h3 class="text-xl font-bold mb-1" x-text="item.title"></h3>
                   <p class="text-sm font-medium leading-relaxed">
@@ -372,7 +373,7 @@
           <template x-for="(item, index) in items" :key="index">
             <div class="flex flex-col items-center text-center">
               <span class="inline-block mb-4">
-                <iconify-icon :icon="item.icon" class="iconify-colored" width="48"></iconify-icon>
+                <iconify-icon :icon="item.icon" class="text-[#14B8A6]" width="48"></iconify-icon>
               </span>
               <h3 class="text-xl font-bold text-[#1D265F] mb-2" x-text="item.title"></h3>
               <p class="text-[#334155] text-base font-medium" x-text="item.shortDesc"></p>
@@ -437,7 +438,7 @@
           <!-- Image 1: Top -->
           <a href="/pages/processing.html" class="flex items-start w-1/4">
             <img
-              src="/assets/about-page/our-story-img1.png"
+              src="/assets/about-page/our-story-img1.webp"
               alt="Product 1"
               class="w-full h-[90%] object-cover rounded-2xl"
             />
@@ -445,7 +446,7 @@
           <!-- Image 2: Bottom -->
           <a href="/pages/product.html" class="flex items-end w-1/4">
             <img
-              src="/assets/about-page/our-story-img2.jpg"
+              src="/assets/about-page/our-story-img2.webp"
               alt="Product 2"
               class="w-full h-[90%] object-cover rounded-2xl"
             />
@@ -453,7 +454,7 @@
           <!-- Image 3: Top -->
           <a href="/pages/export.html" class="flex items-start w-1/4">
             <img
-              src="/assets/about-page/our-story-img3.png"
+              src="/assets/about-page/our-story-img3.webp"
               alt="Product 3"
               class="w-full h-[90%] object-cover rounded-2xl"
             />
@@ -461,7 +462,7 @@
           <!-- Image 4: Bottom -->
           <a href="/pages/product.html" class="flex items-end w-1/4">
             <img
-              src="/assets/about-page/our-story-img4.png"
+              src="/assets/about-page/our-story-img4.webp"
               alt="Product 4"
               class="w-full h-[90%] object-cover rounded-2xl"
             />
@@ -473,7 +474,7 @@
           <!-- Image 1 -->
           <a href="/pages/processing.html" class="w-full max-w-md">
             <img
-              src="/assets/about-page/our-story-img1.png"
+              src="/assets/about-page/our-story-img1.webp"
               alt="Product 1"
               class="w-full h-60 object-cover rounded-lg"
             />
@@ -481,7 +482,7 @@
           <!-- Image 2 -->
           <a href="/pages/product.html" class="w-full max-w-md">
             <img
-              src="/assets/about-page/our-story-img2.jpg"
+              src="/assets/about-page/our-story-img2.webp"
               alt="Product 2"
               class="w-full h-60 object-cover rounded-lg"
             />
@@ -489,7 +490,7 @@
           <!-- Image 3 -->
           <a href="/pages/export.html" class="w-full max-w-md">
             <img
-              src="/assets/about-page/our-story-img3.png"
+              src="/assets/about-page/our-story-img3.webp"
               alt="Product 3"
               class="w-full h-60 object-cover rounded-lg"
             />
@@ -497,7 +498,7 @@
           <!-- Image 4 -->
           <a href="/pages/product.html" class="w-full max-w-md">
             <img
-              src="/assets/about-page/our-story-img4.png"
+              src="/assets/about-page/our-story-img4.webp"
               alt="Product 4"
               class="w-full h-60 object-cover rounded-lg"
             />
@@ -744,7 +745,7 @@
               hasFullDesc: true
             },
             {
-              img: "/assets/about-page/our-business-2.png",
+              img: "/assets/about-page/our-business-2.webp",
               title: "Seafood Express (Marketing Seafood)",
               shortDesc: "We specialize in marketing of frozen seafood of many other companies. Once the buyer order is confirmed.",
               fullDesc: "We specialize in marketing of frozen seafood of many other companies. Once the buyer order is confirmed, we get the product processed as per availability and distribution of different varieties of Tuna, fishes, shrimp, prawns etc in our associate factories throughout India. We have a very large network of fishing boats, inland & sea caught seafood suppliers, farmers who contribute to the fishing, harvesting & supply of high quality diet for human consumption. With their effort and support of government policies & export market demand, the fisheries sector has created employment to many people. Our network helps to process the marine food in factories nearest to the fishing place which are approved by EIC & MPEDA.",
@@ -754,8 +755,8 @@
             {
               img: "/assets/about-page/our-business-3.webp",
               title: "Seafood Express Consultants",
-              shortDesc: "We can plan and construct the shrimp ponds. Prepare full infrastructure with proper pond planning.",
-              fullDesc: "We can plan and construct the shrimp ponds. Prepare full infrastructure with proper pond planning, water inlet & treatment, pond treatment, power line & equipment, Aerators etc. The ponds for reservoir, treatment, nursery & culture are properly planned. Labour management & AI-based feed management. Stocking of shrimp seeds/fingerlings, feed management, best practices for proper health & growth of shrimp/fish etc. Disease prevention & Bio-security. Harvesting is done by trained workers. Proper Ice is arranged for chilling of shrimp/Fish before filling it into crates and sending it to processing plants nearest to the farm area.",
+              shortDesc: "We are involved in shrimp farming & consultation. we have experienced staff and quality testing personnel to plan and implement.",
+              fullDesc: "We are involved in shrimp farming & consultation. we have experienced staff and quality testing personnel to plan and implement your aquaculture needs. We can plan and construct the shrimp ponds. Prepare full infrastructure with proper pond planning, water inlet & treatment, pond treatment, power line & equipment, Aerators etc. The ponds for reservoir, treatment, nursery & culture are properly planned. Labour management & AI-based feed management. Stocking of shrimp seeds/fingerlings, feed management, best practices for proper health & growth of shrimp/fish etc. Disease prevention & Bio-security. Harvesting is done by trained workers. Proper Ice is arranged for chilling of shrimp/Fish before filling it into crates and sending it to processing plants nearest to the farm area.",
               icon: "mdi:fish",
               hasFullDesc: true
             }
