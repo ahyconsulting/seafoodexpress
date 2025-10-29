@@ -103,7 +103,7 @@
   },
   {
     "id": 6,
-    "name": "Semi Needle Loligo Squid",
+    "name": "Semi Needle Squid",
     "categories": [],
     "image": "/assets/product-page/product-img6.2.webp",
     "images": [
@@ -189,10 +189,11 @@
     "modalTitle": "Fish",
     "modalName": "Catfish",
     "details": [
-      "10 KG",
-      "3/5 600",
-      "5/7 500",
-      "7/10  300 Flat price is .080 us$/kgP"
+      "10 kg packing",
+      "Grades",
+      "3/5",
+      "5/7",
+      "7/10"
     ]
   },
   {

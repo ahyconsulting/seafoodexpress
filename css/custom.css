@@ -30,18 +30,3 @@ body {
   font-family: 'Anton', sans-serif;
   letter-spacing: 0.7px;
 }
-
-/* Iconify color */
-.iconify-colored {
-  color: #14B8A6;
-}
-
-/* Banner height */
-.banner-img {
-  height: 400px;
-}
-.list-dash li::before {
-  content: "- ";
-  color: #334155; /* same as your text color */
-}
-
