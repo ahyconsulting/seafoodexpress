@@ -76,6 +76,7 @@
       href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Styles + Scripts -->
     <link
@@ -111,6 +112,7 @@
           src="/assets/product-page/header-image.webp"
           alt="About Image"
           class="absolute top-0 left-0 w-full h-full object-cover"
+          fetchpriority="high"
         />
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
 
@@ -274,123 +276,152 @@
             x-cloak
             @keydown.escape.window="closeModal()"
             @click.self="closeModal()"
-            class="fixed inset-0 z-[2000] flex items-center justify-center bg-black bg-opacity-60 transition duration-300"
-            :class="{ 'backdrop-blur-sm': modalOpen }"
-            x-transition:enter="transition ease-out duration-200"
+            class="fixed inset-0 z-[3000] flex flex-col bg-white overflow-y-auto transition duration-300"
+            x-transition:enter="transition ease-out duration-300"
             x-transition:enter-start="opacity-0"
             x-transition:enter-end="opacity-100"
-            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave="transition ease-in duration-200"
             x-transition:leave-start="opacity-100"
             x-transition:leave-end="opacity-0"
+            x-effect="document.body.style.overflow = modalOpen ? 'hidden' : 'auto'"
           >
-            <div
-              @click.stop
-              class="bg-white rounded-2xl shadow-lg w-full max-w-5xl mx-4 relative overflow-visible flex flex-col md:flex-row h-[500px]"
-              x-transition:enter="transition ease-out duration-200 transform"
-              x-transition:enter-start="scale-95 opacity-0"
-              x-transition:enter-end="scale-100 opacity-100"
-              x-transition:leave="transition ease-in duration-150 transform"
-              x-transition:leave-start="scale-100 opacity-100"
-              x-transition:leave-end="scale-95 opacity-0"
+            <!-- Close Button -->
+            <button
+              @click="closeModal()"
+              class="absolute top-4 right-4 p-3 rounded-lg shadow-md bg-gray-200 hover:brightness-90 z-50"
+              aria-label="Close modal"
             >
-              <!-- Close Button (Floating Outside Top-Right) -->
-              <button
-                @click="closeModal()"
-                class="absolute -top-3 -right-3 p-3 rounded-lg shadow-lg bg-[#14B8A6] hover:brightness-90 z-20"
-                aria-label="Close modal"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="4"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
 
-              <!-- Carousel Image Section -->
-              <div class="md:w-1/2 w-full h-full relative overflow-hidden">
-                <template
-                  x-if="modalProduct.images && modalProduct.images.length"
-                >
-                  <div class="relative w-full h-full">
-                    <!-- Images -->
-                    <template
-                      x-for="(img, index) in modalProduct.images"
-                      :key="index"
-                    >
+            <!-- Content Wrapper -->
+            <div class="flex flex-col lg:flex-row min-h-screen max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16 gap-12 items-start">
+              
+              <!-- Left: Image + Thumbnails -->
+              <div class="w-full lg:w-1/2 flex flex-col items-center justify-start">
+                <!-- Main Image -->
+                <template x-if="modalProduct.images && modalProduct.images.length">
+                  <img
+                    :src="modalProduct.images[currentSlide]"
+                    class="w-full max-w-[600px] h-[350px] md:h-[400px] lg:h-[450px] object-cover rounded-lg shadow-xl"
+                    alt=""
+                  />
+                </template>
+
+                <!-- Thumbnails Carousel -->
+                <div class="relative w-full max-w-[600px] mt-4">
+                  <!-- Left Button -->
+                  <button
+                    @click="prevSlide()"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md hover:bg-gray-100 z-10 w-8 h-8 flex items-center justify-center rounded-full"
+                    aria-label="Previous Thumbnail"
+                  >
+                    <i class="fas fa-chevron-left text-gray-600"></i>
+                  </button>
+
+                  <!-- Thumbnails Wrapper -->
+                  <div
+                    x-ref="thumbContainer"
+                    class="flex overflow-x-auto no-scrollbar scroll-smooth gap-3 px-5 py-1"
+                  >
+                    <template x-for="(img, index) in modalProduct.images || []" :key="index">
                       <img
                         :src="img"
-                        x-show="index === currentSlide"
-                        class="absolute inset-0 w-full h-full object-cover rounded-2xl transition-opacity duration-300"
-                        x-transition:enter="ease-out duration-300"
-                        x-transition:enter-start="opacity-0"
-                        x-transition:enter-end="opacity-100"
-                        x-transition:leave="ease-in duration-200"
-                        x-transition:leave-start="opacity-100"
-                        x-transition:leave-end="opacity-0"
+                        @click="currentSlide = index; scrollToActiveThumbnail()"
+                        :class="currentSlide === index ? 'ring-2 ring-[#006272]' : ''"
+                        class="w-40 h-20 object-cover rounded-md cursor-pointer transition hover:opacity-80 flex-shrink-0"
+                        alt=""
                       />
                     </template>
-
-                    <!-- Left arrow -->
-                    <button
-                      class="absolute left-2 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 text-black p-2 rounded-lg z-10"
-                      @click="currentSlide = (currentSlide - 1 + modalProduct.images.length) % modalProduct.images.length"
-                      aria-label="Previous Image"
-                    >
-                      <i class="fas fa-chevron-left"></i>
-                    </button>
-
-                    <!-- Right arrow -->
-                    <button
-                      class="absolute right-2 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 text-black p-2 rounded-lg z-10"
-                      @click="currentSlide = (currentSlide + 1) % modalProduct.images.length"
-                      aria-label="Next Image"
-                    >
-                      <i class="fas fa-chevron-right"></i>
-                    </button>
                   </div>
-                </template>
+
+                  <!-- Right Button -->
+                  <button
+                    @click="nextSlide()"
+                    class="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md hover:bg-gray-100 z-10 w-8 h-8 flex items-center justify-center rounded-full"
+                    aria-label="Next Thumbnail"
+                  >
+                    <i class="fas fa-chevron-right text-gray-600"></i>
+                  </button>
+                </div>
               </div>
 
-              <!-- Right: Text Content -->
-              <div
-                class="md:w-2/3 w-full relative overflow-hidden rounded-tr-2xl rounded-br-2xl"
-              >
-                <div class="h-full max-h-[500px] overflow-y-auto p-6">
-                  <h2
-                    class="mt-4 text-3xl md:text-[48px] text-[#1D265F] uppercase leading-tight custom-heading"
-                    x-text="modalProduct.modalTitle || modalProduct.name"
-                  ></h2>
-                  <p
-                    class="text-base font-medium text-[#334155] my-4"
-                    x-show="modalProduct.modalName"
-                    x-text="modalProduct.modalName"
-                  ></p>
-                  <hr class="border-gray-300 mb-4" />
-                  <!-- Product Details List -->
-                  <template
-                    x-if="modalProduct.details && modalProduct.details.length"
-                  >
-                    <ul
-                      class="list-inside text-sm text-[#334155] leading-[48px]"
-                    >
-                      <template
-                        x-for="(item, index) in modalProduct.details"
-                        :key="index"
-                      >
-                        <li x-text="`- ${item}`"></li>
+              <!-- Right: Product Details -->
+              <div class="w-full lg:w-1/2 flex flex-col justify-start">
+                <h2 class="text-2xl md:text-3xl lg:text-[40px] text-[#006272] uppercase leading-tight custom-heading" x-text="modalProduct.modalTitle || modalProduct.name"></h2>
+
+                <p class="text-lg font-medium text-[#334155] mt-6 min-h-[28px]"
+                  x-text="modalProduct.modalName || ''"
+                  :class="!modalProduct.modalName ? 'invisible' : 'visible'"></p>
+
+                <p class="text-base font-medium text-[#334155] mt-4 min-h-[28px]"
+                   x-text="modalProduct.description || ''"
+                   :class="!modalProduct.description ? 'invisible' : 'visible'"></p>
+
+                <hr class="border-gray-300 my-4" />
+                <!-- Specifications block -->
+                <template x-if="
+                  (modalProduct.packaging && modalProduct.packaging.length) ||
+                  (modalProduct.sizeRange && modalProduct.sizeRange.length) ||
+                  (modalProduct.varieties && modalProduct.varieties.length) ||
+                  (modalProduct.others && modalProduct.others.length)
+                ">
+                  <div>
+                    <h2 class="font-semibold text-[#006272] text-3xl modal-font">Specifications</h2>
+                    <div class="mt-4 mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <template x-if="modalProduct.packaging && modalProduct.packaging.length">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                          <h3 class="font-medium text-black mb-2">Packaging</h3>
+                          <p class="text-sm text-[#334155] leading-relaxed" x-text="modalProduct.packaging.join(', ')"></p>
+                        </div>
                       </template>
-                    </ul>
-                  </template>
-                </div>
+
+                      <template x-if="modalProduct.sizeRange && modalProduct.sizeRange.length">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                          <h3 class="font-medium text-black mb-2">Size Range</h3>
+                          <p class="text-sm text-[#334155] leading-relaxed" x-text="modalProduct.sizeRange.join(', ')"></p>
+                        </div>
+                      </template>
+
+                      <template x-if="modalProduct.varieties && modalProduct.varieties.length">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                          <h3 class="font-medium text-black mb-2">Varieties</h3>
+                          <p class="text-sm text-[#334155] leading-relaxed" x-text="modalProduct.varieties.join(', ')"></p>
+                        </div>
+                      </template>
+
+                      <template x-if="modalProduct.others && modalProduct.others.length">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                          <h3 class="font-medium text-black mb-2">Other Info</h3>
+                          <p class="text-sm text-[#334155] leading-relaxed" x-text="modalProduct.others.join(', ')"></p>
+                        </div>
+                      </template>
+                    </div>
+                  </div>
+                </template>
+
+                <!-- Certifications block -->
+                <template x-if="modalProduct.certifications && modalProduct.certifications.length">
+                  <div>
+                    <h2 class="font-semibold text-[#006272] text-3xl modal-font">Certifications</h2>
+                    <div class="my-4 flex flex-wrap gap-4">
+                      <template x-for="(cert, index) in modalProduct.certifications" :key="index">
+                        <div class="bg-gray-50 rounded-lg py-2 px-5 flex items-center justify-center text-md font-medium text-[#334155] space-x-2">
+                          <img src="/assets/product-page/check.png" alt="check mark" class="w-4 h-4">
+                          <span x-text="cert"></span>
+                        </div>
+                      </template>
+                    </div>
+                  </div>
+                </template>
+                <a
+                  :href="`/pages/contact.html?productId=` + modalProduct.id"
+                  class="mb-5 mt-3 inline-block w-full sm:w-fit px-5 py-4 text-white font-medium bg-[#dc4123] hover:brightness-90 rounded-lg text-center"
+                >
+                  Submit Inquiry for This Product
+                </a>
               </div>
             </div>
           </div>
@@ -414,6 +445,32 @@
           modalOpen: false,
           modalProduct: {},
           currentSlide: 0,
+          nextSlide() {
+            if (!this.modalProduct.images?.length) return;
+            this.currentSlide = (this.currentSlide + 1) % this.modalProduct.images.length;
+            this.scrollToActiveThumbnail();
+          },
+
+          prevSlide() {
+            if (!this.modalProduct.images?.length) return;
+            this.currentSlide =
+              (this.currentSlide - 1 + this.modalProduct.images.length) %
+              this.modalProduct.images.length;
+            this.scrollToActiveThumbnail();
+          },
+
+          scrollToActiveThumbnail() {
+            const container = this.$refs.thumbContainer;
+            if (!container) return;
+            const activeThumb = container.querySelectorAll("img")[this.currentSlide];
+            if (activeThumb) {
+              activeThumb.scrollIntoView({
+                behavior: "smooth",
+                inline: "center",
+                block: "nearest",
+              });
+            }
+          },
 
           async init() {
             try {
@@ -521,7 +578,14 @@
             this.modalOpen = false;
             // Delay clearing modalProduct until after transition (e.g., 300ms)
             setTimeout(() => {
-              this.modalProduct = {};
+              this.modalProduct = {
+                packaging: [],
+                sizeRange: [],
+                varieties: [],
+                others: [],
+                certifications: [],
+                images: [],
+              };
             }, 300); // Match this to your x-transition duration
             const url = new URL(window.location);
             url.searchParams.delete("product");
@@ -553,10 +617,10 @@
                   );
                 if (el) {
                   el.scrollIntoView({ behavior: "smooth", block: "center" });
-                  el.classList.add("ring-2", "ring-blue-800");
+                  el.classList.add("ring-2", "ring-gray-400");
                   setTimeout(
-                    () => el.classList.remove("ring-2", "ring-blue-800"),
-                    3000
+                    () => el.classList.remove("ring-2", "ring-gray-400"),
+                    6000
                   );
                 }
               });

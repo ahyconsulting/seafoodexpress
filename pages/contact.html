@@ -405,6 +405,10 @@
           </div>
         </div>
       </section>
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-6 pb-20 text-center px-6">
+        <p class="text-[#1D265F] text-xl custom-heading"><strong>CEO</strong><br>Suhail Sait</p>
+        <p class="text-[#1D265F] text-xl custom-heading"><strong>CFO</strong><br>Arshad Khan</p>
+      </div>
     </main>
     <!-- Footer placeholder -->
     <div x-ref="footer"></div>
@@ -468,6 +472,41 @@
           }
         }
       }
+      // (pre-fills the inquiry form)
+      document.addEventListener('DOMContentLoaded', async () => {
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get('productId');
+        if (!productId) return;
+
+        const res = await fetch('/data/product.json');
+        const products = await res.json();
+
+        const product = products.find(p => p.id == productId);
+        if (!product) return;
+
+        const contactRoot = document.querySelector('[x-data="contactSection()"]');
+        if (!contactRoot) return;
+        const contact = Alpine.$data(contactRoot);
+        contact.activeTab = 'inquiry';
+
+        const messageParts = ['Product Inquiry below:'];
+        if (product.name) messageParts.push(`Product: ${product.name}`);
+        if (product.packaging?.length) messageParts.push(`Packaging: ${product.packaging.join(', ')}`);
+        if (product.sizeRange?.length) messageParts.push(`Size Range: ${product.sizeRange.join(', ')}`);
+        if (product.varieties?.length) messageParts.push(`Varieties: ${product.varieties.join(', ')}`);
+        if (product.others?.length) messageParts.push(`Other Info: ${product.others.join(', ')}`);
+
+        contact.inquiry.message = messageParts.join('\n\n');
+
+        const messageField = contactRoot.querySelector('textarea[name="message"]');
+        if (!messageField) return;
+
+        requestAnimationFrame(() => {
+          const topPos = messageField.getBoundingClientRect().top + window.scrollY - 50; // offset if needed
+          window.scrollTo({ top: topPos, behavior: 'smooth' });
+          // messageField.focus();
+        });
+      });
     </script>
     <script src="/index.js"></script>
   </body>

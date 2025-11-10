@@ -445,7 +445,7 @@
                   <div class="relative w-full flex-1 min-h-0 cursor-pointer"
                        @click="
                           const sel = 'sea water fish';
-                          if(sel === 'sea water fish') window.location.href = 'pages/product.html?product=catfish-frozen-9';
+                          if(sel === 'sea water fish') window.location.href = 'pages/product.html?product=catfish-frozen-14';
                         "
                   >
                     <img
@@ -464,7 +464,7 @@
                   <div class="relative w-full flex-1 min-h-0 cursor-pointer"
                        @click="
                           const sel = 'sea water fish';
-                          if(sel === 'sea water fish') window.location.href = 'pages/product.html?product=tuna-4';
+                          if(sel === 'sea water fish') window.location.href = 'pages/product.html?product=tuna-long-tail-10';
                         "
                   >
                     <img
@@ -493,9 +493,9 @@
                     else if(sel === 'black tiger shrimp') window.location.href = 'pages/product.html?product=black-tiger-shrimp-2';
                     else if(sel === 'vannamei shrimp') window.location.href = 'pages/product.html?product=vannamei-shrimp-3';
                     else if(sel === 'lobster') window.location.href = 'pages/product.html?product=lobster-panulirus-polyphagus-13';
-                    else if(sel === 'tuna varieties') window.location.href = 'pages/product.html?product=yellowfin-tuna-14';
-                    else if(sel === 'crustaceans') window.location.href = 'pages/product.html?product=crab-12';
-                    else if(sel === 'cephalopods') window.location.href = 'pages/product.html?product=semi-needle-loligo-squid-6';
+                    else if(sel === 'tuna varieties') window.location.href = 'pages/product.html?product=yellowfin-tuna-9';
+                    else if(sel === 'crustaceans') window.location.href = 'pages/product.html?product=crab-54';
+                    else if(sel === 'cephalopods') window.location.href = 'pages/product.html?product=semi-needle-squid-6';
                     else if(sel === 'surimi') window.location.href = 'pages/product.html?product=itoyori-surimi-62';
                   "
                 />
@@ -673,7 +673,7 @@
           <div class="bg-white rounded-xl max-w-xl w-full md:w-[90%] p-6 relative flex flex-col max-h-[80vh]" x-cloak>
             <button @click="closeModal()" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800">&times;</button>
             <h3 class="text-xl font-bold mb-4" x-text="modalContent.title"></h3>
-            <div class="overflow-y-auto text-gray-700 text-base leading-relaxed" style="flex: 1;" x-text="modalContent.fullDesc"></div>
+            <div class="overflow-y-auto text-gray-700 text-base leading-relaxed" style="flex: 1;" x-html="modalContent.fullDesc"></div>
           </div>
         </div>
       </div>
@@ -821,7 +821,7 @@
                 class="w-full h-full object-cover"
                 @click="
                   const sel = 'tuna';
-                  if(sel === 'tuna') window.location.href = 'pages/product.html?product=yellowfin-tuna-14';
+                  if(sel === 'tuna') window.location.href = 'pages/product.html?product=yellowfin-tuna-9';
                 "
               />
               <div
@@ -943,7 +943,7 @@
               class="w-full h-full object-cover"
               @click="
                 const sel = 'tuna';
-                if(sel === 'tuna') window.location.href = 'pages/product.html?product=yellowfin-tuna-14';
+                if(sel === 'tuna') window.location.href = 'pages/product.html?product=yellowfin-tuna-9';
               "
             />
             <div
@@ -1227,7 +1227,7 @@
               img: "assets/home-page/our-business-3.webp",
               title: "Seafood Express Consultants",
               shortDesc: "We are involved in shrimp farming & consultation. we have experienced staff and quality testing personnel to plan and implement.",
-              fullDesc: "We are involved in shrimp farming & consultation. we have experienced staff and quality testing personnel to plan and implement your aquaculture needs. We can plan and construct the shrimp ponds. Prepare full infrastructure with proper pond planning, water inlet & treatment, pond treatment, power line & equipment, Aerators etc. The ponds for reservoir, treatment, nursery & culture are properly planned. Labour management & AI-based feed management. Stocking of shrimp seeds/fingerlings, feed management, best practices for proper health & growth of shrimp/fish etc. Disease prevention & Bio-security. Harvesting is done by trained workers. Proper Ice is arranged for chilling of shrimp/Fish before filling it into crates and sending it to processing plants nearest to the farm area.",
+              fullDesc: "We are involved in shrimp farming & consultation. we have experienced staff and quality testing personnel to plan and implement your aquaculture needs.<br><br> 1) We can plan and construct the shrimp ponds. <br><br> 2) Prepare full infrastructure with proper pond planning, water inlet & treatment, pond treatment, power line & equipment, Aerators etc.<br><br> 3) The ponds for reservoir, treatment, nursery & culture are properly planned.<br><br> 4) Labour management & AI-based feed management.<br><br> 5) Stocking of shrimp seeds/fingerlings, feed management, best practices for proper health & growth of shrimp/fish etc.<br><br> 6) Disease prevention & Bio-security.<br><br> 7) Harvesting is done by trained workers. Proper Ice is arranged for chilling of shrimp/Fish before filling it into crates and sending it to processing plants nearest to the farm area.<br><br> Shrimp farming has transformed from a traditional small-scale enterprise to a global industry. Advances in technology have led to higher density of shrimp per square area of the modern pond. Mainly two species of shrimp; Penaeus monodon (tiger prawn) and Penaeus vannamei (Penaeus pacificus) are farmed and these shrimp belong to the Penaeidae family.<br><br> The live broodstock are transported worldwide to hatcheries and hatched fingerlings are distributed to nearby farms. Broodstock is a group of mature individuals in aquaculture used for breeding purposes. Broodstock can be animal populations in captivity and can be used as an alternative or an enhanced source of seeds and fry numbers.",
               icon: "mdi:fish",
               hasFullDesc: true
             }

@@ -7,19 +7,50 @@
     "images": [
       "/assets/product-page/product-img1.1.webp",
       "/assets/product-page/product-img1.3.jpg",
-      "/assets/product-page/product-img1.2.jpg"
-  ],
+      "/assets/product-page/product-img1.2.jpg",
+      "/assets/product-page/product-img1.4.webp",
+      "/assets/product-page/product-img1.5.webp",
+      "/assets/product-page/product-img1.6.webp"
+    ],
     "description": "Freshwater scampi with delicate flavor, sourced from trusted farms.",
     "modalTitle": "SCAMPI / FRESHWATER SHRIMP",
     "modalName": "Raw Water Scampi Shrimp (Shellon)",
-    "details": [
-      "Raw Headon Shellon with Claw -- 1/2 to 16/20 pcs/lb",
-      "Raw Headon Shellon without Claw -- 1/2 to 16/20 pcs/lb",
-      "Raw Headless Shellon -- u/5 to 41/50 pcs/lb",
-      "Raw Headless Shellon Easy Peel -- u/5 to 41/50 pcs/lb",
-      "Raw PUD Tail-off -- 13/15 to 51/60 pcs/lb"
+    
+    "packaging": [
+      "Our Scampi packing (Pieces/count per kilogram)",
+      "Head on shell on frozen Scampi prawns",
+      "Packing: net count with 20% glaze",
+      "Frozen Count with 20% glaze"
+    ],
+
+    "sizeRange": [
+      "U/2",
+      "U/3",
+      "U/5",
+      "U/7",
+      "U8/10",
+      "11/15",
+      "16/20 pieces per kg"
+    ],
+
+    "varieties": [
+      "Raw Headon Shellon with Claw — 1/2 to 16/20 pcs/lb",
+      "Raw Headon Shellon without Claw — 1/2 to 16/20 pcs/lb",
+      "Raw Headless Shellon — u/5 to 41/50 pcs/lb",
+      "Raw Headless Shellon Easy Peel — u/5 to 41/50 pcs/lb",
+      "Raw PUD Tail-off — 13/15 to 51/60 pcs/lb"
+    ],
+
+    "others": [
+      "Pound grade also available Pieces/LBS"
+    ],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 2,
     "name": "Black Tiger Shrimp",
@@ -29,17 +60,36 @@
       "/assets/product-page/product-img2.jpg",
       "/assets/product-page/product-img2.1.jpg",
       "/assets/product-page/product-img2.2.jpg",
-      "/assets/product-page/product-img2.3.jpg"
-  ],
+      "/assets/product-page/product-img2.3.jpg",
+      "/assets/product-page/product-img2.4.webp",
+      "/assets/product-page/product-img2.5.webp"
+    ],
     "description": "Premium wild-caught shrimp known for its size and taste.",
     "modalTitle": "BLACK TIGER SHRIMPS (Penaeus Monodon)",
     "modalName": "Raw Black Tiger Shrimp (Shellon)",
-    "details": [
-      "Raw Headon Shellon 21/25 to 51/60 pcs/kg",
-      "Raw Headless Shellon 21/25 to 91/110 pcs/lb",
-      "Raw Headless Shellon Easy peel 21/25 to 71/90 pcs/lb"
+
+    "packaging": [],
+
+    "sizeRange": [
+      "21/25 to 51/60 pcs/kg",
+      "21/25 to 91/110 pcs/lb",
+      "21/25 to 71/90 pcs/lb"
+    ],
+
+    "varieties": [
+      "Raw Headon Shellon — 21/25 to 51/60 pcs/kg",
+      "Raw Headless Shellon — 21/25 to 91/110 pcs/lb",
+      "Raw Headless Shellon Easy Peel — 21/25 to 71/90 pcs/lb"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 3,
     "name": "Vannamei Shrimp",
@@ -49,36 +99,64 @@
       "/assets/product-page/product-img3.2.webp",
       "/assets/product-page/product-img3.1.webp",
       "/assets/product-page/product-img3.webp",
-      "/assets/product-page/product-img3.3.webp"
-  ],
+      "/assets/product-page/product-img3.3.webp",
+      "/assets/product-page/product-img3.4.webp",
+      "/assets/product-page/product-img3.5.webp"
+    ],
     "description": "Farmed white shrimp — processed and exported globally.",
     "modalTitle": "VANNAMEI SHRIMPS (Litopenaeus vannamei)",
     "modalName": "Raw Vannamei White Shrimp (Shellon)",
-    "details": [
-      "Raw Headon Shellon 21/25 to 80/120 pcs/kg",
-      "Raw Headless Shellon 21/25 to 91/110 pcs/lb",
-      "Raw Headless Shellon Easy Peel 21/25 to 71/90 pcs/lb"
+
+    "packaging": [],
+
+    "sizeRange": [
+      "21/25 to 80/120 pcs/kg",
+      "21/25 to 91/110 pcs/lb",
+      "21/25 to 71/90 pcs/lb"
+    ],
+
+    "varieties": [
+      "Raw Headon Shellon — 21/25 to 80/120 pcs/kg",
+      "Raw Headless Shellon — 21/25 to 91/110 pcs/lb",
+      "Raw Headless Shellon Easy Peel — 21/25 to 71/90 pcs/lb"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 4,
-    "name": "Tuna",
+    "name": "Queen Fish (Frozen)",
     "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img4.2.jpg",
+    "image": "/assets/product-page/product-img10.webp",
     "images": [
-      "/assets/product-page/product-img4.2.jpg",
-      "/assets/product-page/product-img4.1.jpg",
-      "/assets/product-page/product-img4.png",
-      "/assets/product-page/product-img4.3.webp"
+      "/assets/product-page/product-img10.webp",
+      "/assets/product-page/product-img10.1.png",
+      "/assets/product-page/product-img10.2.webp",
+      "/assets/product-page/product-img10.3.webp",
+      "/assets/product-page/product-img10.4.webp",
+      "/assets/product-page/product-img10.5.webp"
     ],
-    "description": "Cleaned and processed tuna, export-ready.",
-    "modalTitle": "Fish",
-    "modalName": "Tuna Long Tail",
-    "details": [
-      "Whole Round IQF Bulk 25Kgs in poly bags",
-      "2/3 , 3/5, 5/up (Kgs per piece)"
+    "description": "Frozen queen fish, processed for overseas buyers.",
+    "modalTitle": "QUEEN FISH (Frozen)",
+    "modalName": "Frozen Queen Fish",
+    
+    "packaging": [],
+    "sizeRange": [],
+    "varieties": [],
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 5,
     "name": "Cuttle Fish",
@@ -86,21 +164,38 @@
     "image": "/assets/product-page/product-img5.2.webp",
     "images": [
       "/assets/product-page/product-img5.2.webp",
-      "/assets/product-page/product-img5.1.jpg",
-      "/assets/product-page/product-img5.jpg",
-      "/assets/product-page/product-img5.3.jpg"
-  ],
+      "/assets/product-page/product-img5.1.webp",
+      "/assets/product-page/product-img5.webp",
+      "/assets/product-page/product-img5.3.webp",
+      "/assets/product-page/product-img5.4.webp",
+      "/assets/product-page/product-img5.5.webp"
+    ],
     "description": "Export-grade, cleaned and frozen for global delivery.",
     "modalTitle": "CEPHALOPODS",
-    "modalName": "Cuttle fish (Sepia pharaohnis)",
-    "details": [
+    "modalName": "Cuttle Fish (Sepia pharaohnis)",
+
+    "packaging": [
       "For Whole Round Cuttlefish 4 x 5 Kg, 2 x 10 Kg Block or IQF in 1 Kg bags",
+      "For Whole Cleaned Cuttlefish 2 x 6 Kg, 12 x 1 Kg Bulk IQF, 10% OR 15% Glaze"
+    ],
+
+    "sizeRange": [
       "U/20 TO 1000/UP (Grams/piece)",
-      "For Whole Cleaned Cuttlefish 2 x 6 Kg, 12 x 1 Kg Bulk IQF, 10% OR 15% Glaze",
-      "U/1 TO 60/UP (PCS/KG)",
-      "Also available cuttlefish fillet and tentacles."
+      "U/1 TO 60/UP (PCS/KG)"
+    ],
+
+    "varieties": [
+      "Cuttlefish fillet and tentacles also available"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 6,
     "name": "Semi Needle Squid",
@@ -109,50 +204,84 @@
     "images": [
       "/assets/product-page/product-img6.2.webp",
       "/assets/product-page/product-img6.1.jpg",
-      "/assets/product-page/product-img6.jpg",
-      "/assets/product-page/product-img6.3.jpg"
-  ],
+      "/assets/product-page/product-img6.webp",
+      "/assets/product-page/product-img6.3.jpg",
+      "/assets/product-page/product-img6.4.webp",
+      "/assets/product-page/product-img6.5.webp"
+    ],
     "description": "Premium semi-needle squid, frozen and export ready.",
     "modalTitle": "CEPHALOPODS",
-    "modalName": "Squid (Loligo Duvaucelii) /Semi needle Squid (Doryteuthiis Sibogae)",
-    "details": [
-      "For Whole Round Squid -10 x 2 Kg Block Frozen, Glaze 10/ 15 / 20%",
-      "U/3 TO 20/40",
-      "For Whole Round Squid- 12 x 1 Kg IQF, 10% Glaze",
-      "6/10,10/20,20/40 pieces/kgs",
-      "For Whole Cleaned Squid- 10 x 2 Kg Blocks",
-      "U/5 , 6/10, 10/20, 20/40 pieces/ Kgs",
-      "Whole Cleaned Squid -12 x 1 Kg IQF, 10% Glaze",
-      "6/10, 10/20, 20/40 pieces/kg",
-      "For Squid Rings Blanched -12 Kg Bulk IQF, 10% Glaze",
-      "60/UP (made from 60/UP Size)",
-      "For Squid Tentacles Blanched -12 Kg Bulk IQF, 10% Glaze",
-      "60/UP (made from 60/UP Size )",
+    "modalName": "Semi Needle Squid (Doryteuthis Sibogae)",
+
+    "packaging": [
+      "For Whole Round Squid - 10 x 2 Kg Block Frozen, Glaze 10/15/20%",
+      "For Whole Round Squid - 12 x 1 Kg IQF, 10% Glaze",
+      "For Whole Cleaned Squid - 10 x 2 Kg Blocks",
+      "Whole Cleaned Squid - 12 x 1 Kg IQF, 10% Glaze",
+      "For Squid Rings Blanched - 12 Kg Bulk IQF, 10% Glaze",
+      "For Squid Tentacles Blanched - 12 Kg Bulk IQF, 10% Glaze",
       "For Squid Tubes - Raw or Blanched 10 x 2 Kg Block Net Weight",
-      "60/80,80/150,150/200, Broken",
-      "For Baby Squid -12 x 1 Kg Block, 10% Glaze",
+      "For Baby Squid - 12 x 1 Kg Block, 10% Glaze"
+    ],
+
+    "sizeRange": [
+      "U/3 TO 20/40",
+      "6/10, 10/20, 20/40 pieces/kg",
+      "U/5, 6/10, 10/20, 20/40 pieces/kg",
+      "60/UP (made from 60/UP Size)",
+      "60/80, 80/150, 150/200, Broken",
       "100/UP Pieces/Kg"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 7,
     "name": "Loligo Squid",
-    "categories": [],
+    "categories": ["Most Exported"],
     "image": "/assets/product-page/product-img7.png",
     "images": [
       "/assets/product-page/product-img7.png",
       "/assets/product-page/product-img7.jpg",
       "/assets/product-page/product-img7.1.jpg",
-      "/assets/product-page/product-img7.2.jpg"
-  ],
+      "/assets/product-page/product-img7.2.jpg",
+      "/assets/product-page/product-img7.3.webp",
+      "/assets/product-page/product-img7.4.webp"
+    ],
     "description": "Frozen whole squid, popular in international markets.",
     "modalTitle": "CEPHALOPODS",
     "modalName": "Whole Squid",
-    "details": [
-      "5 x 4KGs Block",
-      "Grade : 3/6, 6/10, 10/20, 20/40"
+
+    "packaging": [
+      "5 x 4 Kg Block Frozen"
+    ],
+
+    "sizeRange": [
+      "U/3",
+      "3x3.6kgs",
+      "3/6 - 6x1.8kgs",
+      "6/10 - 6x1.8kgs",
+      "10/20 - 6x1.8kgs"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 8,
     "name": "Ribbon Fish",
@@ -162,96 +291,174 @@
       "/assets/product-page/product-img8.2.webp",
       "/assets/product-page/product-img8.1.png",
       "/assets/product-page/product-img8.jpg",
-      "/assets/product-page/product-img8.3.jpg"
-  ],
+      "/assets/product-page/product-img8.3.jpg",
+      "/assets/product-page/product-img8.4.webp",
+      "/assets/product-page/product-img8.5.webp"
+    ],
     "description": "Wild-caught, frozen ribbon fish for export demand.",
-    "modalTitle": "Fish",
-    "modalName": "Ribbon fish",
-    "details": [
-      "10 KG BLAST FROZEN",
-      "100/200 TO 1000/UP (GRAMS/ Pcs)",
-      "Ribbonfish IQF, IWP 10 Kgs",
+    "modalTitle": "FISH",
+    "modalName": "Ribbon Fish",
+
+    "packaging": [
+      "10 Kg Blast Frozen",
+      "Ribbonfish IQF, IWP 10 Kgs"
+    ],
+
+    "sizeRange": [
+      "100/200 to 1000/UP (grams/piece)",
       "400/700, 700/1000, 1000/UP"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 9,
-    "name": "Catfish (Frozen)",
+    "name": "Yellowfin Tuna",
     "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img9.webp",
+    "image": "/assets/product-page/product-img14.1.webp",
     "images": [
-      "/assets/product-page/product-img9.webp",
-      "/assets/product-page/product-img9.1.png",
-      "/assets/product-page/product-img9.2.jpg",
-      "/assets/product-page/product-img9.3.jpg"
-  ],
-    "description": "Farm-raised and processed catfish for export.",
-    "modalTitle": "Fish",
-    "modalName": "Catfish",
-    "details": [
-      "10 kg packing",
-      "Grades",
-      "3/5",
-      "5/7",
-      "7/10"
+      "/assets/product-page/product-img14.1.webp",
+      "/assets/product-page/product-img14.2.jpg",
+      "/assets/product-page/product-img14.4.webp",
+      "/assets/product-page/product-img14.5.webp",
+      "/assets/product-page/product-img14.6.webp",
+      "/assets/product-page/product-img14.3.webp"
+    ],
+    "description": "Ocean-caught yellowfin, frozen for international trade.",
+    "modalTitle": "FISH",
+    "modalName": "Tuna Yellowfin",
+
+    "packaging": [
+      "IQF, running weight bags"
+    ],
+
+    "sizeRange": [
+      "4/10, 10/20, 20/30, 30/UP (kgs per piece)"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 10,
-    "name": "Queen Fish (Frozen)",
+    "name": "Tuna Long Tail",
     "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img10.webp",
+    "image": "/assets/product-page/product-img4.2.jpg",
     "images": [
-      "/assets/product-page/product-img10.webp",
-      "/assets/product-page/product-img10.1.png",
-      "/assets/product-page/product-img10.2.webp",
-      "/assets/product-page/product-img10.3.webp"
-  ],
-    "description": "Frozen queen fish, processed for overseas buyers."
-  },
+      "/assets/product-page/product-img4.2.jpg",
+      "/assets/product-page/product-img4.1.webp",
+      "/assets/product-page/product-img4.webp",
+      "/assets/product-page/product-img4.3.webp",
+      "/assets/product-page/product-img4.5.webp",
+      "/assets/product-page/product-img4.6.webp"
+    ],
+    "description": "Cleaned and processed tuna, export-ready.",
+    "modalTitle": "Fish",
+    "modalName": "Tuna Long Tail",
+
+    "packaging": [
+      "running weight in bags"
+    ],
+
+    "sizeRange": [
+      "2kg / 4kg etc"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
+    ]
+  }
+  ,
   {
     "id": 11,
-    "name": "Yellow Croaker (Frozen)",
-    "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img11.3.jpg",
+    "name": "Tuna Bonito",
+    "categories": [],
+    "image": "/assets/product-page/product-img53.webp",
     "images": [
-      "/assets/product-page/product-img11.3.jpg",
-      "/assets/product-page/product-img11.1.png",
-      "/assets/product-page/product-img11.2.webp",
-      "/assets/product-page/product-img11.jpg"
-  ],
-    "description": "High-demand yellow croaker, frozen for global trade.",
-    "modalTitle": "Fish",
-    "modalName": "Croaker yellow",
-    "details": [
-      "10 KGS SHATTER PACK",
-      "Grades:",
-      "50/100grams:",
-      "100/200 :",
-      "200/300 :",
-      "300/UP :",
-      "Total = 2700 Master cartons per fcl"
+      "/assets/product-page/product-img53.webp",
+      "/assets/product-page/product-img53.1.jpg",
+      "/assets/product-page/product-img53.2.jpg",
+      "/assets/product-page/product-img53.3.jpg",
+      "/assets/product-page/product-img53.4.webp",
+      "/assets/product-page/product-img53.5.webp"
+    ],
+    "description": "Wild-caught tuna with rich, savory flavor for seafood enthusiasts.",
+    "modalTitle": "SEA WATER FISHES",
+    "modalName": "Euthynnus affinis",
+
+    "packaging": [
+      "25 Kg IQF"
+    ],
+
+    "sizeRange": [
+      "2 to 4 Kg per piece"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 12,
-    "name": "Crab",
+    "name": "Skipjack Tuna",
     "categories": [],
-    "image": "/assets/product-page/product-img12.jpg",
+    "image": "/assets/product-page/product-img54.webp",
     "images": [
-      "/assets/product-page/product-img12.jpg",
-      "/assets/product-page/product-img12.1.jpg",
-      "/assets/product-page/product-img12.2.jpg",
-      "/assets/product-page/product-img12.3.jpg"
-  ],
-    "description": "Freshly frozen crab, sourced for global seafood markets.",
-    "modalTitle": "CRUSTACEANS",
-    "modalName": "Three Spot Crab",
-    "details": [
-      "10kg/ctn with inner polybag & outer carton, whole round IQF",
-      "100-200g,200-300g,300-400g"
+      "/assets/product-page/product-img54.webp",
+      "/assets/product-page/product-img54.1.jpg",
+      "/assets/product-page/product-img54.2.jpg",
+      "/assets/product-page/product-img54.3.jpg",
+      "/assets/product-page/product-img54.4.webp",
+      "/assets/product-page/product-img54.5.webp"
+    ],
+    "description": "Fresh skipjack tuna with firm, versatile flesh for various recipes.",
+    "modalTitle": "SEA WATER FISHES",
+    "modalName": "Katswonus pelamis",
+
+    "packaging": [
+      "Whole Round IQF, running weight bags"
+    ],
+
+    "sizeRange": [
+      "4/10 (kgs per piece)"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 13,
     "name": "Lobster (Panulirus Polyphagus)",
@@ -261,67 +468,136 @@
       "/assets/product-page/product-img13.jpg",
       "/assets/product-page/product-img13.1.jpg",
       "/assets/product-page/product-img13.2.png",
-      "/assets/product-page/product-img13.3.jpg"
-  ],
+      "/assets/product-page/product-img13.3.jpg",
+      "/assets/product-page/product-img13.4.webp",
+      "/assets/product-page/product-img13.5.webp"
+    ],
     "description": "Premium spiny lobster, frozen and ready for export.",
     "modalTitle": "CRUSTACEANS",
-    "modalName": "Spiny lobster whole",
-    "details": [
-      "2 × 5kg IQF,IWP",
-      "300/400 to 800/up (grams/piece)"
+    "modalName": "Spiny Lobster Whole",
+
+    "packaging": [
+      "2 × 5kg IQF, IWP"
+    ],
+
+    "sizeRange": [
+      "300/400 to 800/UP (grams/piece)"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 14,
-    "name": "Yellowfin Tuna",
+    "name": "Catfish (Frozen)",
     "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img14.1.webp",
+    "image": "/assets/product-page/product-img9.webp",
     "images": [
-      "/assets/product-page/product-img14.1.webp",
-      "/assets/product-page/product-img14.jpeg",
-      "/assets/product-page/product-img14.2.jpg",
-      "/assets/product-page/product-img14.3.jpg"
-  ],
-    "description": "Ocean-caught yellowfin, frozen for international trade.",
-    "modalTitle": "Fish",
-    "modalName": "Tuna yellowfin",
-    "details": [
-      "IQF, running weight bags",
-      "4/10, 10/20, 20/30, 30/up (Kgs per piece)"
+      "/assets/product-page/product-img9.webp",
+      "/assets/product-page/product-img9.1.png",
+      "/assets/product-page/product-img9.2.jpg",
+      "/assets/product-page/product-img9.3.jpg",
+      "/assets/product-page/product-img9.4.webp",
+      "/assets/product-page/product-img9.5.webp"
+    ],
+    "description": "Farm-raised and processed catfish for export.",
+    "modalTitle": "FISH",
+    "modalName": "Catfish",
+
+    "packaging": [
+      "10 kg packing"
+    ],
+
+    "sizeRange": [
+      "3/5",
+      "5/7",
+      "7/10"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 15,
     "name": "Dorab (Wolf Herring)",
-    "categories": ["Most Exported"],
+    "categories": [],
     "image": "/assets/product-page/product-img15.webp",
     "images": [
       "/assets/product-page/product-img15.webp",
       "/assets/product-page/product-img15.1.webp",
       "/assets/product-page/product-img15.2.jpg",
-      "/assets/product-page/product-img15.3.jpg"
-  ],
+      "/assets/product-page/product-img15.3.jpg",
+      "/assets/product-page/product-img15.4.webp",
+      "/assets/product-page/product-img15.5.webp"
+    ],
     "description": "Frozen dorab herring, popular in export destinations.",
     "modalTitle": "FISH",
-    "modalName": "DORAB (wolf herring)",
-    "details": [
-      "10KGS MASTER CARTON",
-      "100/200 : 400  200/300 : 500 300/500 : 100 500/700 : 100 700/1000 : 100"
+    "modalName": "Dorab (Wolf Herring)",
+
+    "packaging": [
+      "10 Kgs master carton"
+    ],
+
+    "sizeRange": [
+      "100/200",
+      "200/300",
+      "300/500",
+      "500/700",
+      "700/1000"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 16,
     "name": "Seawater Shrimps",
-    "categories": [],
+    "categories": ["Most Exported"],
     "image": "/assets/product-page/product-img16.3.webp",
     "images": [
       "/assets/product-page/product-img16.3.webp",
       "/assets/product-page/product-img16.1.webp",
       "/assets/product-page/product-img16.2.jpg",
-      "/assets/product-page/product-img16.png"
-  ],
-    "description": "Wild-caught shrimps, frozen for premium export markets."
-  },
+      "/assets/product-page/product-img16.png",
+      "/assets/product-page/product-img16.4.webp",
+      "/assets/product-page/product-img16.5.webp"
+    ],
+    "description": "Wild-caught shrimps, frozen for premium export markets.",
+    "modalTitle": "SHRIMPS",
+    "modalName": "Seawater Shrimps",
+    
+    "packaging": [],
+    "sizeRange": [],
+    "varieties": [],
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
+    ]
+  }
+  ,
   {
     "id": 17,
     "name": "Raw Black Tiger Shrimp",
@@ -331,19 +607,38 @@
       "/assets/product-page/product-img17.webp",
       "/assets/product-page/product-img17.1.webp",
       "/assets/product-page/product-img17.2.webp",
-      "/assets/product-page/product-img17.3.webp"
-  ],
+      "/assets/product-page/product-img17.3.webp",
+      "/assets/product-page/product-img17.4.webp",
+      "/assets/product-page/product-img17.5.webp"
+    ],
     "description": "Wild-caught, premium shrimp with firm texture and rich flavor, perfect for gourmet dishes",
     "modalTitle": "BLACK TIGER SHRIMPS (Penaeus Monodon)",
     "modalName": "Raw Black Tiger Shrimp (P&D/PUD/PTO)",
-    "details": [
-      "Raw P&D/PUD Tail-on 26/30 to 91/110 pcs/kg",
-      "Raw P&D/PUD Tail-off 26/30 to 91/110 pcs/kg",
-      "Raw PTO Butterfly 26/30 to 71/90 pcs/lb",
-      "Raw P&D/PUD Tail-on Skewers 26/30 to 61/70 pcs/lb",
-      "Raw P&D/PUD Tail-off Skewers 26/30 to 61/70 pcs/lb"
+
+    "packaging": [],
+    
+    "sizeRange": [
+      "26/30 to 91/110 pcs/kg",
+      "26/30 to 71/90 pcs/lb",
+      "26/30 to 61/70 pcs/lb"
+    ],
+
+    "varieties": [
+      "Raw P&D/PUD Tail-on — 26/30 to 91/110 pcs/kg",
+      "Raw P&D/PUD Tail-off — 26/30 to 91/110 pcs/kg",
+      "Raw PTO Butterfly — 26/30 to 71/90 pcs/lb",
+      "Raw P&D/PUD Tail-on Skewers — 26/30 to 61/70 pcs/lb",
+      "Raw P&D/PUD Tail-off Skewers — 26/30 to 61/70 pcs/lb"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 18,
     "name": "Cooked Black Tiger Shrimp (Peeled)",
@@ -353,37 +648,72 @@
       "/assets/product-page/product-img18.2.jpg",
       "/assets/product-page/product-img18.1.jpeg",
       "/assets/product-page/product-img18.png",
-      "/assets/product-page/product-img18.3.webp"
-  ],
+      "/assets/product-page/product-img18.3.webp",
+      "/assets/product-page/product-img18.4.webp",
+      "/assets/product-page/product-img18.5.webp"
+    ],
     "description": "Convenient peeled shrimp retaining natural sweetness and freshness for quick preparation.",
     "modalTitle": "BLACK TIGER SHRIMPS (Penaeus Monodon)",
     "modalName": "Cooked Black Tiger Shrimp (Peeled)",
-    "details": [
-      "Cooked P&D Tail-on (CPTO) 26/30 to 91/120 pcs/lb",
-      "Cooked P&D Tail-off 26/30 to 91/120 pcs/lb",
-      "Cooked PUD Tail-off 31/40 to 200/300 pcs/lb"
+
+    "packaging": [],
+
+    "sizeRange": [
+      "26/30 to 91/120 pcs/lb",
+      "31/40 to 200/300 pcs/lb"
+    ],
+
+    "varieties": [
+      "Cooked P&D Tail-on (CPTO) — 26/30 to 91/120 pcs/lb",
+      "Cooked P&D Tail-off — 26/30 to 91/120 pcs/lb",
+      "Cooked PUD Tail-off — 31/40 to 200/300 pcs/lb"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 19,
     "name": "Cooked Black Tiger Shrimp (Shellon)",
     "categories": [],
-    "image": "/assets/product-page/product-img19.jpg",
+    "image": "/assets/product-page/product-img19.4.webp",
     "images": [
-      "/assets/product-page/product-img19.jpg",
+      "/assets/product-page/product-img19.4.webp",
       "/assets/product-page/product-img19.1.jpg",
-      "/assets/product-page/product-img19.2.jpg",
-      "/assets/product-page/product-img19.3.jpg"
-  ],
+      "/assets/product-page/product-img19.jpg",
+      "/assets/product-page/product-img19.3.jpg",
+      "/assets/product-page/product-img19.5.webp",
+      "/assets/product-page/product-img19.2.jpg"
+    ],
     "description": "Fresh shell-on shrimp ideal for authentic seafood recipes and presentation.",
     "modalTitle": "BLACK TIGER SHRIMPS (Penaeus Monodon)",
     "modalName": "Cooked Black Tiger Shrimp (Shell on)",
-    "details": [
-      "Cooked Headon Shellon 21/30 to 51/60 pcs/kg",
-      "Cooked Headless Shellon 16/20 to 71/90 pcs/lb",
-      "Cooked Headless Shellon 16/20 to 71/90 pcs/lb"
+
+    "packaging": [],
+
+    "sizeRange": [
+      "21/30 to 71/90 pcs/lb",
+      "51/60 pcs/kg"
+    ],
+
+    "varieties": [
+      "Cooked Headon Shellon — 21/30 to 51/60 pcs/kg",
+      "Cooked Headless Shellon — 16/20 to 71/90 pcs/lb"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 20,
     "name": "Raw Vannamei Shrimp",
@@ -393,19 +723,38 @@
       "/assets/product-page/product-img20.jpg",
       "/assets/product-page/product-img20.1.jpg",
       "/assets/product-page/product-img20.2.jpg",
-      "/assets/product-page/product-img20.3.jpg"
-  ],
+      "/assets/product-page/product-img20.3.jpg",
+      "/assets/product-page/product-img20.4.webp",
+      "/assets/product-page/product-img20.5.webp"
+    ],
     "description": "Tender, succulent white shrimp with a delicate ocean-fresh taste.",
     "modalTitle": "VANNAMEI SHRIMPS (Litopenaeus vannamei)",
     "modalName": "Raw Vannamei White Shrimp (P&D/PUD/PTO)",
-    "details": [
-      "Raw P&D/PUD Tail-on 26/30 to 91/110 pcs/kg",
-      "Raw P&D/PUD Tail-off 26/30 to 91/110 pcs/kg",
-      "Raw PTO Butterfly 26/30 to 71/90 pcs/lb",
-      "Raw P&D/PUD Tail-on Skewers 26/30 to 61/70 pcs/lb",
-      "Raw P&D/PUD Tail-off Skewers 26/30 to 61/70 pcs/lb"
+
+    "packaging": [],
+
+    "sizeRange": [
+      "26/30 to 91/110 pcs/kg",
+      "26/30 to 71/90 pcs/lb",
+      "26/30 to 61/70 pcs/lb"
+    ],
+
+    "varieties": [
+      "Raw P&D/PUD Tail-on — 26/30 to 91/110 pcs/kg",
+      "Raw P&D/PUD Tail-off — 26/30 to 91/110 pcs/kg",
+      "Raw PTO Butterfly — 26/30 to 71/90 pcs/lb",
+      "Raw P&D/PUD Tail-on Skewers — 26/30 to 61/70 pcs/lb",
+      "Raw P&D/PUD Tail-off Skewers — 26/30 to 61/70 pcs/lb"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 21,
     "name": "Cooked Vannamei Shrimp P&D/PUD",
@@ -413,19 +762,37 @@
     "image": "/assets/product-page/product-img21.jpg",
     "images": [
       "/assets/product-page/product-img21.jpg",
-      "/assets/product-page/product-img21.1.jpg",
+      "/assets/product-page/product-img21.1.webp",
       "/assets/product-page/product-img21.2.jpg",
-      "/assets/product-page/product-img21.3.jpg"
-  ],
-    "description": "Fully cooked shrimp with soft, flavorful meat, ready to enjoy..",
+      "/assets/product-page/product-img21.3.jpg",
+      "/assets/product-page/product-img21.4.webp",
+      "/assets/product-page/product-img21.5.webp"
+    ],
+    "description": "Fully cooked shrimp with soft, flavorful meat, ready to enjoy.",
     "modalTitle": "VANNAMEI SHRIMPS (Litopenaeus vannamei)",
     "modalName": "Cooked Vannamei White Shrimp (P&D/PUD)",
-    "details": [
-      "Cooked P&D; Tail-on (CPTO) 26/30 to 91/120 pcs/lb",
-      "Cooked P&D; Tail-off 26/30 to 91/120 pcs/lb",
-      "Cooked PUD Tail-off 31/40 to 200/300 pcs/lb"
+
+    "packaging": [],
+
+    "sizeRange": [
+      "26/30 to 91/120 pcs/lb",
+      "31/40 to 200/300 pcs/lb"
+    ],
+
+    "varieties": [
+      "Cooked P&D Tail-on (CPTO) — 26/30 to 91/120 pcs/lb",
+      "Cooked P&D Tail-off — 26/30 to 91/120 pcs/lb",
+      "Cooked PUD Tail-off — 31/40 to 200/300 pcs/lb"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 22,
     "name": "Cooked Vannamei Shrimp (Shellon)",
@@ -435,17 +802,36 @@
       "/assets/product-page/product-img22.jpg",
       "/assets/product-page/product-img22.1.jpg",
       "/assets/product-page/product-img22.2.jpg",
-      "/assets/product-page/product-img22.3.jpg"
-  ],
+      "/assets/product-page/product-img22.3.jpg",
+      "/assets/product-page/product-img22.4.webp",
+      "/assets/product-page/product-img22.5.webp"
+    ],
     "description": "Flavorful cooked shrimp with shells intact, ideal for feasts.",
     "modalTitle": "VANNAMEI SHRIMPS (Litopenaeus vannamei)",
     "modalName": "Cooked Vannamei White Shrimp (Shellon)",
-    "details": [
-      "Cooked Headon Shellon 41/50 to 80/120 pcs/kg",
-      "Cooked Headless Shellon 26/30 to 91/110 pcs/lb",
-      "Cooked Headless Shellon Easy Peel 26/30 to 71/90 pcs/lb"
+
+    "packaging": [],
+
+    "sizeRange": [
+      "41/50 to 80/120 pcs/kg",
+      "26/30 to 91/110 pcs/lb",
+      "26/30 to 71/90 pcs/lb"
+    ],
+
+    "varieties": [
+      "Cooked Headon Shellon — 41/50 to 80/120 pcs/kg",
+      "Cooked Headless Shellon — 26/30 to 91/110 pcs/lb",
+      "Cooked Headless Shellon Easy Peel — 26/30 to 71/90 pcs/lb"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 31,
     "name": "Brown Shrimp",
@@ -455,16 +841,38 @@
       "/assets/product-page/product-img31.jpg",
       "/assets/product-page/product-img31.1.webp",
       "/assets/product-page/product-img31.2.jpeg",
-      "/assets/product-page/product-img31.3.webp"
-  ],
+      "/assets/product-page/product-img31.3.webp",
+      "/assets/product-page/product-img31.4.webp",
+      "/assets/product-page/product-img31.5.webp"
+    ],
     "description": "Naturally rich and firm shrimp, prized for taste and texture.",
     "modalTitle": "CRUSTACEANS",
     "modalName": "Metapenaeus Affinis",
-    "details": [
-      "Whole round, headless, PUD, PD, PD Tail on – 10 × 2 kgs Block & PUD- IQF-as per order",
+
+    "packaging": [
+      "10 × 2 kgs Block & PUD-IQF (as per order)"
+    ],
+
+    "sizeRange": [
       "80/120"
+    ],
+
+    "varieties": [
+      "Whole round",
+      "Headless",
+      "PUD",
+      "PD",
+      "PD Tail-on"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 32,
     "name": "Deep Sea Shrimp",
@@ -472,16 +880,39 @@
     "image": "/assets/product-page/product-img32.jpg",
     "images": [
       "/assets/product-page/product-img32.jpg",
-      "/assets/product-page/product-img32.1.jpg"
-  ],
+      "/assets/product-page/product-img32.1.jpg",
+      "/assets/product-page/product-img32.2.webp",
+      "/assets/product-page/product-img32.3.webp",
+      "/assets/product-page/product-img32.4.webp"
+    ],
     "description": "Premium ocean-caught shrimp with superior flavor and freshness.",
     "modalTitle": "CRUSTACEANS",
     "modalName": "Solenocera Hextii",
-    "details": [
-      "For whole round HL,PUD ,PD,PD Tail on -10 × 2 kg Block PUD – IQF-as per order",
+
+    "packaging": [
+      "10 × 2 kg Block & PUD-IQF (as per order)"
+    ],
+
+    "sizeRange": [
       "60/80 to 300/500"
+    ],
+
+    "varieties": [
+      "Whole round",
+      "Headless",
+      "PUD",
+      "PD",
+      "PD Tail-on"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 33,
     "name": "Flower Shrimp",
@@ -491,16 +922,38 @@
       "/assets/product-page/product-img33.webp",
       "/assets/product-page/product-img33.1.webp",
       "/assets/product-page/product-img33.2.jpeg",
-      "/assets/product-page/product-img33.3.jpg"
-  ],
+      "/assets/product-page/product-img33.3.jpg",
+      "/assets/product-page/product-img33.4.webp",
+      "/assets/product-page/product-img33.5.webp"
+    ],
     "description": "High-quality shrimp with delicate texture and sweet, fresh taste.",
     "modalTitle": "CRUSTACEANS",
     "modalName": "Penaeus Semisulcatus",
-    "details": [
-      "For whole round, HL,PUD,PD,PD Tailon -6 × 2 kg Block PUD – IQF-as per order",
+
+    "packaging": [
+      "6 × 2 kg Block & PUD-IQF (as per order)"
+    ],
+
+    "sizeRange": [
       "6/8 to 51/60"
+    ],
+
+    "varieties": [
+      "Whole round",
+      "Headless",
+      "PUD",
+      "PD",
+      "PD Tail-on"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 34,
     "name": "Karikkadi (Tiny Shrimps)",
@@ -509,16 +962,39 @@
     "images": [
       "/assets/product-page/product-img34.jpg",
       "/assets/product-page/product-img34.1.jpg",
-      "/assets/product-page/product-img34.2.png"
-  ],
+      "/assets/product-page/product-img34.2.png",
+      "/assets/product-page/product-img34.3.webp",
+      "/assets/product-page/product-img34.4.webp",
+      "/assets/product-page/product-img34.5.webp"
+    ],
     "description": "Tiny shrimps with rich flavor, perfect for traditional seafood recipes.",
     "modalTitle": "CRUSTACEANS",
     "modalName": "Parapenaeopsis Stylifera",
-    "details": [
-      "whole round ,HL,PUD,PD,PD Tailon - 10 × 2 kg Block PUD-IQF-as per order",
+
+    "packaging": [
+      "10 × 2 kg Block & PUD-IQF (as per order)"
+    ],
+
+    "sizeRange": [
       "71/90 to 150/200 (PUD: 80/120)"
+    ],
+
+    "varieties": [
+      "Whole round",
+      "Headless",
+      "PUD",
+      "PD",
+      "PD Tail-on"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 35,
     "name": "Choodan (Pink Shrimps)",
@@ -528,72 +1004,159 @@
       "/assets/product-page/product-img35.jpg",
       "/assets/product-page/product-img35.1.jpeg",
       "/assets/product-page/product-img35.2.jpeg",
-      "/assets/product-page/product-img35.3.jpg"
-  ],
+      "/assets/product-page/product-img35.3.jpg",
+      "/assets/product-page/product-img35.4.webp",
+      "/assets/product-page/product-img35.5.webp"
+    ],
     "description": "Vibrant pink shrimp with tender, succulent flesh.",
     "modalTitle": "CRUSTACEANS",
     "modalName": "Metapenaeus Monocerus",
-    "details": [
-      "Whole round, HL,PUD,PD,PD Tailon-10 × 2 kg Block HL IQF,10 × 1kg 20% Glaze or as per order",
-      "8/12 to 51/60 pcs/lb Blanched HL IQF,10*1 kg, 20%Glaze",
-      "8/12 to 71/90 pcs/lb PUD 10 × 2g Block",
+
+    "packaging": [
+      "10 × 2 kg Block HL IQF, 10 × 1 kg (20% Glaze) or as per order"
+    ],
+
+    "sizeRange": [
+      "8/12 to 51/60 pcs/lb (Blanched HL IQF, 10 × 1 kg, 20% Glaze)",
+      "8/12 to 71/90 pcs/lb (PUD 10 × 2 kg Block)",
       "80/120 pcs/lb"
+    ],
+
+    "varieties": [
+      "Whole round",
+      "Headless",
+      "PUD",
+      "PD",
+      "PD Tail-on"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 36,
-    "name": "Poovalan (Pink Brown shrimp)",
+    "name": "Poovalan (Pink Brown Shrimp)",
     "categories": [],
     "image": "/assets/product-page/product-img36.jpg",
     "images": [
       "/assets/product-page/product-img36.jpg",
       "/assets/product-page/product-img36.1.webp",
       "/assets/product-page/product-img36.2.webp",
-      "/assets/product-page/product-img36.3.jpg"
-  ],
-    "description": " Fresh pink-brown shrimp with firm, flavorful meat.",
+      "/assets/product-page/product-img36.3.jpg",
+      "/assets/product-page/product-img36.4.webp",
+      "/assets/product-page/product-img36.5.webp"
+    ],
+    "description": "Fresh pink-brown shrimp with firm, flavorful meat.",
     "modalTitle": "CRUSTACEANS",
     "modalName": "Metapenaeus Dobsonii",
-    "details": [
-      "whole round HL,PUD,PD,PDTO - 10 × 2 kg Block PUD – IQF-as per order",
-      "50/60,61/70,71/90 pcs/lb"
+
+    "packaging": [
+      "10 × 2 kg Block (PUD – IQF) as per order"
+    ],
+
+    "sizeRange": [
+      "50/60, 61/70, 71/90 pcs/lb"
+    ],
+
+    "varieties": [
+      "Whole round",
+      "Headless",
+      "PUD",
+      "PD",
+      "PDTO"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 37,
     "name": "Naran (White Shrimp)",
     "categories": [],
     "image": "/assets/product-page/product-img37.jpg",
     "images": [
-      "/assets/product-page/product-img37.jpg"
-  ],
+      "/assets/product-page/product-img37.jpg",
+      "/assets/product-page/product-img37.1.webp",
+      "/assets/product-page/product-img37.2.webp",
+      "/assets/product-page/product-img37.3.webp",
+      "/assets/product-page/product-img37.4.webp",
+      "/assets/product-page/product-img37.5.webp"
+    ],
     "description": "Premium white shrimp with mild taste and excellent freshness.",
     "modalTitle": "CRUSTACEANS",
     "modalName": "Penaeus Indicus",
-    "details": [
-      "whole round, HL,PUD,PD,PDTO - 10 × 2 kg Block PUD - IQF-as per order",
+
+    "packaging": [
+      "10 × 2 kg Block (PUD – IQF) as per order"
+    ],
+
+    "sizeRange": [
       "6/8 to 51/60"
+    ],
+
+    "varieties": [
+      "Whole round",
+      "Headless",
+      "PUD",
+      "PD",
+      "PDTO"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 38,
-    "name": "Cooked Spiny lobster whole",
+    "name": "Cooked Spiny Lobster Whole",
     "categories": [],
     "image": "/assets/product-page/product-img38.jpg",
     "images": [
       "/assets/product-page/product-img38.jpg",
       "/assets/product-page/product-img38.1.webp",
       "/assets/product-page/product-img38.2.webp",
-      "/assets/product-page/product-img38.3.jpg"
-  ],
+      "/assets/product-page/product-img38.3.jpg",
+      "/assets/product-page/product-img38.4.webp",
+      "/assets/product-page/product-img38.5.webp"
+    ],
     "description": "Fully cooked spiny lobster with sweet, tender meat for gourmet dishes.",
     "modalTitle": "CRUSTACEANS",
     "modalName": "Panulirus Polyphagus",
-    "details": [
-      "2*5kg IQF,IWP",
-      "200/250 to 800/up"
+
+    "packaging": [
+      "2 × 5 kg IQF, IWP"
+    ],
+
+    "sizeRange": [
+      "200/250 to 800/UP (grams/piece)"
+    ],
+
+    "varieties": [
+      "Cooked whole"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 39,
     "name": "Green Mud Crab",
@@ -603,16 +1166,34 @@
       "/assets/product-page/product-img39.2.jpg",
       "/assets/product-page/product-img39.1.jpg",
       "/assets/product-page/product-img39.jpeg",
-      "/assets/product-page/product-img39.3.webp"
-  ],
+      "/assets/product-page/product-img39.3.webp",
+      "/assets/product-page/product-img39.4.webp",
+      "/assets/product-page/product-img39.5.webp"
+    ],
     "description": "Meaty, fresh crab with firm texture and ocean-fresh taste.",
     "modalTitle": "CRUSTACEANS",
     "modalName": "Scylla Serrata",
-    "details": [
-      "10kg/ctn with inner polybag & outer carton, whole round IQF",
-      "150-200g,200-250g,250-300g,300-350g,350-400g"
+
+    "packaging": [
+      "10 kg/ctn with inner polybag & outer carton, whole round IQF"
+    ],
+
+    "sizeRange": [
+      "150/200g, 200/250g, 250/300g, 300/350g, 350/400g"
+    ],
+
+    "varieties": [
+      "Whole round"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 40,
     "name": "Catla",
@@ -622,19 +1203,41 @@
       "/assets/product-page/product-img40.1.jpeg",
       "/assets/product-page/product-img40.jpg",
       "/assets/product-page/product-img40.2.jpg",
-      "/assets/product-page/product-img40.3.webp"
-  ],
+      "/assets/product-page/product-img40.3.webp",
+      "/assets/product-page/product-img40.4.webp",
+      "/assets/product-page/product-img40.5.webp"
+    ],
     "description": "Popular freshwater fish with soft, flavorful flesh for diverse recipes.",
     "modalTitle": "FRESH WATER FISHES",
     "modalName": "Catla Catla",
-    "details": [
-      "whole round whole gutted, Back Gutted IQF/IWP 1 pcs in polythene Bag 20/25 kg per MC",
-      "0.7 – 1 kg , 1– 1.5 kg , 1.5 – 2 kg , 2 – 3 kg , 3 – 4 kg , 4 – 5 kg , 5 – 7 kg, 7 – 8 kg , 8 kg up",
-      "Whole/gutted steak-HO Scale on, HO Scale off, HL Scale on, HL scale off 1 kg in poly bag (10/20 kg per MC) IQF Bulk packing",
-      "Headleas Gutted Tail off-Scale on & Tail off scale off 1 pcs in poly bag (20/25 kg per MC) IQF Bulk packing 10/20 kg",
-      ".3 / 0.5, 0.5 / .8, 0.8 / 1.0, 1.0 / 1.2, 1.2 / 1.5, 1.5 kg up"
+
+    "packaging": [
+      "1 pc in poly bag, 10–25 kg master carton (IQF/IWP Bulk Packing)"
+    ],
+
+    "sizeRange": [
+      "0.3–0.5 kg, 0.5–0.8 kg, 0.8–1.0 kg, 1.0–1.2 kg, 1.2–1.5 kg, 1.5–2 kg, 2–3 kg, 3–4 kg, 4–5 kg, 5–7 kg, 7–8 kg, 8 kg up"
+    ],
+
+    "varieties": [
+      "Whole round",
+      "Whole gutted",
+      "Back gutted",
+      "Headless gutted tail off",
+      "Steak (HO/HL scale on or off)"
+    ],
+
+    "others": [
+      "IQF/IWP processing",
+      "Scale on/off options available"
+    ],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 41,
     "name": "Pearl Spot Fish",
@@ -644,17 +1247,35 @@
       "/assets/product-page/product-img41.2.jpg",
       "/assets/product-page/product-img41.1.webp",
       "/assets/product-page/product-img41.webp",
-      "/assets/product-page/product-img41.3.jpg"
-  ],
+      "/assets/product-page/product-img41.3.jpg",
+      "/assets/product-page/product-img41.4.webp",
+      "/assets/product-page/product-img41.5.webp"
+    ],
     "description": "Delicately flavored fish with tender, moist meat.",
     "modalTitle": "FRESH WATER FISHES",
     "modalName": "Etroplus Suratensis",
-    "details": [
+
+    "packaging": [
       "Whole round IQFF",
-      "100/150, 150/300, 300/500, 500/700",
       "10 to 20% glaz"
+    ],
+
+    "sizeRange": [
+      "100/150, 150/300, 300/500, 500/700"
+    ],
+
+    "varieties": [
+      "Whole round"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 42,
     "name": "Rohu",
@@ -664,19 +1285,39 @@
       "/assets/product-page/product-img42.1.jpg",
       "/assets/product-page/product-img42.jpg",
       "/assets/product-page/product-img42.2.jpg",
-      "/assets/product-page/product-img42.3.jpg"
-  ],
+      "/assets/product-page/product-img42.3.jpg",
+      "/assets/product-page/product-img42.4.webp",
+      "/assets/product-page/product-img42.5.webp"
+    ],
     "description": "Freshwater rohu with juicy, versatile flesh for traditional cooking.",
     "modalTitle": "FRESH WATER FISHES",
     "modalName": "Indian Carp",
-    "details": [
+
+    "packaging": [
       "whole round, whole gutted & Back Gutted (IQF/IWP) 1 pcs in polybag (20/25 kg per MC)",
-      "Upto 1 kg, 1-1.5 kg, 1.5-2 kg, 2-3 kg,3-4 kg, 4-5 kg, 5-7 kg, 7-8 kg,8 kg up",
       "Head On - Scaleon, Head On - Scale off, Head less - Scale on, HeadLess scale off 1 kg in poly bag (10/20 kg per MC) IQF Bulk packing",
-      "Headleas Gutted-Tail on scale on, Tail off-Scale on & Tail off scale off 1 pcs in poly bag (10/20 kg per MC) IQF Bulk packing",
-      ".3 – .5 kg , .5 – .8 kg , .8 – 1 kg , 1 – 1.2 kg , 1.2 – 1.5 kg , 1.5 kg up"
+      "Headleas Gutted-Tail on scale on, Tail off-Scale on & Tail off scale off 1 pcs in poly bag (10/20 kg per MC) IQF Bulk packing"
+    ],
+
+    "sizeRange": [
+      "Upto 1 kg, 1-1.5 kg, 1.5-2 kg, 2-3 kg, 3-4 kg, 4-5 kg, 5-7 kg, 7-8 kg, 8 kg up",
+      ".3 – .5 kg, .5 – .8 kg, .8 – 1 kg, 1 – 1.2 kg, 1.2 – 1.5 kg, 1.5 kg up"
+    ],
+
+    "varieties": [
+      "Whole round",
+      "Whole gutted",
+      "Back gutted"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 43,
     "name": "Tilapia",
@@ -686,16 +1327,32 @@
       "/assets/product-page/product-img43.1.jpg",
       "/assets/product-page/product-img43.webp",
       "/assets/product-page/product-img43.2.jpg",
-      "/assets/product-page/product-img43.3.webp"
-  ],
+      "/assets/product-page/product-img43.3.webp",
+      "/assets/product-page/product-img43.4.webp",
+      "/assets/product-page/product-img43.5.webp"
+    ],
     "description": "Mild-flavored tilapia with firm, fresh fillets.",
     "modalTitle": "FRESH WATER FISHES",
     "modalName": "Oreochromis Niloticus",
-    "details": [
-      "Whole round - IQF/IWP Whole gutted scaleoff (GS) Gutted Gill off scale off (GGS), whole cleaned – 1 pcs in polybag (6 kg / 7 kg / 9 kg, 10kg, 20kg)",
-      " .1 / .2 kg , .2 / .3 kg , .3 / .5 kg , .5 / .8 kg, .8 / 1 kg , 1kg up"
+
+    "packaging": [
+      "Whole round - IQF/IWP Whole gutted scaleoff (GS) Gutted Gill off scale off (GGS), whole cleaned – 1 pcs in polybag (6 kg / 7 kg / 9 kg, 10kg, 20kg)"
+    ],
+
+    "sizeRange": [
+      ".1 / .2 kg, .2 / .3 kg, .3 / .5 kg, .5 / .8 kg, .8 / 1 kg, 1 kg up"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 44,
     "name": "Tilapia Fillet",
@@ -705,16 +1362,32 @@
       "/assets/product-page/product-img44.2.jpg",
       "/assets/product-page/product-img44.1.webp",
       "/assets/product-page/product-img44.jpg",
-      "/assets/product-page/product-img44.3.jpg"
-  ],
+      "/assets/product-page/product-img44.3.jpg",
+      "/assets/product-page/product-img44.4.webp",
+      "/assets/product-page/product-img44.5.webp"
+    ],
     "description": "Boneless tilapia fillets, fresh and ready for cooking.",
     "modalTitle": "FRESH WATER FISHES",
     "modalName": "",
-    "details": [
-      "IQF/IWP 500 gm – 1 kg in polybag (6kg / 7 kg / 9 kg / 10kg / 20 kg)",
-      "200-300 02,300-500 02,500-700 02, 700 – 900 02"
+
+    "packaging": [
+      "IQF/IWP 500 gm – 1 kg in polybag (6kg / 7 kg / 9 kg / 10kg / 20 kg)"
+    ],
+
+    "sizeRange": [
+      "200/300, 300/500, 500/700, 700/900"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 45,
     "name": "Silver Pomfret",
@@ -724,16 +1397,32 @@
       "/assets/product-page/product-img45.1.webp",
       "/assets/product-page/product-img45.jpg",
       "/assets/product-page/product-img45.2.jpeg",
-      "/assets/product-page/product-img45.3.webp"
-  ],
+      "/assets/product-page/product-img45.3.webp",
+      "/assets/product-page/product-img45.4.webp",
+      "/assets/product-page/product-img45.5.webp"
+    ],
     "description": "Premium silver pomfret with tender, flaky texture.",
     "modalTitle": "SEA WATER FISHES",
     "modalName": "Pampus argenteus",
-    "details": [
-      "20 Kg IQF, IWP",
-      "300/400 T0 1000/UP (GRAMS /PCS)"
+
+    "packaging": [
+      "20 Kg IQF, IWP"
+    ],
+
+    "sizeRange": [
+      "300/400 to 1000/UP (grams/piece)"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 46,
     "name": "Black Pomfret",
@@ -743,16 +1432,32 @@
       "/assets/product-page/product-img46.3.webp",
       "/assets/product-page/product-img46.1.webp",
       "/assets/product-page/product-img46.2.jpg",
-      "/assets/product-page/product-img46.jpg"
-  ],
+      "/assets/product-page/product-img46.jpg",
+      "/assets/product-page/product-img46.4.webp",
+      "/assets/product-page/product-img46.5.webp"
+    ],
     "description": "Rich, flavorful black pomfret suitable for steaming or frying.",
     "modalTitle": "SEA WATER FISHES",
     "modalName": "Parastromateus niger",
-    "details": [
-      "20 Kg IQF, IWP",
-      "300/500 TO 2000/UP (GRAMS /PCS)"
+
+    "packaging": [
+      "20 Kg IQF, IWP"
+    ],
+
+    "sizeRange": [
+      "300/500 to 2000/UP (grams/piece)"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 47,
     "name": "Chinese Pomfret",
@@ -762,16 +1467,32 @@
       "/assets/product-page/product-img47.1.jpg",
       "/assets/product-page/product-img47.webp",
       "/assets/product-page/product-img47.2.jpg",
-      "/assets/product-page/product-img47.3.webp"
-  ],
+      "/assets/product-page/product-img47.3.webp",
+      "/assets/product-page/product-img47.4.webp",
+      "/assets/product-page/product-img47.5.webp"
+    ],
     "description": "Mild, buttery-fleshed fish perfect for fine dining recipes.",
     "modalTitle": "SEA WATER FISHES",
     "modalName": "Pampus Chinensis",
-    "details": [
-      "20 Kg IQF, IWP",
-      "300/500 T0 1000/UP (GRAMS /PCS)"
+
+    "packaging": [
+      "20 Kg IQF, IWP"
+    ],
+
+    "sizeRange": [
+      "300/500 to 1000/UP (grams/piece)"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 48,
     "name": "Croacker Silver",
@@ -781,16 +1502,32 @@
       "/assets/product-page/product-img48.1.webp",
       "/assets/product-page/product-img48.jpeg",
       "/assets/product-page/product-img48.2.jpg",
-      "/assets/product-page/product-img48.3.jpg"
-  ],
+      "/assets/product-page/product-img48.3.jpg",
+      "/assets/product-page/product-img48.4.webp",
+      "/assets/product-page/product-img48.5.webp"
+    ],
     "description": "Fresh silver croaker with firm, naturally sweet meat.",
     "modalTitle": "SEA WATER FISHES",
     "modalName": "Otolithes spp",
-    "details": [
-      "10kg Shatter pack, 2x10kg master cartoon",
+
+    "packaging": [
+      "10kg shatter pack, 2x10kg master carton"
+    ],
+
+    "sizeRange": [
       "50/100, 100/200, 200/300, 300/400, 400/up"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 49,
     "name": "Indian Mackerel",
@@ -800,54 +1537,102 @@
       "/assets/product-page/product-img49.jpg",
       "/assets/product-page/product-img49.1.jpg",
       "/assets/product-page/product-img49.2.jpg",
-      "/assets/product-page/product-img49.3.jpg"
-  ],
+      "/assets/product-page/product-img49.3.jpg",
+      "/assets/product-page/product-img49.4.webp",
+      "/assets/product-page/product-img49.5.webp"
+    ],
     "description": "Oil-rich mackerel with robust flavor and firm texture.",
     "modalTitle": "SEA WATER FISHES",
     "modalName": "Rastrelliger kanagurta",
-    "details": [
-      "2 x 10 Kg Shatter pack",
-      "U/5 TO 12/UP (Pieces/Kg)"
+
+    "packaging": [
+      "2 x 10 Kg shatter pack"
+    ],
+
+    "sizeRange": [
+      "U/5 to 12/up (Pieces/Kg)"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 50,
     "name": "Horse Mackerel",
     "categories": [],
-    "image": "/assets/product-page/product-img50.2.jpg",
+    "image": "/assets/product-page/product-img50.4.webp",
     "images": [
-      "/assets/product-page/product-img50.2.jpg",
+      "/assets/product-page/product-img50.4.webp",
       "/assets/product-page/product-img50.1.webp",
       "/assets/product-page/product-img50.webp",
-      "/assets/product-page/product-img50.3.jpg"
-  ],
+      "/assets/product-page/product-img50.3.jpg",
+      "/assets/product-page/product-img50.2.webp",
+      "/assets/product-page/product-img50.5.webp"
+    ],
     "description": "Fresh horse mackerel ideal for grilling or pan-frying.",
     "modalTitle": "SEA WATER FISHES",
     "modalName": "Megalapsis cordyla",
-    "details": [
-      "10 Kgs Shatter pack",
+
+    "packaging": [
+      "10 Kgs shatter pack"
+    ],
+
+    "sizeRange": [
       "1/2, 2/4, 4/6 (pieces/kg)"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 51,
     "name": "Spanish Mackerel",
     "categories": [],
-    "image": "/assets/product-page/product-img51.jpg",
+    "image": "/assets/product-page/product-img51.webp",
     "images": [
-      "/assets/product-page/product-img51.jpg",
+      "/assets/product-page/product-img51.webp",
       "/assets/product-page/product-img51.1.jpg",
       "/assets/product-page/product-img51.2.webp",
-      "/assets/product-page/product-img51.3.webp"
-  ],
+      "/assets/product-page/product-img51.3.webp",
+      "/assets/product-page/product-img51.4.webp",
+      "/assets/product-page/product-img51.5.webp"
+    ],
     "description": "Premium sea mackerel with tender, flavorful meat.",
     "modalTitle": "SEA WATER FISHES",
     "modalName": "Scombromorus commersoni",
-    "details": [
-      "Whole Round 20 Kg IQF, IWP",
+
+    "packaging": [
+      "Whole round 20 Kg IQF, IWP"
+    ],
+
+    "sizeRange": [
       "300/500 TO 3000/UP (GRAMS /Pcs)"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 52,
     "name": "Kingfish",
@@ -857,54 +1642,104 @@
       "/assets/product-page/product-img52.1.webp",
       "/assets/product-page/product-img52.webp",
       "/assets/product-page/product-img52.2.webp",
-      "/assets/product-page/product-img52.3.jpeg"
-  ],
+      "/assets/product-page/product-img52.3.jpeg",
+      "/assets/product-page/product-img52.4.webp",
+      "/assets/product-page/product-img52.5.webp"
+    ],
     "description": "Meaty kingfish with firm texture, perfect for steaks or grilling.",
     "modalTitle": "SEA WATER FISHES",
     "modalName": "Scombromorus guttatus",
-    "details": [
-      "Headon Gutted 25 Kg IQF, IWP",
+
+    "packaging": [
+      "Headon Gutted 25 Kg IQF, IWP"
+    ],
+
+    "sizeRange": [
       "5/10, 10/15, 15/25, 25/UP (LBS /Pcs)"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 53,
-    "name": "Tuna Bonito",
-    "categories": ["Most Exported"],
-    "image": "/assets/product-page/product-img53.webp",
+    "name": "Yellow Croaker (Frozen)",
+    "categories": [],
+    "image": "/assets/product-page/product-img11.3.webp",
     "images": [
-      "/assets/product-page/product-img53.webp",
-      "/assets/product-page/product-img53.1.jpg",
-      "/assets/product-page/product-img53.2.jpg",
-      "/assets/product-page/product-img53.3.jpg"
-  ],
-    "description": "Wild-caught tuna with rich, savory flavor for seafood enthusiasts.",
-    "modalTitle": "SEA WATER FISHES",
-    "modalName": "Euthynnus affinis",
-    "details": [
-      "25 Kg IQF",
-      "2 to 4 Kg per piece"
+      "/assets/product-page/product-img11.3.webp",
+      "/assets/product-page/product-img11.1.png",
+      "/assets/product-page/product-img11.2.webp",
+      "/assets/product-page/product-img11.jpg",
+      "/assets/product-page/product-img11.4.webp",
+      "/assets/product-page/product-img11.5.webp"
+    ],
+    "description": "High-demand yellow croaker, frozen for global trade.",
+    "modalTitle": "Fish",
+    "modalName": "Croaker yellow",
+
+    "packaging": [
+      "10 KGS SHATTER PACK"
+    ],
+
+    "sizeRange": [
+      "50/100 grams, 100/200, 200/300, 300/UP"
+    ],
+
+    "varieties": [],
+
+    "others": [
+      "Total = 2700 Master cartons per fcl"
+    ],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 54,
-    "name": "Skip Jack",
+    "name": "Crab",
     "categories": [],
-    "image": "/assets/product-page/product-img54.webp",
+    "image": "/assets/product-page/product-img12.jpg",
     "images": [
-      "/assets/product-page/product-img54.webp",
-      "/assets/product-page/product-img54.1.jpg",
-      "/assets/product-page/product-img54.2.jpg",
-      "/assets/product-page/product-img54.3.jpg"
-  ],
-    "description": "Fresh skipjack tuna with firm, versatile flesh for various recipes.",
-    "modalTitle": "SEA WATER FISHES",
-    "modalName": "Katswonus pelamis",
-    "details": [
-      "Whole Round IQF, running weight bags",
-      "4/10 (Kgs per piece )"
+      "/assets/product-page/product-img12.jpg",
+      "/assets/product-page/product-img12.1.jpg",
+      "/assets/product-page/product-img12.2.jpg",
+      "/assets/product-page/product-img12.3.jpg",
+      "/assets/product-page/product-img12.4.webp",
+      "/assets/product-page/product-img12.5.webp"
+    ],
+    "description": "Freshly frozen crab, sourced for global seafood markets.",
+    "modalTitle": "CRUSTACEANS",
+    "modalName": "Three Spot Crab",
+
+    "packaging": [
+      "10kg/ctn with inner polybag & outer carton, whole round IQF"
+    ],
+
+    "sizeRange": [
+      "100-200g, 200-300g, 300-400g"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 55,
     "name": "Baracuda",
@@ -914,16 +1749,32 @@
       "/assets/product-page/product-img55.1.jpg",
       "/assets/product-page/product-img55.jpg",
       "/assets/product-page/product-img55.2.jpg",
-      "/assets/product-page/product-img55.3.png"
-  ],
+      "/assets/product-page/product-img55.3.webp",
+      "/assets/product-page/product-img55.4.webp",
+      "/assets/product-page/product-img55.5.webp"
+    ],
     "description": "Premium baracuda with firm, ocean-fresh meat.",
     "modalTitle": "SEA WATER FISHES",
     "modalName": "Sphyraena jello",
-    "details": [
-      "Whole Round, 20 Kgs IQF, IWP",
+
+    "packaging": [
+      "Whole Round, 20 Kgs IQF, IWP"
+    ],
+
+    "sizeRange": [
       "500/1000 TO 3000 gms/piece"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 56,
     "name": "Reefcod",
@@ -933,36 +1784,67 @@
       "/assets/product-page/product-img56.1.jpg",
       "/assets/product-page/product-img56.webp",
       "/assets/product-page/product-img56.2.webp",
-      "/assets/product-page/product-img56.3.webp"
-  ],
+      "/assets/product-page/product-img56.3.webp",
+      "/assets/product-page/product-img56.4.webp",
+      "/assets/product-page/product-img56.5.webp"
+    ],
     "description": "Delicate reefcod with tender, flaky flesh.",
     "modalTitle": "SEA WATER FISHES",
     "modalName": "Epinephelus diacanthus / Epinephelus spp (various)",
-    "details": [
-      "Whole Round , 20 Kg Shatter pack",
-      "200/300,300/500,500/700"
+
+    "packaging": [
+      "Whole Round, 20 Kg Shatter pack"
+    ],
+
+    "sizeRange": [
+      "200/300, 300/500, 500/700"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 57,
     "name": "Red Snapper",
     "categories": [],
-    "image": "/assets/product-page/product-img57.jpg",
+    "image": "/assets/product-page/product-img57.webp",
     "images": [
+      "/assets/product-page/product-img57.webp",
       "/assets/product-page/product-img57.jpg",
       "/assets/product-page/product-img57.1.webp",
       "/assets/product-page/product-img57.2.webp",
-      "/assets/product-page/product-img57.3.webp"
-
-  ],
+      "/assets/product-page/product-img57.3.webp",
+      "/assets/product-page/product-img57.4.webp"
+    ],
     "description": "Vibrant red snapper with juicy, succulent meat.",
     "modalTitle": "SEA WATER FISHES",
     "modalName": "Lutjanus argentimaculatus",
-    "details": [
-      "25 Kgs IQF, IWP",
+
+    "packaging": [
+      "25 Kgs IQF, IWP"
+    ],
+
+    "sizeRange": [
       "2/4, 4/6, 6/8, 8/10 Kgs per piece"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 58,
     "name": "Leather Jacket",
@@ -970,33 +1852,69 @@
     "image": "/assets/product-page/product-img58.jpg",
     "images": [
       "/assets/product-page/product-img58.jpg",
-      "/assets/product-page/product-img58.1.jpg"
-  ],
+      "/assets/product-page/product-img58.1.jpg",
+      "/assets/product-page/product-img58.2.webp",
+      "/assets/product-page/product-img58.3.webp",
+      "/assets/product-page/product-img58.4.webp",
+      "/assets/product-page/product-img58.5.webp"
+    ],
     "description": "Mild-tasting fish with firm texture and premium freshness.",
     "modalTitle": "SEA WATER FISHES",
     "modalName": "Aluterus spp",
-    "details": [
-      "Whole round / HGT/Fillet Shatter pack or 10 Kgs bulk pack IQF/IWP",
-      "100/200,200/300,300/500,500/700,700/up"
+
+    "packaging": [
+      "Whole round / HGT/Fillet Shatter pack or 10 Kgs bulk pack IQF/IWP"
+    ],
+
+    "sizeRange": [
+      "100/200, 200/300, 300/500, 500/700, 700/up"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 59,
     "name": "Indian Oil Sardine",
     "categories": [],
-    "image": "/assets/product-page/product-img59.jpg",
+    "image": "/assets/product-page/product-img59.webp",
     "images": [
-      "/assets/product-page/product-img59.jpg",
-      "/assets/product-page/product-img59.1.jpeg"
-  ],
+      "/assets/product-page/product-img59.webp",
+      "/assets/product-page/product-img59.1.jpeg",
+      "/assets/product-page/product-img59.2.webp",
+      "/assets/product-page/product-img59.3.webp",
+      "/assets/product-page/product-img59.4.webp",
+      "/assets/product-page/product-img59.5.webp"
+    ],
     "description": "Oil-packed sardines with rich flavor for traditional dishes.",
     "modalTitle": "SEA WATER FISHES",
     "modalName": "Sardinella longiceps",
-    "details": [
-      "BQF (Blast Quick Frozen) with polybag ,80 pcs/ MC , 100-120 pcs/MC , 140 pcs/MC",
-      "8, 10-12, 12-14, 14-up (pieces per Kgs)"
+
+    "packaging": [
+      "BQF (Blast Quick Frozen) with polybag, 80 pcs/MC, 100-120 pcs/MC, 140 pcs/MC"
+    ],
+
+    "sizeRange": [
+      "8, 10-12, 12-14, 14-up (pieces per Kg)"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 60,
     "name": "Dolphin Fish",
@@ -1006,16 +1924,32 @@
       "/assets/product-page/product-img60.jpg",
       "/assets/product-page/product-img60.1.jpg",
       "/assets/product-page/product-img60.2.jpg",
-      "/assets/product-page/product-img60.3.jpg"
-  ],
+      "/assets/product-page/product-img60.3.jpg",
+      "/assets/product-page/product-img60.4.webp",
+      "/assets/product-page/product-img60.5.webp"
+    ],
     "description": "Firm, meaty dolphin fish with fresh ocean taste.",
     "modalTitle": "SEA WATER FISHES",
     "modalName": "Coryphaena hippurus",
-    "details": [
-      "Whole 10Kgs or 20Kgs IQF in waving bags or MC",
-      "200-300,300-500,500-1000 , 1000/up(grams/pcs)"
+
+    "packaging": [
+      "Whole 10 Kgs or 20 Kgs IQF in waving bags or MC"
+    ],
+
+    "sizeRange": [
+      "200-300, 300-500, 500-1000, 1000/up (grams/pcs)"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 61,
     "name": "Octopus",
@@ -1023,56 +1957,112 @@
     "image": "/assets/product-page/product-img61.jpg",
     "images": [
       "/assets/product-page/product-img61.jpg",
-      "/assets/product-page/product-img61.1.jpg"
-  ],
+      "/assets/product-page/product-img61.1.jpg",
+      "/assets/product-page/product-img61.2.webp",
+      "/assets/product-page/product-img61.3.webp",
+      "/assets/product-page/product-img61.4.webp",
+      "/assets/product-page/product-img61.5.webp"
+    ],
     "description": "Tender, high-quality octopus perfect for gourmet cooking.",
     "modalTitle": "CEPHALOPODS",
     "modalName": "(Octopus spp)",
-    "details": [
-      "Forms of Octopus Octopus Whole Round Octopus Gutted (Raw and Cooked) Chopped Octopus (Raw/ Cooked) Baby Octopus (Raw/ Cooked) 10x 2 kg Block frozen, 10x1kg IQF",
-      "80/100 , 100/200 , 200/300 , 300/500, 500/700, 700/1000 (grams per piecs)"
+
+    "packaging": [
+      "10 × 2 kg Block frozen, 10 × 1 kg IQF"
+    ],
+
+    "sizeRange": [
+      "80/100, 100/200, 200/300, 300/500, 500/700, 700/1000 (grams per piece)"
+    ],
+
+    "varieties": [
+      "Octopus Whole Round",
+      "Octopus Gutted (Raw and Cooked)",
+      "Chopped Octopus (Raw/Cooked)",
+      "Baby Octopus (Raw/Cooked)"
+    ],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
+  }
+  ,
   {
     "id": 62,
-    "name": "Itoyori surimi",
+    "name": "Itoyori Surimi",
     "categories": [],
     "image": "/assets/product-page/product-img62.jpg",
     "images": [
       "/assets/product-page/product-img62.jpg",
-      "/assets/product-page/product-img62.1.jpg"
-  ],
+      "/assets/product-page/product-img62.1.jpg",
+      "/assets/product-page/product-img62.2.webp",
+      "/assets/product-page/product-img62.3.webp",
+      "/assets/product-page/product-img62.4.webp",
+      "/assets/product-page/product-img62.5.webp"
+    ],
     "description": "Processed fish with smooth texture and mild, fresh flavor.",
     "modalTitle": "SURIMI",
     "modalName": "",
-    "details": [
-      "2x10Kg blocks/MC with poly bag.",
-      "plate frozen",
-      "SA,FA,AAA,AA,A,AB,B  "
+
+    "packaging": [
+      "2 × 10 Kg blocks/MC with poly bag",
+      "Plate frozen"
+    ],
+
+    "sizeRange": [
+      "Grades: SA, FA, AAA, AA, A, AB, B"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
-    {
+  }
+  ,
+  {
     "id": 63,
     "name": "Cooked Scampi",
     "categories": [],
-    "image": "/assets/product-page/product-img64.jpg",
+    "image": "/assets/product-page/product-img64.webp",
     "images": [
-      "/assets/product-page/product-img64.jpg",
+      "/assets/product-page/product-img64.webp",
       "/assets/product-page/product-img64.1.jpg",
       "/assets/product-page/product-img64.2.jpg",
-      "/assets/product-page/product-img64.3.jpg"
-  ],
+      "/assets/product-page/product-img64.3.jpg",
+      "/assets/product-page/product-img64.4.webp",
+      "/assets/product-page/product-img64.5.webp"
+    ],
     "description": "Sweet, tender scampi, fully cooked and ready to enjoy.",
     "modalTitle": "SCAMPI / FRESHWATER SHRIMP",
     "modalName": "",
-    "details": [
+    
+    "packaging": [
       "Scampi HOSO Cooked",
-      "1.8g NW trays *6/ Carton (protective glaze)",
-      "Pcs/box:",
-      "Grades : U5, U/7, U/10, 11/15, 16/20 pieces per kg"
+      "1.8g NW trays × 6 / Carton (protective glaze)"
+    ],
+
+    "sizeRange": [
+      "Grades: U5, U7, U10, 11/15, 16/20 pieces per kg"
+    ],
+
+    "varieties": [],
+
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
-      {
+  }
+  ,
+  {
     "id": 64,
     "name": "Baby Octopus",
     "categories": [],
@@ -1080,21 +2070,38 @@
     "images": [
       "/assets/product-page/product-img65.jpg",
       "/assets/product-page/product-img65.1.jpg",
-      "/assets/product-page/product-img65.2.jpg",
-      "/assets/product-page/product-img65.3.jpg"
-  ],
+      "/assets/product-page/product-img65.2.webp",
+      "/assets/product-page/product-img65.3.webp",
+      "/assets/product-page/product-img65.4.webp",
+      "/assets/product-page/product-img65.5.webp"
+    ],
     "description": "Small, flavorful octopus ideal for fine dining and seafood dishes.",
     "modalTitle": "CEPHALOPODS",
     "modalName": "(Octopus spp)",
-    "details": [
-      "5 x 4 Kg block net weight",
-      "Grades/master cartons per conatiner",
-      "10/20 - 900mc, 20/40 - 200 mc, 40/60 - 100 mc. Total=1200 mc",
-      "Qty : 1 x 40 fcl",
-      "shipment : immediate"
+
+    "packaging": [
+      "5 × 4 Kg block net weight"
+    ],
+
+    "sizeRange": [
+      "Grades / master cartons per container:",
+      "10/20 - 900 mc, 20/40 - 200 mc, 40/60 - 100 mc (Total = 1200 mc)"
+    ],
+
+    "varieties": [],
+
+    "others": [
+      "Qty: 1 × 40 FCL",
+      "Shipment: immediate"
+    ],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
-        {
+  }
+  ,
+  {
     "id": 65,
     "name": "Grouper Fish",
     "categories": [],
@@ -1103,34 +2110,60 @@
       "/assets/product-page/product-img66.jpg",
       "/assets/product-page/product-img66.1.jpg",
       "/assets/product-page/product-img66.2.jpg",
-      "/assets/product-page/product-img66.3.jpg"
-  ],
+      "/assets/product-page/product-img66.3.jpg",
+      "/assets/product-page/product-img66.4.webp",
+      "/assets/product-page/product-img66.5.webp"
+    ],
     "description": "Meaty grouper with firm, premium flesh for grilling or steaming.",
-    "modalTitle": "Fish",
+    "modalTitle": "FISH",
     "modalName": "",
-    "details": [
+
+    "packaging": [
       "Headon gutted descaled",
-      "Offer 1 x 40 fcl as under",
-      "1/2KGs, 2/3, 3/5, 5/10, 10/+",
-      "Packing 25KGs mcs IQF IWP size 10KGs up running wt"
+      "Packing: 25 KGs MCs IQF IWP, size 10 KGs up running weight"
+    ],
+
+    "sizeRange": [
+      "1/2 KGs, 2/3, 3/5, 5/10, 10/+"
+    ],
+
+    "varieties": [],
+
+    "others": [
+      "Offer: 1 × 40 FCL as under"
+    ],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
-  },
-          {
+  }
+  ,
+  {
     "id": 66,
-    "name": "Bombay duck fish",
+    "name": "Bombay Duck Fish",
     "categories": ["Most Exported"],
     "image": "/assets/product-page/product-img67.jpg",
     "images": [
       "/assets/product-page/product-img67.jpg",
+      "/assets/product-page/product-img67.4.webp",
       "/assets/product-page/product-img67.1.jpg",
       "/assets/product-page/product-img67.2.jpg",
-      "/assets/product-page/product-img67.3.jpg"
-  ],
+      "/assets/product-page/product-img67.3.jpg",
+      "/assets/product-page/product-img67.5.webp"
+    ],
     "description": "Meaty Bombay duck fish with firm, premium flesh for grilling or steaming.",
-    "modalTitle": "Fish",
+    "modalTitle": "FISH",
     "modalName": "",
-    "details": [
-      ""
+
+    "packaging": [],
+    "sizeRange": [],
+    "varieties": [],
+    "others": [],
+    "certifications": [
+      "MPEDA",
+      "EIC",
+      "HACCP"
     ]
   }
 ]
