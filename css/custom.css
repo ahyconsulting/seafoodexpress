@@ -30,3 +30,8 @@ body {
   font-family: 'Anton', sans-serif;
   letter-spacing: 0.7px;
 }
+
+/* modal font */
+.modal-font {
+  font-family: 'Merriweather', serif;
+}
