@@ -11,32 +11,36 @@ function openSearch() {
 }
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  function highlightActiveLink() {
-    const navbar = document.querySelector("#navbar");
-    if (!navbar) {
-      setTimeout(highlightActiveLink, 100); // Wait a bit if it's dynamically loaded
-      return;
-    }
-
-    const currentPath = window.location.pathname;
-
-    // Select all links inside the header (covers all screen sizes)
-    const links = document.querySelectorAll(".nav-link");
-
-    links.forEach(link => {
-      const linkPath = new URL(link.href).pathname;
-
-
-      if (currentPath === linkPath || currentPath.startsWith(linkPath)) {
-        link.classList.remove("text-white", "text-[#007B8F]", "font-semibold");
-        link.classList.add("underline");
-      }
+(function () {
+  const normalize = p => (p||'').replace(/\/index\.html$/, '').replace(/\.html$/, '').replace(/\/$/, '');
+  function applyHighlight() {
+    const navbar = document.querySelector('#navbar');
+    if (!navbar) return false;
+    const current = normalize(location.pathname || '/');
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('underline'));
+    document.querySelectorAll('.nav-link').forEach(l => {
+      const href = l.getAttribute('href') || '';
+      let path;
+      try { path = normalize(new URL(href, location.origin).pathname); } catch(e) { path = normalize(href); }
+      const isHome = path === '';
+      const isCurrentHome = current === '';
+      const match = (isHome && isCurrentHome) || (!isHome && (current === path || current.startsWith(path + '/')));
+      if (match) l.classList.add('underline');
     });
+    return true;
   }
 
-  highlightActiveLink();
-});
+  // try immediately; if navbar not present, observe until it is (then run once)
+  if (!applyHighlight()) {
+    const mo = new MutationObserver((m, obs) => {
+      if (document.querySelector('#navbar')) {
+        applyHighlight();
+        obs.disconnect();
+      }
+    });
+    mo.observe(document.documentElement, { childList: true, subtree: true });
+  }
+})();
 
       function searchComponent() {
         return {
