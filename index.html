@@ -27,20 +27,6 @@
     <link rel="icon" type="image/png" sizes="64x64" href="/assets/home-page/logo.png?v=1">
     <link rel="icon" type="image/webp" sizes="64x64" href="/assets/home-page/logo.webp?v=1">
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-P7WGPTWND1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-P7WGPTWND1");
-    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -86,24 +72,17 @@
       }
     </script>
 
-    <!-- Fonts -->
+    <!-- Preconnect to Google Fonts (performance) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Single combined Google Fonts request -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Anton&display=swap"
       rel="stylesheet"
     />
 
     <!-- Tailwind + Alpine + Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       defer
@@ -240,6 +219,7 @@
                   src="/assets/home-page/shrimp.png"
                   alt="Shrimp"
                   class="w-5 h-5 object-contain"
+                  loading="lazy"
                 />
                 PREMIUM SCAMPI & SEAFOOD
               </div>
@@ -339,15 +319,15 @@
         class="px-6 py-20 md:px-6"
         x-data="{
           categories: {
-            'Scampi': 'hero-img1.webp',
+            'Scampi': 'our-product-img1.webp',
             'Black Tiger Shrimp': 'our-product-img2.webp',
             'Vannamei Shrimp': 'our-product-img3.webp',
-            'Lobster': 'our-product-img4.png',
+            'Lobster': 'our-product-img4.webp',
             'Tuna Varieties': 'our-product-img5.webp',
-            'Crustaceans': 'our-product-img6.jpg',
-            'Fishes': 'our-product-img7.jpg',
-            'Cephalopods': 'our-product-img8.jpg',
-            'Surimi': 'our-product-img9.png'
+            'Crustaceans': 'our-product-img6.webp',
+            'Fishes': 'our-product-img7.webp',
+            'Cephalopods': 'our-product-img8.webp',
+            'Surimi': 'our-product-img9.webp'
           },
           selected: 'Scampi',
           keys() {
@@ -377,6 +357,7 @@
               src="/assets/home-page/shrimp.png"
               alt="Shrimp"
               class="w-5 h-5 object-contain"
+              loading="lazy"
             />
             <span>Explore</span>
           </div>
@@ -450,9 +431,10 @@
                         "
                   >
                     <img
-                      src="assets/home-page/fish-category1.jpg"
+                      src="assets/home-page/fish-category1.webp"
                       alt="Freshwater Fish"
                       class="w-full h-full object-cover rounded-xl"
+                      loading="lazy"
                     />
                     <div
                       class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-lg font-semibold py-5 px-4 text-center rounded-b-xl"
@@ -469,9 +451,10 @@
                         "
                   >
                     <img
-                      src="assets/home-page/fish-category2.jpg"
+                      src="assets/home-page/fish-category2.webp"
                       alt="Seawater Fish"
                       class="w-full h-full object-cover rounded-xl"
+                      loading="lazy"
                     />
                     <div
                       class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-lg font-semibold py-5 px-4 text-center"
@@ -488,6 +471,7 @@
                   :src="'assets/home-page/' + categories[selected]"
                   :alt="selected + ' seafood product image'"
                   class="w-full h-full object-cover cursor-pointer"
+                  loading="lazy"
                   @click="
                     const sel = selected.toLowerCase();
                     if(sel === 'scampi') window.location.href = 'pages/product.html?product=scampi-1';
@@ -574,6 +558,14 @@
           >
             <img
               src="assets/home-page/our-business-1.webp"
+              srcset="
+                assets/home-page/our-business-1.2.webp 360w,
+                assets/home-page/our-business-1.1.webp 500w,
+                assets/home-page/our-business-1.webp 650w
+              "
+              sizes="(max-width: 639px) 360px,
+                    (max-width: 1023px) 500px,
+                    650px"
               alt="Seafood Express Exports"
               class="w-full h-80 md:h-[400px] lg:h-[500px] object-cover"
               loading="lazy"
@@ -585,8 +577,17 @@
           >
             <img
               src="assets/home-page/our-business-2.webp"
-              alt="Image 2"
+              srcset="
+                assets/home-page/our-business-2.2.webp 360w,
+                assets/home-page/our-business-2.1.webp 500w,
+                assets/home-page/our-business-2.webp 650w
+              "
+              sizes="(max-width: 639px) 360px,
+                    (max-width: 1023px) 500px,
+                    650px"
+              alt="Seafood Express (Marketing Seafood)"
               class="w-full h-80 md:h-[400px] lg:h-[500px] object-cover"
+              loading="lazy"
             />
           </div>
           <!-- Image 3 -->
@@ -595,6 +596,14 @@
           >
             <img
               src="assets/home-page/our-business-3.webp"
+              srcset="
+                assets/home-page/our-business-3.2.webp 360w,
+                assets/home-page/our-business-3.1.webp 500w,
+                assets/home-page/our-business-3.webp 650w
+              "
+              sizes="(max-width: 639px) 360px,
+                    (max-width: 1023px) 500px,
+                    650px"
               alt="Seafood Express Consultants"
               class="w-full h-80 md:h-[400px] lg:h-[500px] object-cover"
               loading="lazy"
@@ -672,7 +681,7 @@
           class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4"
         >
           <div class="bg-white rounded-xl max-w-xl w-full md:w-[90%] p-6 relative flex flex-col max-h-[80vh]" x-cloak>
-            <button @click="closeModal()" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800">&times;</button>
+            <button @click="closeModal()" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800">✘</button>
             <h3 class="text-xl font-bold mb-4" x-text="modalContent.title"></h3>
             <div class="overflow-y-auto text-gray-700 text-base leading-relaxed" style="flex: 1;" x-html="modalContent.fullDesc"></div>
           </div>
@@ -1209,7 +1218,7 @@
           modalContent: { title: '', fullDesc: '' },
           items: [
             {
-              img: "assets/home-page/our-business-1.webp",
+              img: "assets/home-page/our-business-1.2.webp",
               title: "Seafood Express Exports",
               shortDesc: "We process and export high-quality frozen Scampi, Tuna Varieties, Lobster, Squid, Shrimp (Black tiger & Vannamei) and many more varieties.",
               fullDesc: "We process and export high-quality frozen Scampi, Tuna Varieties, Lobster, Squid, Shrimp (Black tiger & Vannamei) and many more varieties. Our main markets are Maritius, Malaysia, Middle East, EU countries, China, Japan, Vietnam and Hongkong.",
@@ -1217,7 +1226,7 @@
               hasFullDesc: true
             },
             {
-              img: "assets/home-page/our-business-2.webp",
+              img: "assets/home-page/our-business-2.2.webp",
               title: "Seafood Express (Marketing Seafood)",
               shortDesc: "We specialize in marketing of frozen seafood of many other companies. Once the buyer order is confirmed.",
               fullDesc: "We specialize in marketing of frozen seafood of many other companies. Once the buyer order is confirmed, we get the product processed as per availability and distribution of different varieties of Tuna, fishes, shrimp, prawns etc in our associate factories throughout India. We have a very large network of fishing boats, inland & sea caught seafood suppliers, farmers who contribute to the fishing, harvesting & supply of high quality diet for human consumption. With their effort and support of government policies & export market demand, the fisheries sector has created employment to many people. Our network helps to process the marine food in factories nearest to the fishing place which are approved by EIC & MPEDA.",
@@ -1225,7 +1234,7 @@
               hasFullDesc: true
             },
             {
-              img: "assets/home-page/our-business-3.webp",
+              img: "assets/home-page/our-business-3.2.webp",
               title: "Seafood Express Consultants",
               shortDesc: "We are involved in shrimp farming & consultation. we have experienced staff and quality testing personnel to plan and implement.",
               fullDesc: "We are involved in shrimp farming & consultation. we have experienced staff and quality testing personnel to plan and implement your aquaculture needs.<br><br> 1) We can plan and construct the shrimp ponds. <br><br> 2) Prepare full infrastructure with proper pond planning, water inlet & treatment, pond treatment, power line & equipment, Aerators etc.<br><br> 3) The ponds for reservoir, treatment, nursery & culture are properly planned.<br><br> 4) Labour management & AI-based feed management.<br><br> 5) Stocking of shrimp seeds/fingerlings, feed management, best practices for proper health & growth of shrimp/fish etc.<br><br> 6) Disease prevention & Bio-security.<br><br> 7) Harvesting is done by trained workers. Proper Ice is arranged for chilling of shrimp/Fish before filling it into crates and sending it to processing plants nearest to the farm area.<br><br> Shrimp farming has transformed from a traditional small-scale enterprise to a global industry. Advances in technology have led to higher density of shrimp per square area of the modern pond. Mainly two species of shrimp; Penaeus monodon (tiger prawn) and Penaeus vannamei (Penaeus pacificus) are farmed and these shrimp belong to the Penaeidae family.<br><br> The live broodstock are transported worldwide to hatcheries and hatched fingerlings are distributed to nearby farms. Broodstock is a group of mature individuals in aquaculture used for breeding purposes. Broodstock can be animal populations in captivity and can be used as an alternative or an enhanced source of seeds and fry numbers.",
@@ -1269,5 +1278,19 @@
       }
     </script>
     <script src="/index.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-P7WGPTWND1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-P7WGPTWND1");
+    </script>
   </body>
 </html>
