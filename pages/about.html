@@ -279,27 +279,60 @@
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[10px] w-full rounded-t-xl"
         >
           <!-- Image 1 -->
-          <div class="overflow-hidden flex items-center justify-center w-full">
+          <div
+            class="overflow-hidden shadow-lg md:shadow-none flex items-center justify-center w-full"
+          >
             <img
               src="/assets/about-page/our-business-1.webp"
-              alt="Image 1"
+              srcset="
+                /assets/about-page/our-business-1.2.webp 360w,
+                /assets/about-page/our-business-1.1.webp 500w,
+                /assets/about-page/our-business-1.webp 650w
+              "
+              sizes="(max-width: 639px) 360px,
+                    (max-width: 1023px) 500px,
+                    650px"
+              alt="Seafood Express Exports"
               class="w-full h-80 md:h-[400px] lg:h-[500px] object-cover"
+              loading="lazy"
             />
           </div>
           <!-- Image 2 -->
-          <div class="overflow-hidden flex items-center justify-center w-full">
+          <div
+            class="overflow-hidden md:shadow-none flex items-center justify-center w-full"
+          >
             <img
               src="/assets/about-page/our-business-2.webp"
-              alt="Image 2"
+              srcset="
+                /assets/about-page/our-business-2.2.webp 360w,
+                /assets/about-page/our-business-2.1.webp 500w,
+                /assets/about-page/our-business-2.webp 650w
+              "
+              sizes="(max-width: 639px) 360px,
+                    (max-width: 1023px) 500px,
+                    650px"
+              alt="Seafood Express (Marketing Seafood)"
               class="w-full h-80 md:h-[400px] lg:h-[500px] object-cover"
+              loading="lazy"
             />
           </div>
           <!-- Image 3 -->
-          <div class="overflow-hidden flex items-center justify-center w-full">
+          <div
+            class="overflow-hidden shadow-lg md:shadow-none flex items-center justify-center w-full"
+          >
             <img
               src="/assets/about-page/our-business-3.webp"
-              alt="Image 3"
+              srcset="
+                /assets/about-page/our-business-3.2.webp 360w,
+                /assets/about-page/our-business-3.1.webp 500w,
+                /assets/about-page/our-business-3.webp 650w
+              "
+              sizes="(max-width: 639px) 360px,
+                    (max-width: 1023px) 500px,
+                    650px"
+              alt="Seafood Express Consultants"
               class="w-full h-80 md:h-[400px] lg:h-[500px] object-cover"
+              loading="lazy"
             />
           </div>
         </div>
@@ -705,7 +738,7 @@
           modalContent: { title: '', fullDesc: '' },
           items: [
             {
-              img: "/assets/about-page/our-business-1.webp",
+              img: "/assets/about-page/our-business-1.2.webp",
               title: "Seafood Express Exports",
               shortDesc: "We process and export high-quality frozen Scampi, Tuna Varieties, Lobster, Squid, Shrimp (Black tiger & Vannamei) and many more varieties.",
               fullDesc: "We process and export high-quality frozen Scampi, Tuna Varieties, Lobster, Squid, Shrimp (Black tiger & Vannamei) and many more varieties. Our main markets are Maritius, Malaysia, Middle East, EU countries, China, Japan, Vietnam and Hongkong.",
@@ -713,7 +746,7 @@
               hasFullDesc: true
             },
             {
-              img: "/assets/about-page/our-business-2.webp",
+              img: "/assets/about-page/our-business-2.2.webp",
               title: "Seafood Express (Marketing Seafood)",
               shortDesc: "We specialize in marketing of frozen seafood of many other companies. Once the buyer order is confirmed.",
               fullDesc: "We specialize in marketing of frozen seafood of many other companies. Once the buyer order is confirmed, we get the product processed as per availability and distribution of different varieties of Tuna, fishes, shrimp, prawns etc in our associate factories throughout India. We have a very large network of fishing boats, inland & sea caught seafood suppliers, farmers who contribute to the fishing, harvesting & supply of high quality diet for human consumption. With their effort and support of government policies & export market demand, the fisheries sector has created employment to many people. Our network helps to process the marine food in factories nearest to the fishing place which are approved by EIC & MPEDA.",
@@ -721,7 +754,7 @@
               hasFullDesc: true
             },
             {
-              img: "/assets/about-page/our-business-3.webp",
+              img: "/assets/about-page/our-business-3.2.webp",
               title: "Seafood Express Consultants",
               shortDesc: "We are involved in shrimp farming & consultation. we have experienced staff and quality testing personnel to plan and implement.",
               fullDesc: "We are involved in shrimp farming & consultation. we have experienced staff and quality testing personnel to plan and implement your aquaculture needs.<br><br> 1) We can plan and construct the shrimp ponds. <br><br> 2) Prepare full infrastructure with proper pond planning, water inlet & treatment, pond treatment, power line & equipment, Aerators etc.<br><br> 3) The ponds for reservoir, treatment, nursery & culture are properly planned.<br><br> 4) Labour management & AI-based feed management.<br><br> 5) Stocking of shrimp seeds/fingerlings, feed management, best practices for proper health & growth of shrimp/fish etc.<br><br> 6) Disease prevention & Bio-security.<br><br> 7) Harvesting is done by trained workers. Proper Ice is arranged for chilling of shrimp/Fish before filling it into crates and sending it to processing plants nearest to the farm area.<br><br> Shrimp farming has transformed from a traditional small-scale enterprise to a global industry. Advances in technology have led to higher density of shrimp per square area of the modern pond. Mainly two species of shrimp; Penaeus monodon (tiger prawn) and Penaeus vannamei (Penaeus pacificus) are farmed and these shrimp belong to the Penaeidae family.<br><br> The live broodstock are transported worldwide to hatcheries and hatched fingerlings are distributed to nearby farms. Broodstock is a group of mature individuals in aquaculture used for breeding purposes. Broodstock can be animal populations in captivity and can be used as an alternative or an enhanced source of seeds and fry numbers.",

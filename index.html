@@ -117,24 +117,40 @@
           selected: '',
           loaded: false,
           init() {
+            const isMobile = window.innerWidth <= 768;
+
+            const mobileVideos = [
+              'assets/home-page/mobile-video1.mp4',
+              'assets/home-page/mobile-video2.mp4',
+              'assets/home-page/mobile-video3.mp4',
+              'assets/home-page/mobile-video4.mp4',
+              'assets/home-page/mobile-video5.mp4',
+              'assets/home-page/mobile-video6.mp4'
+            ];
+
+            const desktopVideos = [
+              'assets/home-page/video1.mp4',
+              'assets/home-page/video2.mp4',
+              'assets/home-page/video3.mp4',
+              'assets/home-page/video4.mp4',
+              'assets/home-page/video5.mp4',
+              'assets/home-page/video6.mp4'
+            ];
+
+            const videos = isMobile ? mobileVideos : desktopVideos;
+
             const hasVisited = localStorage.getItem('hasVisitedBefore');
-            
+
             if (!hasVisited) {
-              console.log('First visit: playing default video');
-              this.selected = 'assets/home-page/video6.mp4';
+              this.selected = videos[5]; // default video6 on first visit
               localStorage.setItem('hasVisitedBefore', 'true');
             } else {
-              this.selected = this.videos[Math.floor(Math.random() * this.videos.length)];
-              console.log('Returning visit: random video ->', this.selected);
+              this.selected = videos[Math.floor(Math.random() * videos.length)];
             }
 
             this.$nextTick(() => {
               const videoEl = this.$refs.video;
-              videoEl.oncanplaythrough = () => {
-                if (!this.loaded) {
-                  this.loaded = true;
-                }
-              };
+              videoEl.oncanplaythrough = () => this.loaded = true;
               videoEl.load();
             });
           }
@@ -150,7 +166,7 @@
           muted
           loop
           playsinline
-          preload="auto"
+          preload="none"
           :src="selected"
           class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700"
           :class="loaded ? 'opacity-100' : 'opacity-0'"
@@ -683,7 +699,7 @@
           <div class="bg-white rounded-xl max-w-xl w-full md:w-[90%] p-6 relative flex flex-col max-h-[80vh]" x-cloak>
             <button @click="closeModal()" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800">✘</button>
             <h3 class="text-xl font-bold mb-4" x-text="modalContent.title"></h3>
-            <div class="overflow-y-auto text-gray-700 text-base leading-relaxed" style="flex: 1;" x-html="modalContent.fullDesc"></div>
+            <div class="overflow-y-auto text-gray-700 text-base leading-relaxed flex-1" x-html="modalContent.fullDesc"></div>
           </div>
         </div>
       </div>
